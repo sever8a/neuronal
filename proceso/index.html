@@ -1,0 +1,578 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Aprendizaje progresivo para conocer las posibilidades de la IA.">
+      
+      
+        <meta name="author" content="IES Severo Ochoa">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0b4">
+    
+    
+      
+        <title>El proceso - Deep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.91872f81.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proyectos-de-inteligencia-artificial" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Deep Learning" class="md-header__button md-logo" aria-label="Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Deep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              El proceso
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Deep Learning" class="md-nav__button md-logo" aria-label="Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Deep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Comenzando
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          El proceso
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        El proceso
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el-origen-de-datos" class="md-nav__link">
+    El origen de datos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definir-el-problema" class="md-nav__link">
+    Definir el problema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seleccion-de-datos" class="md-nav__link">
+    Selección de datos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preprocesamiento" class="md-nav__link">
+    Preprocesamiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformacion" class="md-nav__link">
+    Transformación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descubrimiento-de-conocimiento" class="md-nav__link">
+    Descubrimiento de conocimiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluacion" class="md-nav__link">
+    Evaluación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#produccion" class="md-nav__link">
+    Producción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volver-a-empezar" class="md-nav__link">
+    Volver a empezar
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deep_learning/" class="md-nav__link">
+        Machine vs Deep
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Redes Neuronales
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Redes Neuronales" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Redes Neuronales
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redesneuronales/fundamentos/" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redesneuronales/fundamentos/" class="md-nav__link">
+        Fundamentos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redesneuronales/redes_profundas/" class="md-nav__link">
+        Redes Densas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el-origen-de-datos" class="md-nav__link">
+    El origen de datos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definir-el-problema" class="md-nav__link">
+    Definir el problema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seleccion-de-datos" class="md-nav__link">
+    Selección de datos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preprocesamiento" class="md-nav__link">
+    Preprocesamiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformacion" class="md-nav__link">
+    Transformación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descubrimiento-de-conocimiento" class="md-nav__link">
+    Descubrimiento de conocimiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluacion" class="md-nav__link">
+    Evaluación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#produccion" class="md-nav__link">
+    Producción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volver-a-empezar" class="md-nav__link">
+    Volver a empezar
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="proyectos-de-inteligencia-artificial">Proyectos de inteligencia artificial</h1>
+<p><strong><em>No es un producto, es un proceso</em></strong></p>
+<p>Comienza con la definición y concreción del problema, y a partir de esta opción se podrá valorar el resultado conseguido.</p>
+<p>Es necesario determinar los datos disponibles. El origen de datos. Los datos requerirán de una fase de preprocesado para poder adaptarlos a los procesos matemáticos del modelo de inteligencia artificial utilizado.</p>
+<p>El modelo elegido, se basa en algortimos y estructuras matemáticas. Existe una bibliografía orientando el uso de diferentes modelos para cada tipo de problema.</p>
+<p>Realización de un proceso de entrenamiento. No siempre es necesario comenzar un entrenamiento desde el principio, al contrario, es muy adecuado aprovechar modelos ya entrenados para ajustar parámetros de reentrenamiento para el problema que se quiere resolver.</p>
+<p>El despliegue del modelo en un entorno de producción, es clava para establecer su utilidad.</p>
+<p>También es relevante ser consciente de posibles cambios y ajustes necesarios en el modelo. Resulta útil establecer métricas de análisis de rendimiento que permitan conocer la efectivad de la solución.</p>
+<p>Un proyecto puede utilizar varios modelos de inteligencia artificial. En general suele ser necesario realizar varias tareas para conseguir una solución completa.</p>
+<h2 id="el-origen-de-datos">El origen de datos</h2>
+<p>El dato es fundamental en un proyecto de inteligencia artificial. Se obtiene de forma masiva, y su procesamiento puede ser en tiempo real (en algunos casos).</p>
+<p><img alt="cientifico de datos moderno" src="https://www.business-science.io/assets/2019-05-23-financial-data-scientist/modern_data_scientist.jpg" /></p>
+<blockquote>
+<p><strong>Nota</strong>
+El analista de datos busca conclusiones y alertas sobre métricas que la organización considera críticas. El científico de datos construye nuevos modelos y busca conocimiento sobre indicadores que la organización aún no sabe que son importantes.</p>
+</blockquote>
+<h2 id="definir-el-problema">Definir el problema</h2>
+<p>Definir el problema que se quiere resolver o el planteamiento que se quiere comprobar. No se trata de comprobar aquello que uno piensa, sino responder una pregunta que se plantea teniendo en cuenta los objetivos de la organización.</p>
+<h2 id="seleccion-de-datos">Selección de datos</h2>
+<p>No únicamente los disponibles internamente, también los internos que no se disponen (se podría intentar obtener) y los externos que se pueden incorporar (algunos a coste cero y otros de pago).</p>
+<h2 id="preprocesamiento">Preprocesamiento</h2>
+<p>Conocer los datos; qué problemas tienen, comprobar si están completos, qué tipo de distribución siguen... </p>
+<h2 id="transformacion">Transformación</h2>
+<p>Se transforman los datos en bruto para poderlos utilizar en los algoritmos deseados. Datos de diferente formato, incompletos, con problemas de distribución y de escala. El resultado debe ser el dataset.</p>
+<h2 id="descubrimiento-de-conocimiento">Descubrimiento de conocimiento</h2>
+<p>La etapa menos compleja, y más visible. Se aplican los algoritmos deseados. Hay que decidir si se utiliza un algoritmo supervisado o no supervisado, si se trata de clasificar o predecir.
+La mayor parte de los algoritmos ya están disponibles, solo hay que aplicarlos.</p>
+<h2 id="evaluacion">Evaluación</h2>
+<p>El resultado es simplemente un modelo. Hay que comprobar y entender si el modelo responde a las cuestiones planteadas inicialmente. Es el momento de considerar si es necesario volver a empezar, sea desde cualquiera de las fases, para mejorar el resultado obtenido o por el contrario el modelo es aceptable y pasa a producción.</p>
+<h2 id="produccion">Producción</h2>
+<p>El motivo principal de todo el proceso es que el conocimiento obtenido sea útil. Presentar el resultado de forma inteligible: visualizaciones personalizadas, cuadros de mando o entrada a otros sistemas.</p>
+<h2 id="volver-a-empezar">Volver a empezar</h2>
+<p>El proceso no acaba nunca. Siempre se pueden añadir nuevos datos, hay que definir un proceso repetible que se adapte a las interferencias existentes en el día a día.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.3de43c86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ce0331ff.min.js"></script>
+      
+    
+    
+  </body>
+</html>

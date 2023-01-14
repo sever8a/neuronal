@@ -1,0 +1,745 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Aprendizaje progresivo para conocer las posibilidades de la IA.">
+      
+      
+        <meta name="author" content="IES Severo Ochoa">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0b4">
+    
+    
+      
+        <title>Redes Densas - Deep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.91872f81.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#redes-neuronales-profundas-densas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Deep Learning" class="md-header__button md-logo" aria-label="Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Deep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Redes Densas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Deep Learning" class="md-nav__button md-logo" aria-label="Deep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Deep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Comenzando
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proceso/" class="md-nav__link">
+        El proceso
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deep_learning/" class="md-nav__link">
+        Machine vs Deep
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Redes Neuronales
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Redes Neuronales" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Redes Neuronales
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentos/" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentos/" class="md-nav__link">
+        Fundamentos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Redes Densas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Redes Densas
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#la-funcion-de-activacion" class="md-nav__link">
+    La función de activación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apilando-capas" class="md-nav__link">
+    Apilando capas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#construccion-del-modelo" class="md-nav__link">
+    Construcción del modelo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-gradiente-estocastico-descendente" class="md-nav__link">
+    El gradiente estocástico descendente
+  </a>
+  
+    <nav class="md-nav" aria-label="El gradiente estocástico descendente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-entrenamiento" class="md-nav__link">
+    El entrenamiento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-funcion-de-perdida" class="md-nav__link">
+    La función de pérdida
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-optimizador-gradiente-estocastico-descendente" class="md-nav__link">
+    El optimizador - Gradiente Estocástico Descendente
+  </a>
+  
+    <nav class="md-nav" aria-label="El optimizador - Gradiente Estocástico Descendente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-tasa-de-aprendizaje-y-el-tamano-del-lote" class="md-nav__link">
+    La tasa de aprendizaje y el tamaño del lote
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overfitting-y-underfitting" class="md-nav__link">
+    Overfitting y Underfitting
+  </a>
+  
+    <nav class="md-nav" aria-label="Overfitting y Underfitting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#early-stopping" class="md-nav__link">
+    Early stopping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dropout" class="md-nav__link">
+    Dropout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-normalization" class="md-nav__link">
+    Batch Normalization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasificacion-binaria" class="md-nav__link">
+    Clasificación binaria
+  </a>
+  
+    <nav class="md-nav" aria-label="Clasificación binaria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accuracy-y-entropia-cruzada" class="md-nav__link">
+    Accuracy y entropía cruzada
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#la-funcion-de-activacion" class="md-nav__link">
+    La función de activación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apilando-capas" class="md-nav__link">
+    Apilando capas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#construccion-del-modelo" class="md-nav__link">
+    Construcción del modelo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-gradiente-estocastico-descendente" class="md-nav__link">
+    El gradiente estocástico descendente
+  </a>
+  
+    <nav class="md-nav" aria-label="El gradiente estocástico descendente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-entrenamiento" class="md-nav__link">
+    El entrenamiento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-funcion-de-perdida" class="md-nav__link">
+    La función de pérdida
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-optimizador-gradiente-estocastico-descendente" class="md-nav__link">
+    El optimizador - Gradiente Estocástico Descendente
+  </a>
+  
+    <nav class="md-nav" aria-label="El optimizador - Gradiente Estocástico Descendente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-tasa-de-aprendizaje-y-el-tamano-del-lote" class="md-nav__link">
+    La tasa de aprendizaje y el tamaño del lote
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overfitting-y-underfitting" class="md-nav__link">
+    Overfitting y Underfitting
+  </a>
+  
+    <nav class="md-nav" aria-label="Overfitting y Underfitting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#early-stopping" class="md-nav__link">
+    Early stopping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dropout" class="md-nav__link">
+    Dropout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-normalization" class="md-nav__link">
+    Batch Normalization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasificacion-binaria" class="md-nav__link">
+    Clasificación binaria
+  </a>
+  
+    <nav class="md-nav" aria-label="Clasificación binaria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accuracy-y-entropia-cruzada" class="md-nav__link">
+    Accuracy y entropía cruzada
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="redes-neuronales-profundas-densas">Redes Neuronales Profundas (densas)</h1>
+<p>Wn la capa de entrada, comienzan los datos de las características disponibles. La red neuronal realiza todas las combinaciones entre estas características a lo largo de todas las capas. Hasta la capa de salida donde la cantidad de neuronas se limita a las respuestas que se quieren obtener del modelo. </p>
+<p>Esta salida será el mejor resultado del procesamiento de todas las combinaciones anteriores. Por la tanto, la se consigue un modelo complejo utilizando estructuras lineales sencillas. Cuanto más capas, más compleja será la estructura, por eso se considera <em>profunda</em> la red neuronal.</p>
+<p>Existen diferentes tipos de capas (convolucionales, recurrentes...), especializadas en resolver diferentes problemas.</p>
+<h3 id="la-funcion-de-activacion">La función de activación</h3>
+<p>En un modelo de red neuronal densa, utilizar dos capas sin nada en medio no aportan nada diferente a una única capa. Las redes neuronales densas siempre aportan líneas o planos. Se necesita algo no lineal: la <strong>función de activación</strong>.</p>
+<p>Sin función de activación las redes neuronales densas solo pueden aprender relaciones lineales entre las característas.</p>
+<p>La <strong>función de activación</strong> es simplemente una función que se aplica a la salida de las neuronas de cada capa. La función más común es la función de rectificación <em>$max(0,x)$</em>.<br />
+!!!
+La función de salida se debe ajustar al tipo de predicción que se está realizando:
+    * Regresión.
+    * Clasificación binaria.
+    * Clasificación multiclase.</p>
+<p>Para conseguir buenos resultados con las redes neuronales es preciso que los datos de entrada estén normalizados a valores entre 0 y 1.</p>
+<pre><code>    &gt; La función convierte en 0 los valores negativos.
+    ![ReLU](https://i.imgur.com/aeIyAlF.png)
+</code></pre>
+<h3 id="apilando-capas">Apilando capas</h3>
+<p>De esta forma se consigue aumentar la complejidad de la red neuronal.
+<img alt="Red neuronal" src="https://i.imgur.com/Y5iwFQZ.png" /></p>
+<p>Las capas anteriores a la capa de salida permanecen ocultas.</p>
+<p>También hay que destacar que en la capa de salida no hay función de activacion, será una función lineal. Esto indica que se está utilizando para una regresión. Si se tratase de una clasificación habría que utilizar una función de activación.</p>
+<h3 id="construccion-del-modelo">Construcción del modelo</h3>
+<p>La construcción del modelo mediante un framework (TensorFlow / PyTorch), requiere establecer una secuencia de capas. Indicando el número de neuronas, la función de activación que utilizará la capa, y el número de salidas.</p>
+<p>'''
+from tensorflow import keras
+from tensorflow.keras import layers</p>
+<p>model = keras.Sequential([
+    # the hidden ReLU layers
+    layers.Dense(units=4, activation='relu', input_shape=[2]),
+    layers.Dense(units=3, activation='relu'),
+    # the linear output layer 
+    layers.Dense(units=1),
+])
+'''</p>
+<h2 id="el-gradiente-estocastico-descendente">El gradiente estocástico descendente</h2>
+<p>Cuando creamos una red neuronal densa, todas las capas están interconectadas. Los pesos de estas conexiones <em>w</em> se establecen de manera aleatoria, la red todavía "no sabe nada".</p>
+<h3 id="el-entrenamiento">El entrenamiento</h3>
+<p>Al igual que en todos los procesos de Machine Learning, comienza con un conjunto de datos de entrenamiento. Cada instancia de estos datos consistirá en un conjunto de características (la entrada) junto con el objetivo esperado (salida). <em><em>Entrenar la red neuronal significa ajustar los pesos </em>w</em> de manera que pueda transformar las características en el objetivo. Los pesos representan de algún modo la relación entre la entrada y el resultado.</p>
+<p>Para entrenar los datos es necesario:
+    - Una <strong>función de pérdida</strong>, que mida cómo son de buenas las predicciones que realiza la redn neuronal.
+    - Un <strong>optimizador</strong> que dice a la red neuronal cómo tiene que cambiar los pesos.</p>
+<h3 id="la-funcion-de-perdida">La función de pérdida</h3>
+<p>Mide la diferencia entre el valor real del objetivo y el valor que el modelo predice.</p>
+<p>Según el tipo de problema que se esté tratando (regresión o clasificación) la función de pérdida tendrá que ser diferente. Por ejemplo; el error absoluto medio, o el error cuadrático medio son dos funciones para regresiones.</p>
+<h3 id="el-optimizador-gradiente-estocastico-descendente">El optimizador - Gradiente Estocástico Descendente</h3>
+<p>Es un algoritmo que ajusta los pesos para minimizar la pérdida.</p>
+<p>Se utiliza el algoritmo del <strong>Gradiente Estocástico Descendente</strong>, es iterativo en cada paso realiza las siguientes tareas:
+        1. Utiliza un subconjunto de los datos de entrenamiento y los utiliza en la red neuronal para realizar predicciones.
+        2. Mide la pérdida entre las predicciones y los valores reales.
+        3. Finalmente ajusta los pesos en una dirección que hace la pérdida menor.</p>
+<p>Estos pasos se repiten una y otra vez hasta que la pérdida es tan pequeña como se considere (o ya no disminuya).</p>
+<p>Cada iteracion con un grupo de datos de entrenamiento se llama <strong>mini-lote (minibatch)</strong>, mientras que el entrenamiento de la red neuronal con todos los datos del conjunto de entrenamiento se llama <strong>época (epoch)</strong>.</p>
+<h4 id="la-tasa-de-aprendizaje-y-el-tamano-del-lote">La tasa de aprendizaje y el tamaño del lote</h4>
+<p>La tasa de aprendizaje determina la velocidad de aprendizaje de la red neuronal. Se trata de un modificador que altera los pesos en una dirección. Si esta modificación es más pequeña el entrenamiento será más preciso, pero tendrá que dar más pasos utilizando más minilotes.</p>
+<p>La tasa de aprendizaje y el tamaño del minilote son dos hiperparámetros claves en el resultado que se consiga. Afortunadamente se puede elegir el algoritmo <strong>Adam</strong> que tiene una tasa de aprendizaje adaptable, y es una buena solución generica para cualquier problema.</p>
+<p>Se indica en el método de compilación
+'''
+model.compile(
+    optimizer="adam",
+    loss="mae",
+)
+'''</p>
+<h2 id="overfitting-y-underfitting">Overfitting y Underfitting</h2>
+<p>Una vez entrenado el modelo es necesario realizar una valoración de qué tal predice valores distintos a los utilizados para el entrenamiento.</p>
+<p>Si se dibuja en un gráfico las curvas de aprendizaje, representando en cada época el valor el valor de la función de pérdida con los valores de entrenamiento y los valores reales. Se puede interpretar si existe overfitting o underfitting.</p>
+<p>Considerando que en el dataset de entrenamiento hay datos correcto (permiten una buena predicción) y ruido (datos que distorsionan la solución). El overfitting es cuando los datos de ruido tienen mucha relevancia en el modelo. 
+El underfitting ocurre cuando la función de pérdida no baja (sigue siendo alta después del entrenamiento). Se puede solucionar añadiendo más neuronas.</p>
+<h3 id="early-stopping">Early stopping</h3>
+<p>Se trata de una funcionalidad que permite detectar el momento óptimo de las dos líneas de aprendizaje, para detener el entrenamiento no exceder el número de épocas necesarios.</p>
+<p><img alt="Early stopping" src="https://i.imgur.com/eP0gppr.png" /></p>
+<h3 id="dropout">Dropout</h3>
+<p>Se utiliza para solucionar el overfitting. Consiste en agregar una capa que se encarga de 'desactivar' algunas neuronas de la capa, de manera que no todos participen en todos los pasos de aprendizaje. De esta manera el aprendizaje es más difícil y se pueden evitar datos que producen ruido.</p>
+<h3 id="batch-normalization">Batch Normalization</h3>
+<p>Los datos de entrada a la red neuronal deben estar normalizados, ya que el Gradiente Estocástico Descendente modifica los pesos, en función de los valores de salida. Si hay valores de salida dispares se ponderarán más los valores altos.</p>
+<p>La normalización por lotes, es una capa especial que se añade a la red neuronal para realizar una normalización adicional respecto a los valores de cada mini-lote que se está utilizando. Volviendo a normalizar los valores.</p>
+<h2 id="clasificacion-binaria">Clasificación binaria</h2>
+<p>La principal diferencia entre los problemas de regresión y clasificación es: la función de activación y la capa de salida. La salida se asigna a dos valores de la etiqueta 0 y 1, para cada caso.</p>
+<h3 id="accuracy-y-entropia-cruzada">Accuracy y entropía cruzada</h3>
+<p>La</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.3de43c86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ce0331ff.min.js"></script>
+      
+    
+    
+  </body>
+</html>
