@@ -7,4 +7,4 @@
 
     #### Tarea
 Tareas propuestas y guiadas para facilitar el aprendizaje.
-**[Zona de tareas](/redesneuronales/tareas1/)** 
+**[Zona de tareas](/neuronal/redesneuronales/tareas1/)** 
