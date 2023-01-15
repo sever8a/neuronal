@@ -39,7 +39,7 @@ También hay que destacar que en la capa de salida no hay función de activacion
 
 La construcción del modelo mediante un framework (TensorFlow / PyTorch), requiere establecer una secuencia de capas. Indicando el número de neuronas, la función de activación que utilizará la capa, y el número de salidas.
 
-'''
+'
 from tensorflow import keras
 from tensorflow.keras import layers
 
@@ -50,7 +50,7 @@ model = keras.Sequential([
     # the linear output layer 
     layers.Dense(units=1),
 ])
-'''
+'
 
 ## El gradiente estocástico descendente
 
