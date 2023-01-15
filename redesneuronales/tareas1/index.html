@@ -17,7 +17,7 @@
     
     
       
-        <title>Fundamentos - Deep Learning</title>
+        <title>Tareas - Deep Learning</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#el-perceptron" class="md-skip">
+        <a href="#redes-neuronales" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fundamentos
+              Tareas
             
           </span>
         </div>
@@ -254,52 +254,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Fundamentos
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../fundamentos/" class="md-nav__link">
         Fundamentos
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#la-neurona" class="md-nav__link">
-    La neurona
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -323,11 +282,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../tareas1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tareas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Tareas
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#redes-profundas-densas" class="md-nav__link">
+    Redes profundas (densas)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -366,8 +366,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#la-neurona" class="md-nav__link">
-    La neurona
+  <a href="#redes-profundas-densas" class="md-nav__link">
+    Redes profundas (densas)
   </a>
   
 </li>
@@ -387,26 +387,13 @@
                   
 
 
-<h1 id="el-perceptron">El perceptron</h1>
-<p>El elmento más básico de una red neuronal es la <strong><em>neurona</em></strong>. La red neuronal más sencilla es el <strong>perceptron</strong>, que está compuesta de una única neurona. </p>
-<p>La potencia de una red neuronal se obtiene de la complejidad de las conexiones entre las neuronas que la forman.</p>
-<h2 id="la-neurona">La neurona</h2>
-<p><img alt="La neurona" src="https://i.imgur.com/mfOlDR6.png" /></p>
-<p>Los componentes fundamentales son:
-    * La entrada <strong><em>x</em></strong>.
-    * El peso <strong><em>w</em></strong>, Conecta la entrada con la neurona y tiene un peso.
-    * Un peso especial llamado desviación (bias) <strong><em>b</em></strong>.
-    * Valor final de salida <strong><em>y</em></strong>.</p>
-<p>La entrada <strong><em>x</em></strong> llega hasta la neurona mediante una conexión de peso <strong><em>w</em></strong>. El valor para llegar a la neurona es su multiplación <strong><em>w * x</em></strong>. La red neuronal aprende modificando sus pesos <strong><em>w</em></strong>. Obteniendo la salida <strong><em>y</em></strong> con el resultado.</p>
-<p>La desviación (bias) <strong><em>b</em></strong> modifica el valor de salida de la neurona, independientemente de la entrada.</p>
-<p>Por lo tanto, la fórmula de la neurona es <strong><em>$y = wx + b$</em></strong>.</p>
-<blockquote>
-<p>La fórmula de una ecuación lineal, donde <strong><em>w</em></strong> es la pendiente y <strong><em>b</em></strong> el punto de corte de la recta el eje de ordenadas.</p>
-</blockquote>
-<p>!!!
-Como mínimo siempre es necesario definir una capa de entrada y una de salida. La capa de entrada debe tener tantas neuronas de entrada como características de entrada tenga el modelo.</p>
-<p>La cantidad de neuronas en la capa de salida dependerá de la respuesta que se esté buscando. En el caso de una valor (regresión), o una clasificación binaria bastará con una neurona. Pero si es una <strong>clasificación multiclse</strong> se necesita una neurona de salida por cada clase diferente.</p>
-<p><img alt="modelo neurona" src="https://www.researchgate.net/profile/Dmitry-Rashkovetsky/publication/348382026/figure/fig3/AS:978712501690376@1610354652732/Schematic-representation-of-a-neuron-A-linear-combination-of-the-inputs-x-i-followed-by.jpg" /></p>
+<h1 id="redes-neuronales">Redes Neuronales</h1>
+<h2 id="redes-profundas-densas">Redes profundas (densas)</h2>
+<pre><code>- Referencia [guía Kaggle]()
+- 
+#### Tarea
+**Los 5 cereales**
+</code></pre>
 
 
 
