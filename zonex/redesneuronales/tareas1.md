@@ -7,6 +7,6 @@ Sirve para prácticar con los tutoriales las diferentes fases del proceso, y con
 #### Ejemplo práctico
 - Detección de dígitos escritos manualmente con una red neuronal densa. [Acceso al notebook en Google colab](https://colab.research.google.com/drive/1ye-nrSE2U1pkuT1Bu6WhbqrClTULWwT4?usp=sharing).
 
-    #### Tarea
+#### Tarea
 **Los 80 cereales**
     Utiliza [el siguiente dataset](https://www.kaggle.com/datasets/crawford/80-cereals) para predecir la cantidad de calorías de un desayuno basado en cereales. Realización en equipos. Comienza con un modelo de tres características (proteninas, fibra y azucar)
