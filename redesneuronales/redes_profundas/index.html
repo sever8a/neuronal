@@ -432,6 +432,19 @@
     Accuracy y entropía cruzada
   </a>
   
+    <nav class="md-nav" aria-label="Accuracy y entropía cruzada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcion-sigmoide" class="md-nav__link">
+    Función Sigmoide
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -609,6 +622,19 @@
     Accuracy y entropía cruzada
   </a>
   
+    <nav class="md-nav" aria-label="Accuracy y entropía cruzada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcion-sigmoide" class="md-nav__link">
+    Función Sigmoide
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -697,10 +723,11 @@ model.compile(
 <h2 id="overfitting-y-underfitting">Overfitting y Underfitting</h2>
 <p>Una vez entrenado el modelo es necesario realizar una valoración de qué tal predice valores distintos a los utilizados para el entrenamiento.</p>
 <p>Si se dibuja en un gráfico las curvas de aprendizaje, representando en cada época el valor el valor de la función de pérdida con los valores de entrenamiento y los valores reales. Se puede interpretar si existe overfitting o underfitting.</p>
-<p>Considerando que en el dataset de entrenamiento hay datos correcto (permiten una buena predicción) y ruido (datos que distorsionan la solución). El overfitting es cuando los datos de ruido tienen mucha relevancia en el modelo. 
+<p>Considerando que en el dataset de entrenamiento hay datos correctos (permiten una buena predicción) y ruido (datos que distorsionan la solución). El overfitting es cuando los datos de ruido tienen mucha relevancia en el modelo. 
 El underfitting ocurre cuando la función de pérdida no baja (sigue siendo alta después del entrenamiento). Se puede solucionar añadiendo más neuronas.</p>
+<p>Al principio el modelo no es lo suficientemente complicado para captar los diferentes patrones de los datos (underfitting), luego al complicarse demasiado, falla en encontrar los patrones generales porque aprende peculiaridades concretas del dataset de entrenamiento (overfitting).</p>
 <h3 id="early-stopping">Early stopping</h3>
-<p>Se trata de una funcionalidad que permite detectar el momento óptimo de las dos líneas de aprendizaje, para detener el entrenamiento no exceder el número de épocas necesarios.</p>
+<p>Se trata de una funcionalidad que permite detectar el momento óptimo de las dos líneas de aprendizaje, para detener el entrenamiento y no exceder el número de épocas necesarios.</p>
 <p><img alt="Early stopping" src="https://i.imgur.com/eP0gppr.png" /></p>
 <h3 id="dropout">Dropout</h3>
 <p>Se utiliza para solucionar el overfitting. Consiste en agregar una capa que se encarga de 'desactivar' algunas neuronas de la capa, de manera que no todos participen en todos los pasos de aprendizaje. De esta manera el aprendizaje es más difícil y se pueden evitar datos que producen ruido.</p>
@@ -710,7 +737,12 @@ El underfitting ocurre cuando la función de pérdida no baja (sigue siendo alta
 <h2 id="clasificacion-binaria">Clasificación binaria</h2>
 <p>La principal diferencia entre los problemas de regresión y clasificación es: la función de activación y la capa de salida. La salida se asigna a dos valores de la etiqueta 0 y 1, para cada caso.</p>
 <h3 id="accuracy-y-entropia-cruzada">Accuracy y entropía cruzada</h3>
-<p>La</p>
+<p>Para problemas de clasificación, la precisión (acuracy) es la métrica que representa la relación entre predicciones correctas y el total de predicciones. <em>+precision = correctas / total+</em>.</p>
+<p>Es una buena métrica siempre que la probabilidad de que suceda cada una de las clases sea la misma.</p>
+<p>El problema es que las metrícas de clasificación no pueden usarse como función de perdida. En su lugar se utliza la <strong>entropía cruzada</strong> (probabilidad de predecir la clase correcta).</p>
+<h4 id="funcion-sigmoide">Función Sigmoide</h4>
+<p>De esta forma se puede obtener un valor 0-1 de la predicción.</p>
+<p><img alt="Sigmoid" src="https://i.imgur.com/FYbRvJo.png" /></p>
 
 
 
