@@ -103,12 +103,14 @@ Una vez entrenado el modelo es necesario realizar una valoración de qué tal pr
 
 Si se dibuja en un gráfico las curvas de aprendizaje, representando en cada época el valor el valor de la función de pérdida con los valores de entrenamiento y los valores reales. Se puede interpretar si existe overfitting o underfitting.
 
-Considerando que en el dataset de entrenamiento hay datos correcto (permiten una buena predicción) y ruido (datos que distorsionan la solución). El overfitting es cuando los datos de ruido tienen mucha relevancia en el modelo. 
+Considerando que en el dataset de entrenamiento hay datos correctos (permiten una buena predicción) y ruido (datos que distorsionan la solución). El overfitting es cuando los datos de ruido tienen mucha relevancia en el modelo. 
 El underfitting ocurre cuando la función de pérdida no baja (sigue siendo alta después del entrenamiento). Se puede solucionar añadiendo más neuronas.
+
+Al principio el modelo no es lo suficientemente complicado para captar los diferentes patrones de los datos (underfitting), luego al complicarse demasiado, falla en encontrar los patrones generales porque aprende peculiaridades concretas del dataset de entrenamiento (overfitting).
 
 ### Early stopping
 
-Se trata de una funcionalidad que permite detectar el momento óptimo de las dos líneas de aprendizaje, para detener el entrenamiento no exceder el número de épocas necesarios.
+Se trata de una funcionalidad que permite detectar el momento óptimo de las dos líneas de aprendizaje, para detener el entrenamiento y no exceder el número de épocas necesarios.
 
 ![Early stopping](https://i.imgur.com/eP0gppr.png)
 
@@ -131,4 +133,15 @@ La principal diferencia entre los problemas de regresión y clasificación es: l
 
 ### Accuracy y entropía cruzada
 
-La
+Para problemas de clasificación, la precisión (acuracy) es la métrica que representa la relación entre predicciones correctas y el total de predicciones. *+precision = correctas / total+*.
+
+Es una buena métrica siempre que la probabilidad de que suceda cada una de las clases sea la misma.
+
+El problema es que las metrícas de clasificación no pueden usarse como función de perdida. En su lugar se utliza la **entropía cruzada** (probabilidad de predecir la clase correcta).
+
+#### Función Sigmoide
+
+De esta forma se puede obtener un valor 0-1 de la predicción.
+
+![Sigmoid](https://i.imgur.com/FYbRvJo.png)
+
