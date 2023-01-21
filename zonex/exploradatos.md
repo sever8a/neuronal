@@ -9,6 +9,7 @@ El elemento principal es el DataFrame. Es comparable a una hoja de cálculo Exce
     * Mostrar un resumen estadístico de los datos, 'describe()'.
 
 ##### Interpretación de **describe**
+
     **'count'** indica la cantidad de filas no vaias. Hay que considerar que puede haber valores vacios cuando alguna característica no existe en ese elemento.
     **'mean'** media de los valores.
     **'std'** Desviación estandar, mide la dispersión numérica de los valores.

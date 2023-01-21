@@ -14,11 +14,12 @@ En un modelo de red neuronal densa, utilizar dos capas sin nada en medio no apor
 Sin función de activación las redes neuronales densas solo pueden aprender relaciones lineales entre las característas.
 
 La **función de activación** es simplemente una función que se aplica a la salida de las neuronas de cada capa. La función más común es la función de rectificación *$max(0,x)$*.  
-!!!
-La función de salida se debe ajustar al tipo de predicción que se está realizando:
-    * Regresión.
-    * Clasificación binaria.
-    * Clasificación multiclase.
+
+!!! note "Salida"
+    La función de salida se debe ajustar al tipo de predicción que se está realizando:
+        * Regresión.
+        * Clasificación binaria.
+        * Clasificación multiclase.
 
 Para conseguir buenos resultados con las redes neuronales es preciso que los datos de entrada estén normalizados a valores entre 0 y 1.
 
@@ -39,7 +40,7 @@ También hay que destacar que en la capa de salida no hay función de activacion
 
 La construcción del modelo mediante un framework (TensorFlow / PyTorch), requiere establecer una secuencia de capas. Indicando el número de neuronas, la función de activación que utilizará la capa, y el número de salidas.
 
-'
+''' python
 from tensorflow import keras
 from tensorflow.keras import layers
 
@@ -50,7 +51,7 @@ model = keras.Sequential([
     # the linear output layer 
     layers.Dense(units=1),
 ])
-'
+'''
 
 ## El gradiente estocástico descendente
 
@@ -90,7 +91,7 @@ La tasa de aprendizaje determina la velocidad de aprendizaje de la red neuronal.
 La tasa de aprendizaje y el tamaño del minilote son dos hiperparámetros claves en el resultado que se consiga. Afortunadamente se puede elegir el algoritmo **Adam** que tiene una tasa de aprendizaje adaptable, y es una buena solución generica para cualquier problema.
 
 Se indica en el método de compilación
-'''
+''' python
 model.compile(
     optimizer="adam",
     loss="mae",
