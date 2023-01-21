@@ -40,7 +40,7 @@ También hay que destacar que en la capa de salida no hay función de activacion
 
 La construcción del modelo mediante un framework (TensorFlow / PyTorch), requiere establecer una secuencia de capas. Indicando el número de neuronas, la función de activación que utilizará la capa, y el número de salidas.
 
-    ''' python
+``` python
     from tensorflow import keras
     from tensorflow.keras import layers
 
@@ -51,7 +51,7 @@ La construcción del modelo mediante un framework (TensorFlow / PyTorch), requie
         # the linear output layer 
         layers.Dense(units=1),
     ])
-    '''
+```
 
 ## El gradiente estocástico descendente
 
@@ -92,12 +92,12 @@ La tasa de aprendizaje y el tamaño del minilote son dos hiperparámetros claves
 
 Se indica en el método de compilación:
 
-    ''' python
+``` python
         model.compile(
             optimizer="adam",
             loss="mae",
         )
-    '''
+```
 
 ## Overfitting y Underfitting
 
