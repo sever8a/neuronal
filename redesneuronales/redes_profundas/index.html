@@ -255,6 +255,20 @@
   
     <li class="md-nav__item">
       <a href="../../exploradatos/" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exploradatos/" class="md-nav__link">
         Análisis Exploratorio
       </a>
     </li>
@@ -730,18 +744,16 @@
 <p>También hay que destacar que en la capa de salida no hay función de activacion, será una función lineal. Esto indica que se está utilizando para una regresión. Si se tratase de una clasificación habría que utilizar una función de activación.</p>
 <h3 id="construccion-del-modelo">Construcción del modelo</h3>
 <p>La construcción del modelo mediante un framework (TensorFlow / PyTorch), requiere establecer una secuencia de capas. Indicando el número de neuronas, la función de activación que utilizará la capa, y el número de salidas.</p>
-<pre><code>''' python
-from tensorflow import keras
-from tensorflow.keras import layers
+<pre><code class="language-python">    from tensorflow import keras
+    from tensorflow.keras import layers
 
-model = keras.Sequential([
-    # the hidden ReLU layers
-    layers.Dense(units=4, activation='relu', input_shape=[2]),
-    layers.Dense(units=3, activation='relu'),
-    # the linear output layer 
-    layers.Dense(units=1),
-])
-'''
+    model = keras.Sequential([
+        # the hidden ReLU layers
+        layers.Dense(units=4, activation='relu', input_shape=[2]),
+        layers.Dense(units=3, activation='relu'),
+        # the linear output layer 
+        layers.Dense(units=1),
+    ])
 </code></pre>
 <h2 id="el-gradiente-estocastico-descendente">El gradiente estocástico descendente</h2>
 <p>Cuando creamos una red neuronal densa, todas las capas están interconectadas. Los pesos de estas conexiones <em>w</em> se establecen de manera aleatoria, la red todavía "no sabe nada".</p>
@@ -765,12 +777,10 @@ model = keras.Sequential([
 <p>La tasa de aprendizaje determina la velocidad de aprendizaje de la red neuronal. Se trata de un modificador que altera los pesos en una dirección. Si esta modificación es más pequeña el entrenamiento será más preciso, pero tendrá que dar más pasos utilizando más minilotes.</p>
 <p>La tasa de aprendizaje y el tamaño del minilote son dos hiperparámetros claves en el resultado que se consiga. Afortunadamente se puede elegir el algoritmo <strong>Adam</strong> que tiene una tasa de aprendizaje adaptable, y es una buena solución generica para cualquier problema.</p>
 <p>Se indica en el método de compilación:</p>
-<pre><code>''' python
-    model.compile(
-        optimizer="adam",
-        loss="mae",
-    )
-'''
+<pre><code class="language-python">        model.compile(
+            optimizer=&quot;adam&quot;,
+            loss=&quot;mae&quot;,
+        )
 </code></pre>
 <h2 id="overfitting-y-underfitting">Overfitting y Underfitting</h2>
 <p>Una vez entrenado el modelo es necesario realizar una valoración de qué tal predice valores distintos a los utilizados para el entrenamiento.</p>

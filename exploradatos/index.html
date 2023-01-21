@@ -254,6 +254,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -479,28 +493,28 @@
 <p>El primer paso en cualquier proyecto es conocer los datos con los que se trabaja. La librería Pandas es una buena herramienta para este propósito.</p>
 <p>El elemento principal es el DataFrame. Es comparable a una hoja de cálculo Excel, o una tabla en una base de datos SQL.</p>
 <h3 id="pasos-basicos-habituales">Pasos básicos habituales</h3>
-<pre><code>* Leer los datos y almacenarlos en un DataFrame. 'read_csv()'.
-* Mostrar un resumen estadístico de los datos, 'describe()'.
+<pre><code>* Leer los datos y almacenarlos en un DataFrame. `read_csv()`.
+* Mostrar un resumen estadístico de los datos, `describe()`.
 </code></pre>
 <h5 id="interpretacion-de-describe">Interpretación de <strong>describe</strong></h5>
-<pre><code>**'count'** indica la cantidad de filas no vaias. Hay que considerar que puede haber valores vacios cuando alguna característica no existe en ese elemento.
-**'mean'** media de los valores.
-**'std'** Desviación estandar, mide la dispersión numérica de los valores.
-**'min'** Si se ordena cada columna de características de menor a mayor, el primer valor.
-**'25%'** Valor que se sitúa entre un 25% de valores menores y el resto mayores.
-**'50%'** Valor que se sitúa entre un 50% de valores menores y 50% de valores mayores.
-**'75%'** Valor que se sitúa entre un 75% de valores menores y 25% de valores mayores.
-**'max'** Valor mayor.
+<pre><code>* **`count`** indica la cantidad de filas no vaias. Hay que considerar que puede haber valores vacios * cuando alguna característica no existe en ese elemento.
+* **`mean`** media de los valores.
+* **`std`** Desviación estandar, mide la dispersión numérica de los valores.
+* **`min`** Si se ordena cada columna de características de menor a mayor, el primer valor.
+* **`25%`** Valor que se sitúa entre un 25% de valores menores y el resto mayores.
+* **`50%`** Valor que se sitúa entre un 50% de valores menores y 50% de valores mayores.
+* **`75%`** Valor que se sitúa entre un 75% de valores menores y 25% de valores mayores.
+* **`max`** Valor mayor.
 </code></pre>
 <h1 id="seleccionar-datos-para-el-modelo">Seleccionar datos para el modelo</h1>
 <p>De entre todos los datos del dataset, se pueden elegir algunas características (utilizando la intuición), pero también es posible utilizar <strong>técnicas estadísticas</strong> para automáticamente priorizar el uso de algunas características frente a otras.</p>
 <p>!!!     note        "columns"
-    La propiedad 'columns' muestra la lista de nombres de loas características del DataFrame.
-    '.columns'</p>
+    La propiedad <code>columns</code> muestra la lista de nombres de loas características del DataFrame.
+    <code>.columns</code></p>
 <p>!!!     note        "dropna"
     Se utiliza para eliminar los valores Na.
-    '.dropna(axis=0)'</p>
-<p>Para seleccionar un subconjunto de datos se puede hacer utilizando la notacion "punto", indicando el nombre de la característica en el DataFrame. Normalmente es útil para obtener el vector 'y' con las etiquetas objetivo.</p>
+    <code>.dropna(axis=0)</code></p>
+<p>Para seleccionar un subconjunto de datos se puede hacer utilizando la notacion "punto", indicando el nombre de la característica en el DataFrame. Normalmente es útil para obtener el vector <code>y</code> con las etiquetas objetivo.</p>
 <p>Otra forma, es crear una lista con los nombres de las columnas de las características del DataFrame. Se utliza para crear el vector X con los datos de entrada al modelo.</p>
 
 
