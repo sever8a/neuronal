@@ -1,0 +1,20 @@
+site_name: Deep Learning
+site_description: Aprendizaje progresivo para conocer las posibilidades de la IA.
+site_author: IES Severo Ochoa
+site_dir: resultado
+docs_dir: zonex
+
+nav: 
+  - "Comenzando": 'index.md'
+  - "El proceso": 'proceso.md'
+  - "Machine vs Deep": 'deep_learning.md'
+  - "Pasos básicos":
+      - "Análisis Exploratorio": 'exploradatos.md'
+  - "Redes Neuronales": 
+      - 'redesneuronales/index.md'
+      - Fundamentos: 'redesneuronales/fundamentos.md'
+      - Redes Densas: 'redesneuronales/redes_profundas.md'
+      - Tareas: 'redesneuronales/tareas1.md'
+
+theme:
+  name: 'material'
