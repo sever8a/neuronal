@@ -9,12 +9,14 @@ nav:
   - "El proceso": 'proceso.md'
   - "Machine vs Deep": 'deep_learning.md'
   - "Pasos básicos":
+      - 'exploradatos.md'
       - "Análisis Exploratorio": 'exploradatos.md'
   - "Redes Neuronales": 
       - 'redesneuronales/index.md'
-      - Fundamentos: 'redesneuronales/fundamentos.md'
-      - Redes Densas: 'redesneuronales/redes_profundas.md'
-      - Tareas: 'redesneuronales/tareas1.md'
+      - "Fundamentos": 'redesneuronales/fundamentos.md'
+      - "Redes Densas": 'redesneuronales/redes_profundas.md'
+      - "Redes recurrentes/LSTM": 'redesneuronales/temporales.md'
+      - "Tareas": 'redesneuronales/tareas1.md'
 
 theme:
   name: 'material'

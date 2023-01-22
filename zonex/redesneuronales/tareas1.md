@@ -17,3 +17,9 @@ Ejemplo de aplicación utilizando los resultados conseguidos, aunque en este cas
 
 **Los 80 cereales**
     Utiliza [el siguiente dataset](https://www.kaggle.com/datasets/crawford/80-cereals) para predecir la cantidad de calorías de un desayuno basado en cereales. Realización en equipos. Comienza con un modelo de tres características (proteninas, fibra y azucar)
+
+
+## Redes recurrentes y LSTM
+
+
+## Redes convolucionales
