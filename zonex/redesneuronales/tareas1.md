@@ -27,6 +27,14 @@ Ejemplo de aplicación utilizando los resultados conseguidos, aunque en este cas
 
     Predecir el siguiente caracter a partir de una secuencia de caracteres. [Ejemplo en Google colab](https://colab.research.google.com/drive/1BDeEnJrvMlNf8gHjiEuadvAVJ8cujqD7?usp=sharing).
 
+### Tarea
+    
+    Competición para aprender. Demuestra a tus compañeros tu habilidad con la inteligencia artificial, mejora tu ranking y consigue resolver este [viaje sin edad](https://www.kaggle.com/competitions/viaje-sin-edad), hacia el conocimiento de la Inteligencia Artificial.
+    
+    Ventas en **La Favorita**, una cadena de tiendas de productos de alimentación. Predicciones a nivel de una gran corporación.
+
+
+
 
 
 ## Redes convolucionales
