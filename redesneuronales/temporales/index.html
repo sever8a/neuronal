@@ -473,7 +473,7 @@
 <p><strong>Regresión vs Clasificación</strong>. Un problema de regresión es cuando se busca un valor, un problema de clasificación se obtiene un valor categoríco (frio, calor, sube, baja...). Hay que tener en cuenta que en muchos casos el problema puede redefinirse de un tipo u otro. <em>El problema se trata de una clasificación o una regresión</em>.</p>
 </li>
 <li>
-<p><strong>Univariable vs Multivariable</strong>. Univariable, una única variable medida a lo largo del tiempo. Multivariable, varias variables medidas a lo largo del tiempo. La multivariable puede ocurrir en las variables de entrada o en la cantidad de variables  de salida. <em>Determinar las variables con vinculación temporal, tanto en entrada como salida</em>.</p>
+<p><strong>Univariable vs Multivariable</strong>. Univariable, una única variable se observada en cada instante de tiempo. Multivariable, se obtienen más de un valor de diferentes variables en cada instante de tiempo. La multivariable puede ocurrir en las variables de entrada o en la cantidad de variables de salida. Considera simultaneamente varias series de tiempo. <em>Determinar las variables con vinculación temporal, tanto en entrada como salida</em>.</p>
 </li>
 <li>
 <p><strong>Paso simple vs Multiple paso</strong>. Paso simple se refiere a la predicción del siguiente instante de tiempo, frente a multiple paso donde la predicción va más allá del siguiente instante de tiempo. <em>ES una predicción multiple o simple paso</em>.</p>
@@ -489,6 +489,15 @@
 <p>También es necesario diseñar un proceso de evaluación del modelo. Considerando estratégias como dividir los datos en entrenamiento y test, entrenar una aproximación del modelo.</p>
 <p>Es importante valorar el modelo más adecuado para el problema, considerando diferentes opciones y tecnologías.</p>
 <h1 id="como-transformar-series-temporales-en-problema-de-aprendizaje-supervisado">Como transformar series temporales en problema de aprendizaje supervisado</h1>
+<p>Los problemas basados en series de datos temporales se pueden rediseñar como problemas de aprendizaje supervisado. De esta manera se puede utilizar para la solución modelos lineales y no lineales de Machine Learning.</p>
+<p>Se puede reestructurar el dataset de series temporales en dataset para aprendizaje supervisado, considerando la siguiente toma temporal como el objetivo de la anterior. El previo paso de tiempo es la entrada al modelo (<em>X</em>), mientras que el siguiente paso de tiempo es la salida del modelo (<em>y</em>).</p>
+<p>!!!Note "Orden datos"
+    Es muy importante mantener el orden de los datos.</p>
+<p>Es posible que los valores primeros y últimos del dataset queden incompletos. En este caso será necesario eliminar estos registros.</p>
+<p>Utilizar momentos previos de tiempo para predecir el momento de un tiempo futuro, se denomina método de la <strong>ventana deslizante</strong>. La cantidad de momentos previos se denomína <strong>amplitud de la ventana</strong>.</p>
+<p>La variable de salida puede ser simple o múltiple. Con redes neuronales se pueden predecir más de un valor en una secuencia de tiempo. Pero también es posible predecir más allá de un momento futuro (<em>multiple paso</em>).</p>
+<h3 id="ventana-deslizante-con-multiples-pasos-de-tiempo">Ventana deslizante con multiples pasos de tiempo</h3>
+<p>El número de marcas de tiempo futuro que se quiere predecir es importante.</p>
 
 
 
