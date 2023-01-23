@@ -61,7 +61,7 @@ Es necesario conseguir la respuesta a las siguientes cuestiones para plantear ad
 
 4. **Regresión vs Clasificación**. Un problema de regresión es cuando se busca un valor, un problema de clasificación se obtiene un valor categoríco (frio, calor, sube, baja...). Hay que tener en cuenta que en muchos casos el problema puede redefinirse de un tipo u otro. *El problema se trata de una clasificación o una regresión*.
 
-5. **Univariable vs Multivariable**. Univariable, una única variable medida a lo largo del tiempo. Multivariable, varias variables medidas a lo largo del tiempo. La multivariable puede ocurrir en las variables de entrada o en la cantidad de variables  de salida. *Determinar las variables con vinculación temporal, tanto en entrada como salida*.
+5. **Univariable vs Multivariable**. Univariable, una única variable se observada en cada instante de tiempo. Multivariable, se obtienen más de un valor de diferentes variables en cada instante de tiempo. La multivariable puede ocurrir en las variables de entrada o en la cantidad de variables de salida. Considera simultaneamente varias series de tiempo. *Determinar las variables con vinculación temporal, tanto en entrada como salida*.
 
 6. **Paso simple vs Multiple paso**. Paso simple se refiere a la predicción del siguiente instante de tiempo, frente a multiple paso donde la predicción va más allá del siguiente instante de tiempo. *ES una predicción multiple o simple paso*.
 
@@ -79,3 +79,19 @@ Es importante valorar el modelo más adecuado para el problema, considerando dif
 
 # Como transformar series temporales en problema de aprendizaje supervisado
 
+Los problemas basados en series de datos temporales se pueden rediseñar como problemas de aprendizaje supervisado. De esta manera se puede utilizar para la solución modelos lineales y no lineales de Machine Learning.
+
+Se puede reestructurar el dataset de series temporales en dataset para aprendizaje supervisado, considerando la siguiente toma temporal como el objetivo de la anterior. El previo paso de tiempo es la entrada al modelo (*X*), mientras que el siguiente paso de tiempo es la salida del modelo (*y*).
+
+!!!Note "Orden datos"
+    Es muy importante mantener el orden de los datos.
+
+Es posible que los valores primeros y últimos del dataset queden incompletos. En este caso será necesario eliminar estos registros.
+
+Utilizar momentos previos de tiempo para predecir el momento de un tiempo futuro, se denomina método de la **ventana deslizante**. La cantidad de momentos previos se denomína **amplitud de la ventana**.
+
+La variable de salida puede ser simple o múltiple. Con redes neuronales se pueden predecir más de un valor en una secuencia de tiempo. Pero también es posible predecir más allá de un momento futuro (*multiple paso*).
+
+### Ventana deslizante con multiples pasos de tiempo
+
+El número de marcas de tiempo futuro que se quiere predecir es importante.
