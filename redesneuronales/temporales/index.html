@@ -505,35 +505,46 @@
 <p>El número de marcas de tiempo futuro que se quiere predecir es importante.</p>
 <h2 id="redes-neuronales-recurrentes">Redes Neuronales Recurrentes</h2>
 <p>Hay tres problemas con las <strong>redes neuronales densas</strong> para tratar problemas con series de datos temporales:</p>
-<pre><code>* No puede mantener el orden de los datos.
-* Requiere un tamaño fijo de entrada.
-* No puede devolver salidas de diferente longitud a la prevista. *Por ejemplo, la traducción de una frase al ruso no se puede ver limitada por solo cinco palabras*.
-</code></pre>
+<ul>
+<li>No puede mantener el orden de los datos.</li>
+<li>Requiere un tamaño fijo de entrada.</li>
+<li>No puede devolver salidas de diferente longitud a la prevista. <em>Por ejemplo, la traducción de una frase al ruso no se puede ver limitada por solo cinco palabras</em>.</li>
+</ul>
 <p><img alt="&quot;Combinaciones de uso de las redes neuronales&quot;" src="https://pythongeeks.org/wp-content/uploads/2022/02/types-of-rnn.webp" /></p>
 <p>Las redes recurrentes solucionan estos inconvenientes, pero han surgido diferentes variedades de ellas. Las <em>long short-term memory</em> <strong>LSTM</strong> tienen una evaluoción larga. Se han utilizado para problemas de traducción de texto o análisis de sentimiento.</p>
-<p>Potenciales casos de uso de las Redes Neuronales Recurrentes:
-    - Aprendizaje de gramática.
-    - Reconocimiento de escritura a mano.
-    - Reconocimiento de acciones de humanos.
-    - Traducción.
-    - Composición de música.
-    - Predicción de la localización de proteninas en células.
-    - Predicción en tratamiento médicos.
-    - Detección de proteinas homólogas.
-    - Aprendizaje de ritmos.
-    - Robótica.
-    - Análisis de sentimientos.
-    - Reconocimiento de la voz y creación de voz sintética.
-    - Detección de anomalías en series temporales.
-    - Predicción en series temporales.</p>
+<ul>
+<li>Potenciales casos de uso de las Redes Neuronales Recurrentes:<ul>
+<li>Aprendizaje de gramática.</li>
+<li>Reconocimiento de escritura a mano.</li>
+<li>Reconocimiento de acciones de humanos.</li>
+<li>Traducción.</li>
+<li>Composición de música.</li>
+<li>Predicción de la localización de proteninas en células.</li>
+<li>Predicción en tratamiento médicos.</li>
+<li>Detección de proteinas homólogas.</li>
+<li>Aprendizaje de ritmos.</li>
+<li>Robótica.</li>
+<li>Análisis de sentimientos.</li>
+<li>Reconocimiento de la voz y creación de voz sintética.</li>
+<li>Detección de anomalías en series temporales.</li>
+<li>Predicción en series temporales.</li>
+</ul>
+</li>
+</ul>
 <h3 id="mecanismo-de-las-redes-neuronales-recurrentes">Mecanismo de las Redes Neuronales Recurrentes</h3>
 <p>Utilizan la información previa almacenándola en memoria, se guarda como <code>state</code> con cada neurona.</p>
 <p><img alt="Esquema red neuronal recurrente" src="https://pythongeeks.org/wp-content/uploads/2022/02/rnn-block.webp" /></p>
-<p>Tres tipos de redes neuronales para series temporales:
-    * Tienen en común almacenar en memoria el <code>state</code> de un momento anterior.
-    * Aplican una función de activación (<em>tanh</em>) y realizan operaciones matriciales.
-    * Con todos los elementos obtiene el estado del momento actual.
-    * Repiten todo el proceso para mejorar los pesos <em>w</em> y desviación <em>b</em>.</p>
+<ul>
+<li>
+<p>Tres tipos de redes neuronales para series temporales:</p>
+<ul>
+<li>Tienen en común almacenar en memoria el <code>state</code> de un momento anterior.</li>
+<li>Aplican una función de activación (<em>tanh</em>) y realizan operaciones matriciales.</li>
+<li>Con todos los elementos obtiene el estado del momento actual.</li>
+<li>Repiten todo el proceso para mejorar los pesos <em>w</em> y desviación <em>b</em>.</li>
+</ul>
+</li>
+</ul>
 <p><img alt="Redes neuronales series temporales" src="https://media.licdn.com/dms/image/C5612AQH5Im8XrvLmYQ/article-cover_image-shrink_600_2000/0/1564974698831?e=2147483647&amp;v=beta&amp;t=mVx-N8AfjAS5L-ktV6vmi_5LxR1madQ16yT1fRu__Jk" /></p>
 
 

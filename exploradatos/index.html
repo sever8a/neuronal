@@ -523,12 +523,16 @@
 </code></pre>
 <h1 id="seleccionar-datos-para-el-modelo">Seleccionar datos para el modelo</h1>
 <p>De entre todos los datos del dataset, se pueden elegir algunas características (utilizando la intuición), pero también es posible utilizar <strong>técnicas estadísticas</strong> para automáticamente priorizar el uso de algunas características frente a otras.</p>
-<p>!!!     note        "columns"
-    La propiedad <code>columns</code> muestra la lista de nombres de loas características del DataFrame.
-    <code>.columns</code></p>
-<p>!!!     note        "dropna"
-    Se utiliza para eliminar los valores Na.
-    <code>.dropna(axis=0)</code></p>
+<div class="admonition note">
+<p class="admonition-title">columns</p>
+<p>La propiedad <code>columns</code> muestra la lista de nombres de loas características del DataFrame.
+<code>.columns</code></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">dropna</p>
+<p>Se utiliza para eliminar los valores Na.
+<code>.dropna(axis=0)</code></p>
+</div>
 <p>Para seleccionar un subconjunto de datos se puede hacer utilizando la notacion "punto", indicando el nombre de la característica en el DataFrame. Normalmente es útil para obtener el vector <code>y</code> con las etiquetas objetivo.</p>
 <p>Otra forma, es crear una lista con los nombres de las columnas de las características del DataFrame. Se utliza para crear el vector X con los datos de entrada al modelo.</p>
 

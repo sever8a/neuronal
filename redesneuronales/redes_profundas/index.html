@@ -742,12 +742,13 @@
 <p>En un modelo de red neuronal densa, utilizar dos capas sin nada en medio no aportan nada diferente a una única capa. Las redes neuronales densas siempre aportan líneas o planos. Se necesita algo no lineal: la <strong>función de activación</strong>.</p>
 <p>Sin función de activación las redes neuronales densas solo pueden aprender relaciones lineales entre las característas.</p>
 <p>La <strong>función de activación</strong> es simplemente una función que se aplica a la salida de las neuronas de cada capa. La función más común es la función de rectificación <em>$max(0,x)$</em>.  </p>
-<pre><code>!!! note "Salida"
-    La función de salida se debe ajustar al tipo de predicción que se está realizando:
-        * Regresión.
-        * Clasificación binaria.
-        * Clasificación multiclase.
-</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Salida<p>La función de salida se debe ajustar al tipo de predicción que se está realizando:
+    * Regresión.
+    * Clasificación binaria.
+    * Clasificación multiclase.</p>
+</p>
+</div>
 <p>Para conseguir buenos resultados con las redes neuronales es preciso que los datos de entrada estén normalizados a valores entre 0 y 1.</p>
 <pre><code>    &gt; La función convierte en 0 los valores negativos.
     ![ReLU](https://i.imgur.com/aeIyAlF.png)
