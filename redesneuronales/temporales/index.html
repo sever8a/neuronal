@@ -12,8 +12,16 @@
         <meta name="author" content="IES Severo Ochoa">
       
       
+        <link rel="canonical" href="https://sever8a.github.io/neuronal/redesneuronales/temporales/">
+      
+      
+        <link rel="prev" href="../redes_profundas/">
+      
+      
+        <link rel="next" href="../tareas1/">
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0b4">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
@@ -21,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.91872f81.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -54,7 +61,9 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
     
@@ -132,7 +141,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -231,12 +240,15 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
           Pasos básicos
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -295,12 +307,13 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
           Redes Neuronales
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -369,9 +382,82 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Redes recurrentes/LSTM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Redes recurrentes/LSTM
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-serie-de-datos-temporales" class="md-nav__link">
+    Qué es una serie de datos temporales?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicciones-basadas-en-modelos-lineales" class="md-nav__link">
+    Predicciones basadas en modelos lineales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicciones-basadas-en-modelos-no-lineales" class="md-nav__link">
+    Predicciónes basadas en modelos no lineales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tendencia" class="md-nav__link">
+    Tendencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estacionalidad" class="md-nav__link">
+    Estacionalidad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ciclos" class="md-nav__link">
+    Ciclos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicciones-hibridas" class="md-nav__link">
+    Predicciones híbridas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -419,6 +505,63 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-serie-de-datos-temporales" class="md-nav__link">
+    Qué es una serie de datos temporales?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicciones-basadas-en-modelos-lineales" class="md-nav__link">
+    Predicciones basadas en modelos lineales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicciones-basadas-en-modelos-no-lineales" class="md-nav__link">
+    Predicciónes basadas en modelos no lineales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tendencia" class="md-nav__link">
+    Tendencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estacionalidad" class="md-nav__link">
+    Estacionalidad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ciclos" class="md-nav__link">
+    Ciclos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicciones-hibridas" class="md-nav__link">
+    Predicciones híbridas
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -432,10 +575,11 @@
                   
 
 
+
 <h1 id="series-temporales">Series temporales</h1>
 <p>La predicción de valores futuros es posiblemente la aplicación más común en Machine Learning. En diferentes campos se precisa de esta información: economía, la producción, ventas, meteorología, aumento de población, etc... </p>
 <p>Otra característica importante, es que los datos no son independientes, sino que tiene significado su secuencia y orden temporal.</p>
-<h1 id="que-es-una-serie-de-datos-temporales">Qué es una serie de datos temporales?</h1>
+<h2 id="que-es-una-serie-de-datos-temporales">Qué es una serie de datos temporales?</h2>
 <p>Un conjunto de observaciones asociadas a una marca de tiempo. Las observaciones se guardan con una frecuencia constante (diaria, mensual, por hora...).</p>
 <p>Por ejemplo, el importe de venta de libros de tapa dura al día durante el mes de agosto, en la librería más pequeña de la ciudad.</p>
 <p>Una relación de puntos anteriores tienen implicitamente una relación temporal, implica un número fijo de periodos de tiempo.</p>
@@ -583,12 +727,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.3de43c86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ce0331ff.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
-    
     
   </body>
 </html>

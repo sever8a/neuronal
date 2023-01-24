@@ -12,8 +12,16 @@
         <meta name="author" content="IES Severo Ochoa">
       
       
+        <link rel="canonical" href="https://sever8a.github.io/neuronal/redesneuronales/fundamentos/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../redes_profundas/">
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0b4">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
@@ -21,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.91872f81.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -54,7 +61,9 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
     
@@ -132,7 +141,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -231,12 +240,15 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
           Pasos básicos
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -295,12 +307,13 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
           Redes Neuronales
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -478,16 +491,19 @@
                   
 
 
+
 <h1 id="el-perceptron">El perceptron</h1>
 <p>El elmento más básico de una red neuronal es la <strong><em>neurona</em></strong>. La red neuronal más sencilla es el <strong>perceptron</strong>, que está compuesta de una única neurona. </p>
 <p>La potencia de una red neuronal se obtiene de la complejidad de las conexiones entre las neuronas que la forman.</p>
 <h2 id="la-neurona">La neurona</h2>
 <p><img alt="La neurona" src="https://i.imgur.com/mfOlDR6.png" /></p>
-<p>Los componentes fundamentales son:
-    * La entrada <strong><em>x</em></strong>.
-    * El peso <strong><em>w</em></strong>, Conecta la entrada con la neurona y tiene un peso.
-    * Un peso especial llamado desviación (bias) <strong><em>b</em></strong>.
-    * Valor final de salida <strong><em>y</em></strong>.</p>
+<p>Los componentes fundamentales son:</p>
+<ul>
+<li>La entrada <strong><em>x</em></strong>.</li>
+<li>El peso <strong><em>w</em></strong>, Conecta la entrada con la neurona y tiene un peso.</li>
+<li>Un peso especial llamado desviación (bias) <strong><em>b</em></strong>.</li>
+<li>Valor final de salida <strong><em>y</em></strong>.</li>
+</ul>
 <p>La entrada <strong><em>x</em></strong> llega hasta la neurona mediante una conexión de peso <strong><em>w</em></strong>. El valor para llegar a la neurona es su multiplación <strong><em>w * x</em></strong>. La red neuronal aprende modificando sus pesos <strong><em>w</em></strong>. Obteniendo la salida <strong><em>y</em></strong> con el resultado.</p>
 <p>La desviación (bias) <strong><em>b</em></strong> modifica el valor de salida de la neurona, independientemente de la entrada.</p>
 <p>Por lo tanto, la fórmula de la neurona es <strong><em>$y = wx + b$</em></strong>.</p>
@@ -537,12 +553,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.3de43c86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ce0331ff.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
-    
     
   </body>
 </html>

@@ -12,8 +12,16 @@
         <meta name="author" content="IES Severo Ochoa">
       
       
+        <link rel="canonical" href="https://sever8a.github.io/neuronal/redesneuronales/redes_profundas/">
+      
+      
+        <link rel="prev" href="../fundamentos/">
+      
+      
+        <link rel="next" href="../temporales/">
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0b4">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
@@ -21,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.91872f81.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -54,7 +61,9 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
     
@@ -132,7 +141,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -231,12 +240,15 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
           Pasos básicos
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -295,12 +307,13 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
           Redes Neuronales
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -734,11 +747,12 @@
                   
 
 
+
 <h1 id="redes-neuronales-profundas-densas">Redes Neuronales Profundas (densas)</h1>
 <p>Wn la capa de entrada, comienzan los datos de las características disponibles. La red neuronal realiza todas las combinaciones entre estas características a lo largo de todas las capas. Hasta la capa de salida donde la cantidad de neuronas se limita a las respuestas que se quieren obtener del modelo. </p>
 <p>Esta salida será el mejor resultado del procesamiento de todas las combinaciones anteriores. Por la tanto, la se consigue un modelo complejo utilizando estructuras lineales sencillas. Cuanto más capas, más compleja será la estructura, por eso se considera <em>profunda</em> la red neuronal.</p>
 <p>Existen diferentes tipos de capas (convolucionales, recurrentes...), especializadas en resolver diferentes problemas.</p>
-<h3 id="la-funcion-de-activacion">La función de activación</h3>
+<h2 id="la-funcion-de-activacion">La función de activación</h2>
 <p>En un modelo de red neuronal densa, utilizar dos capas sin nada en medio no aportan nada diferente a una única capa. Las redes neuronales densas siempre aportan líneas o planos. Se necesita algo no lineal: la <strong>función de activación</strong>.</p>
 <p>Sin función de activación las redes neuronales densas solo pueden aprender relaciones lineales entre las característas.</p>
 <p>La <strong>función de activación</strong> es simplemente una función que se aplica a la salida de las neuronas de cada capa. La función más común es la función de rectificación <em>$max(0,x)$</em>.  </p>
@@ -757,23 +771,23 @@
 <pre><code>    &gt; La función convierte en 0 los valores negativos.
 </code></pre>
 <p><img alt="ReLU" src="https://i.imgur.com/aeIyAlF.png" /></p>
-<h3 id="apilando-capas">Apilando capas</h3>
+<h2 id="apilando-capas">Apilando capas</h2>
 <p>De esta forma se consigue aumentar la complejidad de la red neuronal.
 <img alt="Red neuronal" src="https://i.imgur.com/Y5iwFQZ.png" /></p>
 <p>Las capas anteriores a la capa de salida permanecen ocultas.</p>
 <p>También hay que destacar que en la capa de salida no hay función de activacion, será una función lineal. Esto indica que se está utilizando para una regresión. Si se tratase de una clasificación habría que utilizar una función de activación.</p>
-<h3 id="construccion-del-modelo">Construcción del modelo</h3>
+<h2 id="construccion-del-modelo">Construcción del modelo</h2>
 <p>La construcción del modelo mediante un framework (TensorFlow / PyTorch), requiere establecer una secuencia de capas. Indicando el número de neuronas, la función de activación que utilizará la capa, y el número de salidas.</p>
-<div class="highlight"><pre><span></span><code>    <span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
-    <span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">layers</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">layers</span>
 
-    <span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
-        <span class="c1"># the hidden ReLU layers</span>
-        <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span>
-        <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
-        <span class="c1"># the linear output layer </span>
-        <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
-    <span class="p">])</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="c1"># the hidden ReLU layers</span>
+<span class="hll">    <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span>
+</span>    <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+    <span class="c1"># the linear output layer </span>
+    <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">])</span>
 </code></pre></div>
 <h2 id="el-gradiente-estocastico-descendente">El gradiente estocástico descendente</h2>
 <p>Cuando creamos una red neuronal densa, todas las capas están interconectadas. Los pesos de estas conexiones <em>w</em> se establecen de manera aleatoria, la red todavía "no sabe nada".</p>
@@ -797,10 +811,10 @@
 <p>La tasa de aprendizaje determina la velocidad de aprendizaje de la red neuronal. Se trata de un modificador que altera los pesos en una dirección. Si esta modificación es más pequeña el entrenamiento será más preciso, pero tendrá que dar más pasos utilizando más minilotes.</p>
 <p>La tasa de aprendizaje y el tamaño del minilote son dos hiperparámetros claves en el resultado que se consiga. Afortunadamente se puede elegir el algoritmo <strong>Adam</strong> que tiene una tasa de aprendizaje adaptable, y es una buena solución generica para cualquier problema.</p>
 <p>Se indica en el método de compilación:</p>
-<div class="highlight"><pre><span></span><code>        <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
-            <span class="n">optimizer</span><span class="o">=</span><span class="s2">&quot;adam&quot;</span><span class="p">,</span>
-            <span class="n">loss</span><span class="o">=</span><span class="s2">&quot;mae&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="n">optimizer</span><span class="o">=</span><span class="s2">&quot;adam&quot;</span><span class="p">,</span>
+    <span class="n">loss</span><span class="o">=</span><span class="s2">&quot;mae&quot;</span><span class="p">,</span>
+<span class="p">)</span>
 </code></pre></div>
 <h2 id="overfitting-y-underfitting">Overfitting y Underfitting</h2>
 <p>Una vez entrenado el modelo es necesario realizar una valoración de qué tal predice valores distintos a los utilizados para el entrenamiento.</p>
@@ -862,12 +876,11 @@ El underfitting ocurre cuando la función de pérdida no baja (sigue siendo alta
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.3de43c86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ce0331ff.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
-    
     
   </body>
 </html>
