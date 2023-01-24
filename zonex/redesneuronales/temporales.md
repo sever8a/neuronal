@@ -36,7 +36,7 @@ Se basa en la lentitud en que cambian los valores a loargo plazo. Es decir, las 
 
 Se puede observar como aunque cada año la emisión varía y cambia oscilando con valores altos y bajos, según la estación. la tendencia en un rango más ámplio, año tras año, se puede obtener considerando la media anual, observando el crecimiento.
 
-!!!     note    "Tendencia"
+!!! note    "Tendencia"
 
     Para observar la tendencia es necesario calcular la media sobre un número más ámplio de datos.
     

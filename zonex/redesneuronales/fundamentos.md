@@ -21,7 +21,7 @@ Por lo tanto, la fórmula de la neurona es ***$y = wx + b$***.
 
 > La fórmula de una ecuación lineal, donde ***w*** es la pendiente y ***b*** el punto de corte de la recta el eje de ordenadas.
 
-!!! info "Elementos mínimos"
+!!! info    "Elementos mínimos"
 
     Como mínimo siempre es necesario definir una capa de entrada y una de salida. La capa de entrada debe tener tantas neuronas de entrada como características de entrada tenga el modelo.
 
