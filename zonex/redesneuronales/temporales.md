@@ -4,7 +4,8 @@ La predicción de valores futuros es posiblemente la aplicación más común en 
 
 Otra característica importante, es que los datos no son independientes, sino que tiene significado su secuencia y orden temporal.
 
-# Qué es una serie de datos temporales?
+##  Qué es una serie de datos temporales?
+
 Un conjunto de observaciones asociadas a una marca de tiempo. Las observaciones se guardan con una frecuencia constante (diaria, mensual, por hora...).
 
 Por ejemplo, el importe de venta de libros de tapa dura al día durante el mes de agosto, en la librería más pequeña de la ciudad.

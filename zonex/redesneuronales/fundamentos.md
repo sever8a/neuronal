@@ -8,10 +8,11 @@ La potencia de una red neuronal se obtiene de la complejidad de las conexiones e
 ![La neurona](https://i.imgur.com/mfOlDR6.png)
 
 Los componentes fundamentales son:
-    * La entrada ***x***.
-    * El peso ***w***, Conecta la entrada con la neurona y tiene un peso.
-    * Un peso especial llamado desviación (bias) ***b***.
-    * Valor final de salida ***y***.
+
+* La entrada ***x***.
+* El peso ***w***, Conecta la entrada con la neurona y tiene un peso.
+* Un peso especial llamado desviación (bias) ***b***.
+* Valor final de salida ***y***.
     
 La entrada ***x*** llega hasta la neurona mediante una conexión de peso ***w***. El valor para llegar a la neurona es su multiplación ***w * x***. La red neuronal aprende modificando sus pesos ***w***. Obteniendo la salida ***y*** con el resultado.
 
@@ -21,7 +22,7 @@ Por lo tanto, la fórmula de la neurona es ***$y = wx + b$***.
 
 > La fórmula de una ecuación lineal, donde ***w*** es la pendiente y ***b*** el punto de corte de la recta el eje de ordenadas.
 
-!!! info    "Elementos mínimos"
+!!! info "Elementos mínimos"
 
     Como mínimo siempre es necesario definir una capa de entrada y una de salida. La capa de entrada debe tener tantas neuronas de entrada como características de entrada tenga el modelo.
 

@@ -43,21 +43,21 @@ Deep Learning es un subconjunto del Machine Learning, un espacio donde algoritmo
 
 Los algoritmos de Machine Learning son superiores a los del Deep Learning cuando existe una carencia de datos, pero conforme se consiguen más datos su rendimiento queda estancado, mientras que los algoritmos de Deep Learning consiguen una mejora significativa en el aprendizaje.
 
-**Tipo de Datos**
+### Tipo de Datos
 
 - Machine Learning, precisa datos estructurados para poder aprender y trabajar con ellos. 
 - Deep Learning puede trabajar con datos no estructurados.
 - Deep Learning necesita gran cantidad de datos (Big Data) para conseguir resultados.
 - Machine Learning, pocos datos, más datos no supone mejorar más el resultado.
 
-**Complejidad y precisión**
+### Complejidad y precisión
 
 - Deep Learning necesita más potencia de cómputo.
 - Machine Learning, algoritmos con diferente exigencia de computación.
 - Deep Learning es difícil poder justificar los resultados con el modelo.
 - Machine Learning permite justificar el resultado.
 
-**Framework y desarrollo**
+### Framework y desarrollo
 
 - Deep Learning precisa utilizar Frameworks para utilizar las complejas funciones matemáticas.
 - Machine Learning utiliza funciones matemáticas más comprensibles y operacionalmente manejables.
