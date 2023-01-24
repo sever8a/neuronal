@@ -43,11 +43,11 @@ Se emplean herramientas para la extracción, la transformación y carga de datos
 
 #### Tendencia
 
-*    [X] Cabe destacar el desarrollo de los cuadros de mando y los registros de resultados, que ayudan a visualizar y analizar una serie de métricas de rendimiento.
+-   [X] Cabe destacar el desarrollo de los cuadros de mando y los registros de resultados, que ayudan a visualizar y analizar una serie de métricas de rendimiento.
 
-*    [X] Son herramientas orientadas a generar informes, a lo que hay que añadir la expansión de las técnicas estadísticas y de minería de datos, para asociar, segmentar, agrupar y clasificar datos, preparar modelos de regresión, de detección de anomalías e incluso hacer predicciones.
+-   [X] Son herramientas orientadas a generar informes, a lo que hay que añadir la expansión de las técnicas estadísticas y de minería de datos, para asociar, segmentar, agrupar y clasificar datos, preparar modelos de regresión, de detección de anomalías e incluso hacer predicciones.
 
-*    [X] La minería de datos se basa en procesos algorítmicos y la obtención de información a partir de bases de datos. Que implica pasos adicionales como la *preparación de los datos, selección, limpieza, incorporación de información de otras fuentes e interpolación de los resultados de la minería de datos*, con el objetivo esenciál de obtener conocimiento útil a partir de datos.
+-   [X] La minería de datos se basa en procesos algorítmicos y la obtención de información a partir de bases de datos. Que implica pasos adicionales como la *preparación de los datos, selección, limpieza, incorporación de información de otras fuentes e interpolación de los resultados de la minería de datos*, con el objetivo esenciál de obtener conocimiento útil a partir de datos.
     
 ![inteligencia artificial](https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Schaubilder/ES-machine-learning-vs-deep-learning.png)
 

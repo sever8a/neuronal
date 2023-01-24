@@ -16,15 +16,15 @@ Sin función de activación las redes neuronales densas solo pueden aprender rel
 La **función de activación** es simplemente una función que se aplica a la salida de las neuronas de cada capa. La función más común es la función de rectificación *$max(0,x)$*.  
 
 !!! info    "Salida"
-        La función de salida se debe ajustar al tipo de predicción que se está realizando:
-            * Regresión.
-            * Clasificación binaria.
-            * Clasificación multiclase.
+- La función de salida se debe ajustar al tipo de predicción que se está realizando:
+    * Regresión.
+    * Clasificación binaria.
+    * Clasificación multiclase.
 
 Para conseguir buenos resultados con las redes neuronales es preciso que los datos de entrada estén normalizados a valores entre 0 y 1.
 
         > La función convierte en 0 los valores negativos.
-        ![ReLU](https://i.imgur.com/aeIyAlF.png)
+![ReLU](https://i.imgur.com/aeIyAlF.png)
 
 
 ### Apilando capas
@@ -61,8 +61,8 @@ Cuando creamos una red neuronal densa, todas las capas están interconectadas. L
 Al igual que en todos los procesos de Machine Learning, comienza con un conjunto de datos de entrenamiento. Cada instancia de estos datos consistirá en un conjunto de características (la entrada) junto con el objetivo esperado (salida). **Entrenar la red neuronal significa ajustar los pesos *w* de manera que pueda transformar las características en el objetivo. Los pesos representan de algún modo la relación entre la entrada y el resultado.
 
 Para entrenar los datos es necesario:
-    - Una **función de pérdida**, que mida cómo son de buenas las predicciones que realiza la redn neuronal.
-    - Un **optimizador** que dice a la red neuronal cómo tiene que cambiar los pesos.
+- Una **función de pérdida**, que mida cómo son de buenas las predicciones que realiza la redn neuronal.
+- Un **optimizador** que dice a la red neuronal cómo tiene que cambiar los pesos.
 
 ### La función de pérdida
 
@@ -76,9 +76,9 @@ Según el tipo de problema que se esté tratando (regresión o clasificación) l
 Es un algoritmo que ajusta los pesos para minimizar la pérdida.
 
 Se utiliza el algoritmo del **Gradiente Estocástico Descendente**, es iterativo en cada paso realiza las siguientes tareas:
-        1. Utiliza un subconjunto de los datos de entrenamiento y los utiliza en la red neuronal para realizar predicciones.
-        2. Mide la pérdida entre las predicciones y los valores reales.
-        3. Finalmente ajusta los pesos en una dirección que hace la pérdida menor.
+1. Utiliza un subconjunto de los datos de entrenamiento y los utiliza en la red neuronal para realizar predicciones.
+2. Mide la pérdida entre las predicciones y los valores reales.
+3. Finalmente ajusta los pesos en una dirección que hace la pérdida menor.
 
 Estos pasos se repiten una y otra vez hasta que la pérdida es tan pequeña como se considere (o ya no disminuya).
 
