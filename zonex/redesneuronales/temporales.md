@@ -101,15 +101,15 @@ El número de marcas de tiempo futuro que se quiere predecir es importante.
 
 Hay tres problemas con las **redes neuronales densas** para tratar problemas con series de datos temporales:
 
-    * No puede mantener el orden de los datos.
-    * Requiere un tamaño fijo de entrada.
-    * No puede devolver salidas de diferente longitud a la prevista. *Por ejemplo, la traducción de una frase al ruso no se puede ver limitada por solo cinco palabras*.
+* No puede mantener el orden de los datos.
+* Requiere un tamaño fijo de entrada.
+* No puede devolver salidas de diferente longitud a la prevista. *Por ejemplo, la traducción de una frase al ruso no se puede ver limitada por solo cinco palabras*.
 
 !["Combinaciones de uso de las redes neuronales"](https://pythongeeks.org/wp-content/uploads/2022/02/types-of-rnn.webp)
 
 Las redes recurrentes solucionan estos inconvenientes, pero han surgido diferentes variedades de ellas. Las *long short-term memory* **LSTM** tienen una evaluoción larga. Se han utilizado para problemas de traducción de texto o análisis de sentimiento.
 
-Potenciales casos de uso de las Redes Neuronales Recurrentes:
+- Potenciales casos de uso de las Redes Neuronales Recurrentes:
     - Aprendizaje de gramática.
     - Reconocimiento de escritura a mano.
     - Reconocimiento de acciones de humanos.
@@ -131,11 +131,12 @@ Utilizan la información previa almacenándola en memoria, se guarda como `state
 
 ![Esquema red neuronal recurrente](https://pythongeeks.org/wp-content/uploads/2022/02/rnn-block.webp)
 
-Tres tipos de redes neuronales para series temporales:
-    * Tienen en común almacenar en memoria el `state` de un momento anterior.
-    * Aplican una función de activación (*tanh*) y realizan operaciones matriciales.
-    * Con todos los elementos obtiene el estado del momento actual.
-    * Repiten todo el proceso para mejorar los pesos *w* y desviación *b*.
+- Tres tipos de redes neuronales para series temporales:
+
+    - Tienen en común almacenar en memoria el `state` de un momento anterior.
+    - Aplican una función de activación (*tanh*) y realizan operaciones matriciales.
+    - Con todos los elementos obtiene el estado del momento actual.
+    - Repiten todo el proceso para mejorar los pesos *w* y desviación *b*.
 
 ![Redes neuronales series temporales](https://media.licdn.com/dms/image/C5612AQH5Im8XrvLmYQ/article-cover_image-shrink_600_2000/0/1564974698831?e=2147483647&v=beta&t=mVx-N8AfjAS5L-ktV6vmi_5LxR1madQ16yT1fRu__Jk)
 

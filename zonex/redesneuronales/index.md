@@ -7,6 +7,6 @@
 ## Redes neuronales recurrentes y LSTM
 
 
-    #### Tarea
+#### Tarea
 Tareas propuestas y guiadas para facilitar el aprendizaje.
 **[Zona de tareas](/neuronal/redesneuronales/tareas1/)** 

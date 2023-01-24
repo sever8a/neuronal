@@ -22,12 +22,12 @@ El elemento principal es el DataFrame. Es comparable a una hoja de cálculo Exce
 # Seleccionar datos para el modelo
 De entre todos los datos del dataset, se pueden elegir algunas características (utilizando la intuición), pero también es posible utilizar **técnicas estadísticas** para automáticamente priorizar el uso de algunas características frente a otras.
 
-!!!     note        "columns"
+!!! note    "columns"
     La propiedad `columns` muestra la lista de nombres de loas características del DataFrame.
     `.columns`
 
 
-!!!     note        "dropna"
+!!! note    "dropna"
     Se utiliza para eliminar los valores Na.
     `.dropna(axis=0)`
 

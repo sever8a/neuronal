@@ -18,20 +18,18 @@ Ejemplo de aplicación utilizando los resultados conseguidos, aunque en este cas
 **Los 80 cereales**
     Utiliza [el siguiente dataset](https://www.kaggle.com/datasets/crawford/80-cereals) para predecir la cantidad de calorías de un desayuno basado en cereales. Realización en equipos. Comienza con un modelo de tres características (proteninas, fibra y azucar).
 
-
-    Aquí tienes disponible un [ejemplo de solución](https://www.kaggle.com/code/joerobcia/calorias-en-80-cereales), propuesta para el caso de 80 cereales.
+Aquí tienes disponible un [ejemplo de solución](https://www.kaggle.com/code/joerobcia/calorias-en-80-cereales), propuesta para el caso de 80 cereales.
 
 
 ## Redes recurrentes y LSTM
 
-
-    Predecir el siguiente caracter a partir de una secuencia de caracteres. [Ejemplo en Google colab](https://colab.research.google.com/drive/1BDeEnJrvMlNf8gHjiEuadvAVJ8cujqD7?usp=sharing).
+Predecir el siguiente caracter a partir de una secuencia de caracteres. [Ejemplo en Google colab](https://colab.research.google.com/drive/1BDeEnJrvMlNf8gHjiEuadvAVJ8cujqD7?usp=sharing).
 
 ### Tarea
     
-    Competición para aprender. Demuestra a tus compañeros tu habilidad con la inteligencia artificial, mejora tu ranking y consigue resolver este [viaje sin edad](https://www.kaggle.com/competitions/viaje-sin-edad), hacia el conocimiento de la Inteligencia Artificial.
+Competición para aprender. Demuestra a tus compañeros tu habilidad con la inteligencia artificial, mejora tu ranking y consigue resolver este [viaje sin edad](https://www.kaggle.com/competitions/viaje-sin-edad), hacia el conocimiento de la Inteligencia Artificial.
     
-    Ventas en **La Favorita**, una cadena de tiendas de productos de alimentación. Predicciones a nivel de una gran corporación.
+Ventas en **La Favorita**, una cadena de tiendas de productos de alimentación. Predicciones a nivel de una gran corporación.
 
 
 

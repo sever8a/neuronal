@@ -15,7 +15,7 @@ Sin función de activación las redes neuronales densas solo pueden aprender rel
 
 La **función de activación** es simplemente una función que se aplica a la salida de las neuronas de cada capa. La función más común es la función de rectificación *$max(0,x)$*.  
 
-    !!! note "Salida"
+!!! info    "Salida"
         La función de salida se debe ajustar al tipo de predicción que se está realizando:
             * Regresión.
             * Clasificación binaria.
