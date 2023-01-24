@@ -5,18 +5,26 @@ site_dir: resultado
 docs_dir: zonex
 
 nav: 
-  - "Comenzando": 'index.md'
-  - "El proceso": 'proceso.md'
-  - "Machine vs Deep": 'deep_learning.md'
+  - "Comenzando": "index.md"
+  - "El proceso": "proceso.md"
+  - "Machine vs Deep": "deep_learning.md"
   - "Pasos básicos":
-      - 'exploradatos.md'
-      - "Análisis Exploratorio": 'exploradatos.md'
+      - "exploradatos.md"
+      - "Análisis Exploratorio": "exploradatos.md"
   - "Redes Neuronales": 
-      - 'redesneuronales/index.md'
-      - "Fundamentos": 'redesneuronales/fundamentos.md'
-      - "Redes Densas": 'redesneuronales/redes_profundas.md'
-      - "Redes recurrentes/LSTM": 'redesneuronales/temporales.md'
-      - "Tareas": 'redesneuronales/tareas1.md'
+      - "redesneuronales/index.md"
+      - "Fundamentos": "redesneuronales/fundamentos.md"
+      - "Redes Densas": "redesneuronales/redes_profundas.md"
+      - "Redes recurrentes/LSTM": "redesneuronales/temporales.md"
+  - "Tareas": "redesneuronales/tareas1.md"
 
 theme:
   name: 'material'
+
+markdown_extensions:
+    - admonition
+    - pymdownx.superfences
+    - pymdownx.details
+    - def_list
+    - pymdownx.tasklist:
+        custom_checkbox: true

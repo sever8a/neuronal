@@ -32,11 +32,12 @@ Las redes neuronales, árboles de regresión (M5), regresión mediante soporte d
 
 Se basa en la lentitud en que cambian los valores a loargo plazo. Es decir, las fluctuaciones a corto plazo no son relevantes, solo los cambios en un rango más ámplio.
 
-![Emisión de CO2 del volcan Manu Loa]("https://i.imgur.com/EZOXiPs.gif")
+![Emisión de CO2 del volcan Manu Loa](https://i.imgur.com/EZOXiPs.gif)
 
 Se puede observar como aunque cada año la emisión varía y cambia oscilando con valores altos y bajos, según la estación. la tendencia en un rango más ámplio, año tras año, se puede obtener considerando la media anual, observando el crecimiento.
 
 !!!     note    "Tendencia"
+
     Para observar la tendencia es necesario calcular la media sobre un número más ámplio de datos.
     
 ## Estacionalidad
@@ -83,7 +84,7 @@ Los problemas basados en series de datos temporales se pueden rediseñar como pr
 
 Se puede reestructurar el dataset de series temporales en dataset para aprendizaje supervisado, considerando la siguiente toma temporal como el objetivo de la anterior. El previo paso de tiempo es la entrada al modelo (*X*), mientras que el siguiente paso de tiempo es la salida del modelo (*y*).
 
-!!!Note "Orden datos"
+!!! warning "Orden datos"
     Es muy importante mantener el orden de los datos.
 
 Es posible que los valores primeros y últimos del dataset queden incompletos. En este caso será necesario eliminar estos registros.
@@ -104,7 +105,7 @@ Hay tres problemas con las **redes neuronales densas** para tratar problemas con
     * Requiere un tamaño fijo de entrada.
     * No puede devolver salidas de diferente longitud a la prevista. *Por ejemplo, la traducción de una frase al ruso no se puede ver limitada por solo cinco palabras*.
 
-!["Combinaciones de uso de las redes neuronales"]("https://pythongeeks.org/wp-content/uploads/2022/02/types-of-rnn.webp")
+!["Combinaciones de uso de las redes neuronales"](https://pythongeeks.org/wp-content/uploads/2022/02/types-of-rnn.webp)
 
 Las redes recurrentes solucionan estos inconvenientes, pero han surgido diferentes variedades de ellas. Las *long short-term memory* **LSTM** tienen una evaluoción larga. Se han utilizado para problemas de traducción de texto o análisis de sentimiento.
 
@@ -128,7 +129,7 @@ Potenciales casos de uso de las Redes Neuronales Recurrentes:
 
 Utilizan la información previa almacenándola en memoria, se guarda como `state` con cada neurona.
 
-![Esquema red neuronal recurrente]("https://pythongeeks.org/wp-content/uploads/2022/02/rnn-block.webp")
+![Esquema red neuronal recurrente](https://pythongeeks.org/wp-content/uploads/2022/02/rnn-block.webp)
 
 Tres tipos de redes neuronales para series temporales:
     * Tienen en común almacenar en memoria el `state` de un momento anterior.
@@ -136,7 +137,7 @@ Tres tipos de redes neuronales para series temporales:
     * Con todos los elementos obtiene el estado del momento actual.
     * Repiten todo el proceso para mejorar los pesos *w* y desviación *b*.
 
-![Redes neuronales series temporales]("https://media.licdn.com/dms/image/C5612AQH5Im8XrvLmYQ/article-cover_image-shrink_600_2000/0/1564974698831?e=2147483647&v=beta&t=mVx-N8AfjAS5L-ktV6vmi_5LxR1madQ16yT1fRu__Jk")
+![Redes neuronales series temporales](https://media.licdn.com/dms/image/C5612AQH5Im8XrvLmYQ/article-cover_image-shrink_600_2000/0/1564974698831?e=2147483647&v=beta&t=mVx-N8AfjAS5L-ktV6vmi_5LxR1madQ16yT1fRu__Jk)
 
 
 
