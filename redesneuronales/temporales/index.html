@@ -378,8 +378,16 @@
 
             
           
-            
-              
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
   
   
   
@@ -387,13 +395,6 @@
       <a href="../tareas1/" class="md-nav__link">
         Tareas
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -448,10 +449,11 @@
 <p>Las redes neuronales, árboles de regresión (M5), regresión mediante soporte de vectores o métodos <em>kernel</em> corresponden a esta categoría. Además de las variables anteriores, el modelo puede incorporar la variable temporar y variables temporales derivadas (como día de la semana, trimestre, franja horaria).</p>
 <h2 id="tendencia">Tendencia</h2>
 <p>Se basa en la lentitud en que cambian los valores a loargo plazo. Es decir, las fluctuaciones a corto plazo no son relevantes, solo los cambios en un rango más ámplio.</p>
-<p><img alt="Emisión de CO2 del volcan Manu Loa" src="" title="https://i.imgur.com/EZOXiPs.gif" /></p>
+<p><img alt="Emisión de CO2 del volcan Manu Loa" src="https://i.imgur.com/EZOXiPs.gif" /></p>
 <p>Se puede observar como aunque cada año la emisión varía y cambia oscilando con valores altos y bajos, según la estación. la tendencia en un rango más ámplio, año tras año, se puede obtener considerando la media anual, observando el crecimiento.</p>
-<p>!!!     note    "Tendencia"
-    Para observar la tendencia es necesario calcular la media sobre un número más ámplio de datos.</p>
+<p>!!!     note    "Tendencia"</p>
+<pre><code>Para observar la tendencia es necesario calcular la media sobre un número más ámplio de datos.
+</code></pre>
 <h2 id="estacionalidad">Estacionalidad</h2>
 <p>Parámetros constantes en el tiempo.</p>
 <h2 id="ciclos">Ciclos</h2>
@@ -491,8 +493,10 @@
 <h1 id="como-transformar-series-temporales-en-problema-de-aprendizaje-supervisado">Como transformar series temporales en problema de aprendizaje supervisado</h1>
 <p>Los problemas basados en series de datos temporales se pueden rediseñar como problemas de aprendizaje supervisado. De esta manera se puede utilizar para la solución modelos lineales y no lineales de Machine Learning.</p>
 <p>Se puede reestructurar el dataset de series temporales en dataset para aprendizaje supervisado, considerando la siguiente toma temporal como el objetivo de la anterior. El previo paso de tiempo es la entrada al modelo (<em>X</em>), mientras que el siguiente paso de tiempo es la salida del modelo (<em>y</em>).</p>
-<p>!!!Note "Orden datos"
-    Es muy importante mantener el orden de los datos.</p>
+<div class="admonition warning">
+<p class="admonition-title">Orden datos</p>
+<p>Es muy importante mantener el orden de los datos.</p>
+</div>
 <p>Es posible que los valores primeros y últimos del dataset queden incompletos. En este caso será necesario eliminar estos registros.</p>
 <p>Utilizar momentos previos de tiempo para predecir el momento de un tiempo futuro, se denomina método de la <strong>ventana deslizante</strong>. La cantidad de momentos previos se denomína <strong>amplitud de la ventana</strong>.</p>
 <p>La variable de salida puede ser simple o múltiple. Con redes neuronales se pueden predecir más de un valor en una secuencia de tiempo. Pero también es posible predecir más allá de un momento futuro (<em>multiple paso</em>).</p>
@@ -504,7 +508,7 @@
 * Requiere un tamaño fijo de entrada.
 * No puede devolver salidas de diferente longitud a la prevista. *Por ejemplo, la traducción de una frase al ruso no se puede ver limitada por solo cinco palabras*.
 </code></pre>
-<p><img alt="&quot;Combinaciones de uso de las redes neuronales&quot;" src="" title="https://pythongeeks.org/wp-content/uploads/2022/02/types-of-rnn.webp" /></p>
+<p><img alt="&quot;Combinaciones de uso de las redes neuronales&quot;" src="https://pythongeeks.org/wp-content/uploads/2022/02/types-of-rnn.webp" /></p>
 <p>Las redes recurrentes solucionan estos inconvenientes, pero han surgido diferentes variedades de ellas. Las <em>long short-term memory</em> <strong>LSTM</strong> tienen una evaluoción larga. Se han utilizado para problemas de traducción de texto o análisis de sentimiento.</p>
 <p>Potenciales casos de uso de las Redes Neuronales Recurrentes:
     - Aprendizaje de gramática.
@@ -523,13 +527,13 @@
     - Predicción en series temporales.</p>
 <h3 id="mecanismo-de-las-redes-neuronales-recurrentes">Mecanismo de las Redes Neuronales Recurrentes</h3>
 <p>Utilizan la información previa almacenándola en memoria, se guarda como <code>state</code> con cada neurona.</p>
-<p><img alt="Esquema red neuronal recurrente" src="" title="https://pythongeeks.org/wp-content/uploads/2022/02/rnn-block.webp" /></p>
+<p><img alt="Esquema red neuronal recurrente" src="https://pythongeeks.org/wp-content/uploads/2022/02/rnn-block.webp" /></p>
 <p>Tres tipos de redes neuronales para series temporales:
     * Tienen en común almacenar en memoria el <code>state</code> de un momento anterior.
     * Aplican una función de activación (<em>tanh</em>) y realizan operaciones matriciales.
     * Con todos los elementos obtiene el estado del momento actual.
     * Repiten todo el proceso para mejorar los pesos <em>w</em> y desviación <em>b</em>.</p>
-<p><img alt="Redes neuronales series temporales" src="" title="https://media.licdn.com/dms/image/C5612AQH5Im8XrvLmYQ/article-cover_image-shrink_600_2000/0/1564974698831?e=2147483647&amp;v=beta&amp;t=mVx-N8AfjAS5L-ktV6vmi_5LxR1madQ16yT1fRu__Jk" /></p>
+<p><img alt="Redes neuronales series temporales" src="https://media.licdn.com/dms/image/C5612AQH5Im8XrvLmYQ/article-cover_image-shrink_600_2000/0/1564974698831?e=2147483647&amp;v=beta&amp;t=mVx-N8AfjAS5L-ktV6vmi_5LxR1madQ16yT1fRu__Jk" /></p>
 
 
 
