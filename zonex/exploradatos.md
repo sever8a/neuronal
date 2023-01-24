@@ -10,14 +10,14 @@ El elemento principal es el DataFrame. Es comparable a una hoja de cálculo Exce
 
 ##### Interpretación de **describe**
 
-    * **`count`** indica la cantidad de filas no vaias. Hay que considerar que puede haber valores vacios * cuando alguna característica no existe en ese elemento.
-    * **`mean`** media de los valores.
-    * **`std`** Desviación estandar, mide la dispersión numérica de los valores.
-    * **`min`** Si se ordena cada columna de características de menor a mayor, el primer valor.
-    * **`25%`** Valor que se sitúa entre un 25% de valores menores y el resto mayores.
-    * **`50%`** Valor que se sitúa entre un 50% de valores menores y 50% de valores mayores.
-    * **`75%`** Valor que se sitúa entre un 75% de valores menores y 25% de valores mayores.
-    * **`max`** Valor mayor.
+- **`count`** indica la cantidad de filas no vaias. Hay que considerar que puede haber valores vacios * cuando alguna característica no existe en ese elemento.
+- **`mean`** media de los valores.
+- **`std`** Desviación estandar, mide la dispersión numérica de los valores.
+- **`min`** Si se ordena cada columna de características de menor a mayor, el primer valor.
+- **`25%`** Valor que se sitúa entre un 25% de valores menores y el resto mayores.
+- **`50%`** Valor que se sitúa entre un 50% de valores menores y 50% de valores mayores.
+- **`75%`** Valor que se sitúa entre un 75% de valores menores y 25% de valores mayores.
+- **`max`** Valor mayor.
 
 # Seleccionar datos para el modelo
 De entre todos los datos del dataset, se pueden elegir algunas características (utilizando la intuición), pero también es posible utilizar **técnicas estadísticas** para automáticamente priorizar el uso de algunas características frente a otras.
