@@ -17,6 +17,7 @@ nav:
         - "Fundamentos": "redesneuronales/fundamentos.md"
         - "Redes Densas": "redesneuronales/redes_profundas.md"
         - "Redes recurrentes/LSTM": "redesneuronales/temporales.md"
+    - "Transferencia de conocimiento": "transferenccia.md"
     - "Tareas": "redesneuronales/tareas1.md"
 
 theme:
