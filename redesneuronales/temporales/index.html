@@ -14,14 +14,8 @@
       
         <link rel="canonical" href="https://sever8a.github.io/neuronal/redesneuronales/temporales/">
       
-      
-        <link rel="prev" href="../redes_profundas/">
-      
-      
-        <link rel="next" href="../tareas1/">
-      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0b4">
     
     
       
@@ -29,10 +23,11 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.91872f81.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
       
       
 
@@ -61,9 +56,7 @@
     
     
     
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
   
     
     
@@ -141,7 +134,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
+          <ol class="md-search-result__list"></ol>
         </div>
       </div>
     </div>
@@ -240,15 +233,12 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-      
-      
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+      
+        <label class="md-nav__link" for="__nav_4">
           Pasos básicos
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -307,13 +297,12 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
-      
-        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_5">
           Redes Neuronales
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -575,7 +564,6 @@
                   
 
 
-
 <h1 id="series-temporales">Series temporales</h1>
 <p>La predicción de valores futuros es posiblemente la aplicación más común en Machine Learning. En diferentes campos se precisa de esta información: economía, la producción, ventas, meteorología, aumento de población, etc... </p>
 <p>Otra característica importante, es que los datos no son independientes, sino que tiene significado su secuencia y orden temporal.</p>
@@ -690,6 +678,14 @@
 </li>
 </ul>
 <p><img alt="Redes neuronales series temporales" src="https://media.licdn.com/dms/image/C5612AQH5Im8XrvLmYQ/article-cover_image-shrink_600_2000/0/1564974698831?e=2147483647&amp;v=beta&amp;t=mVx-N8AfjAS5L-ktV6vmi_5LxR1madQ16yT1fRu__Jk" /></p>
+<p>Las redes neuronales LSTM incoroporan una memoria más grande y duradera. Mediante el mecanismo de puertas <em>gate</em>. Se abren si la infomración generada en la neurona es importante. Estas puertas son tres:</p>
+<ul>
+<li><strong>Puerta de entrada</strong> (<em>input gate</em>). Permite una nueva entrada.</li>
+<li><strong>Puerta de olvido</strong> (<em>forget gate</em>). Elimina la información porque no es importante.</li>
+<li><strong>Puerta de salida</strong> (<em>output gate</em>). Deja que afecte a la salida.</li>
+</ul>
+<h3 id="gate-recurrent-unit-gru">Gate Recurrent Unit (GRU)</h3>
+<p>Son una versión simplificada de las capas LSTM, computacionalmente son más eficientes y su rendimiento está a la par de las LSTM.</p>
 
 
 
@@ -727,11 +723,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.3de43c86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ce0331ff.min.js"></script>
       
+    
     
   </body>
 </html>
