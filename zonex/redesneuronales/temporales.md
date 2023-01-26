@@ -141,6 +141,12 @@ Utilizan la información previa almacenándola en memoria, se guarda como `state
 
 ![Redes neuronales series temporales](https://media.licdn.com/dms/image/C5612AQH5Im8XrvLmYQ/article-cover_image-shrink_600_2000/0/1564974698831?e=2147483647&v=beta&t=mVx-N8AfjAS5L-ktV6vmi_5LxR1madQ16yT1fRu__Jk)
 
+Las redes neuronales LSTM incoroporan una memoria más grande y duradera. Mediante el mecanismo de puertas *gate*. Se abren si la infomración generada en la neurona es importante. Estas puertas son tres:
 
+- **Puerta de entrada** (*input gate*). Permite una nueva entrada.
+- **Puerta de olvido** (*forget gate*). Elimina la información porque no es importante.
+- **Puerta de salida** (*output gate*). Deja que afecte a la salida.
 
+### Gate Recurrent Unit (GRU)
 
+Son una versión simplificada de las capas LSTM, computacionalmente son más eficientes y su rendimiento está a la par de las LSTM.
