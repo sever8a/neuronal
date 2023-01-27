@@ -69,6 +69,12 @@ Mide la diferencia entre el valor real del objetivo y el valor que el modelo pre
 
 Según el tipo de problema que se esté tratando (regresión o clasificación) la función de pérdida tendrá que ser diferente. Por ejemplo; el error absoluto medio, o el error cuadrático medio son dos funciones para regresiones.
 
+!!! info "Funciones de pérdida"
+Ajustadas a cada tipo de problema.
+    * Clasificación múltiple con one hot encoding --> *categorical_crossentropy*
+    * Clasificación múltiple con indice categoria --> *sparse_categorical_crossentropy*
+    * Regresión --> *mse*
+    * Clasificación binaria --> *binary_crossentropy*
 
 ### El optimizador - Gradiente Estocástico Descendente
 
