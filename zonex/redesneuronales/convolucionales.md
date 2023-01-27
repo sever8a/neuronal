@@ -8,6 +8,17 @@ Las redes convolucionales ofrecen ventajas, frente a las redes de capas densas, 
 Las capas convolucionales son el elemento clave en este tipo de redes.
 
 
+
+
+
+# De capas densas a capas convolucionales
+
+El dataset de prendas de ropa de Zalando sirve para probar los resultados que se pueden conseguir con un modelo de red neuronal de capas densas, frente a una red con capas convolucionales.
+
+[Ejemplo para comparar](https://colab.research.google.com/drive/1VdwtqDSlz1TzNVyWU0R-X9qvrkQ-z7c5?usp=sharing)
+
+
+
 ## Recursos
 
 La base de datos [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html) consiste en un dataset de imágenes cotidianas pertenecientes a 10 clases diferentes. 
