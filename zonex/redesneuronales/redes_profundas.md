@@ -17,6 +17,7 @@ La **función de activación** es simplemente una función que se aplica a la sa
 !!! info    "Salida"
 
     La función de salida se debe ajustar al tipo de predicción que se está realizando:
+    
         * Regresión.
         * Clasificación binaria.
         * Clasificación multiclase.
@@ -73,10 +74,11 @@ Según el tipo de problema que se esté tratando (regresión o clasificación) l
 !!! info "Funciones de pérdida"
 
     Ajustadas a cada tipo de problema.
-    * Clasificación múltiple con one hot encoding --> *categorical_crossentropy*
-    * Clasificación múltiple con indice categoria --> *sparse_categorical_crossentropy*
-    * Regresión --> *mse*
-    * Clasificación binaria --> *binary_crossentropy*
+    
+    - Clasificación múltiple con one hot encoding --> *categorical_crossentropy*
+    - Clasificación múltiple con indice categoria --> *sparse_categorical_crossentropy*
+    - Regresión --> *mse*
+    - Clasificación binaria --> *binary_crossentropy*
 
 ### El optimizador - Gradiente Estocástico Descendente
 
