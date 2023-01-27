@@ -775,15 +775,11 @@
 <p>La <strong>función de activación</strong> es simplemente una función que se aplica a la salida de las neuronas de cada capa. La función más común es la función de rectificación <em>$max(0,x)$</em>.  </p>
 <div class="admonition info">
 <p class="admonition-title">Salida</p>
+<p>La función de salida se debe ajustar al tipo de predicción que se está realizando:
+    * Regresión.
+    * Clasificación binaria.
+    * Clasificación multiclase.</p>
 </div>
-<ul>
-<li>La función de salida se debe ajustar al tipo de predicción que se está realizando:<ul>
-<li>Regresión.</li>
-<li>Clasificación binaria.</li>
-<li>Clasificación multiclase.</li>
-</ul>
-</li>
-</ul>
 <p>Para conseguir buenos resultados con las redes neuronales es preciso que los datos de entrada estén normalizados a valores entre 0 y 1.</p>
 <pre><code>    &gt; La función convierte en 0 los valores negativos.
 </code></pre>
