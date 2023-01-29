@@ -485,6 +485,20 @@
 <h1 id="de-capas-densas-a-capas-convolucionales">De capas densas a capas convolucionales</h1>
 <p>El dataset de prendas de ropa de Zalando sirve para probar los resultados que se pueden conseguir con un modelo de red neuronal de capas densas, frente a una red con capas convolucionales.</p>
 <p><a href="https://colab.research.google.com/drive/1VdwtqDSlz1TzNVyWU0R-X9qvrkQ-z7c5?usp=sharing">Ejemplo para comparar</a></p>
+<h1 id="aumento-de-datos">Aumento de datos</h1>
+<p>Permite disponer de más datos aplicando variaciones a las imágenes disponibles (rotación, iluminación, contraste,...).</p>
+<p>En algunos casos (problemas de segmentación) puede ser necesario aplicar los mismos filtros a otros elementos del dataset relacionados con cada elemento del dataset. Por ejemplo, la máscara en los problemas de segmentación.</p>
+<h1 id="segmentacion">Segmentación</h1>
+<p>Los problemas de segmentación en imágenes se basan en identificar elementos en la imagen. La estructura de los modelos es diferente a los que solucionan problemas de clasificación.</p>
+<h2 id="segmentacion-semantica">Segmentación semántica</h2>
+<p>Consiste en determinar los elementos que componen una imagen, detectando su relevancia en la imagen. Etiquetando cada área con una categoría de las clases utilizadas. *Se clasifican los pixels, no los objetos.</p>
+<p>En la siguiente imagen se observa como sobre el total de las imagenes se establecen las zonas relevantes a: pasto, avión, edificio, vaca, cielo, camino...</p>
+<p><img alt="ejemplo segmentación semantica" src="https://www.researchgate.net/profile/Cristobal-Silva-5/publication/319766387/figure/fig4/AS:538875850625025@1505489422809/Figura-24-Ejemplo-de-Segmentacion-Semantica-31.png" /></p>
+<h3 id="segmentacion-binaria">Segmentación binaria</h3>
+<p>Es un caso particular de segmentación semática, en el cual solo se clasifica cada pixel: <em>si pertenece al </em><em>fondo</em><em>, o a la </em><em>región de interés</em>**.</p>
+<h2 id="segmentacion-de-instancias">Segmentación de instancias</h2>
+<p>Consiste en determinar los objetos de la imagnes. <em>Se clasifican los </em><em>pixels</em><em> y los </em><em>objetos</em>**.</p>
+<p><img alt="Ejemplo instancias" src="https://cocodataset.org/images/detection-splash.png" /></p>
 <h2 id="recursos">Recursos</h2>
 <p>La base de datos <a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR10</a> consiste en un dataset de imágenes cotidianas pertenecientes a 10 clases diferentes. </p>
 <p>Dispone de unas 60.000 imágenes a color de 32 x 32. Distribuidas para entrenamiento y validación.</p>
@@ -500,6 +514,7 @@
 - barco
 - camión</p>
 <p>Una desventaja de este dataset es el tamaño (32 x 32), ya que son imágenes con baja resolución.</p>
+<p>La base de datos <a href="https://cocodataset.org/#home">COCO</a> consiste en un dataset de imágenes etiquetadas con 80 categorías. Se utiliza para entrenar modelos para solucionar problemas de <strong>segmentación de instancias</strong>.</p>
 
 
 
