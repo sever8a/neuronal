@@ -19,6 +19,7 @@ nav:
         - "Redes Recurrentes/LSTM": "redesneuronales/temporales.md"
         - "Redes Convolucionales": "redesneuronales/convolucionales.md"
     - "Transferencia de conocimiento": "transferencia.md"
+    - "Procesamiento Lenguaje Natural": "nlp.md"
     - "Tareas": "redesneuronales/tareas1.md"
 
 theme:
