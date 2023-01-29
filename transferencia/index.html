@@ -430,6 +430,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tecnicas-de-tranferencia-de-conocimiento" class="md-nav__link">
+    Técnicas de tranferencia de conocimiento
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas de tranferencia de conocimiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona" class="md-nav__link">
+    Como funciona
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    Ventajas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modelos-libreria-keras" class="md-nav__link">
     Modelos librería Keras
   </a>
@@ -440,6 +467,21 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nlp/" class="md-nav__link">
+        Procesamiento Lenguaje Natural
+      </a>
     </li>
   
 
@@ -486,6 +528,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tecnicas-de-tranferencia-de-conocimiento" class="md-nav__link">
+    Técnicas de tranferencia de conocimiento
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas de tranferencia de conocimiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona" class="md-nav__link">
+    Como funciona
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    Ventajas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modelos-libreria-keras" class="md-nav__link">
     Modelos librería Keras
   </a>
@@ -509,6 +578,35 @@
 
 <h1 id="transferencia-de-conocimiento">Transferencia de conocimiento</h1>
 <p>Estos modelos se basan en redes preentrenadas</p>
+<h2 id="tecnicas-de-tranferencia-de-conocimiento">Técnicas de tranferencia de conocimiento</h2>
+<h3 id="como-funciona">Como funciona</h3>
+<h3 id="ventajas">Ventajas</h3>
+<p><strong>Ejemplo:</strong> 
+Detectar <em>tweets</em> negativos escritos en inglés. En este caso se trata de encontrar Tweets negativos en castellano. Existen dos soluciones:</p>
+<ol>
+<li>
+<p>Traducir los <em>tweets</em> del castellano al inglés.</p>
+<ul>
+<li>Utilizar el modelo existente (Universidad de Helsinki).</li>
+<li>Métrica de evaluación <strong>BLEU</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Entrenar modelos para cada idioma. <em>Múltiples modelos</em>:</p>
+<ul>
+<li>Entrenar modelos de clasificación de <em>tweets</em> en castellano.</li>
+<li>Entrenar un clasificador de idioma (librería langdetect).</li>
+</ul>
+</li>
+<li>
+<p>Modelo multilengüaje.</p>
+<ul>
+<li>Modelos multilíngües.</li>
+<li>Ventajas.</li>
+<li>Entrenar un modelo multilingüe.</li>
+</ul>
+</li>
+</ol>
 <h2 id="modelos-libreria-keras">Modelos librería Keras</h2>
 <p>La siguiente relación de modelos está disponible en la <a href="https://keras.io/api/applications/">plataforma de la librería Keras</a> (que se utiliza desde TensorFlow). Estos modelos se pueden utilizar para extracción de características, predicción y ajuste (fine tunning).</p>
 <div class="admonition note">
