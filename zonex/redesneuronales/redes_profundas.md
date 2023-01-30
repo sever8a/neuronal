@@ -1,6 +1,6 @@
 # Redes Neuronales Profundas (densas)
 
-Wn la capa de entrada, comienzan los datos de las características disponibles. La red neuronal realiza todas las combinaciones entre estas características a lo largo de todas las capas. Hasta la capa de salida donde la cantidad de neuronas se limita a las respuestas que se quieren obtener del modelo. 
+En la capa de entrada, comienzan los datos de las características disponibles. La red neuronal realiza todas las combinaciones entre estas características a lo largo de todas las capas. Hasta la capa de salida donde la cantidad de neuronas se limita a las respuestas que se quieren obtener del modelo. 
 
 Esta salida será el mejor resultado del procesamiento de todas las combinaciones anteriores. Por la tanto, la se consigue un modelo complejo utilizando estructuras lineales sencillas. Cuanto más capas, más compleja será la estructura, por eso se considera *profunda* la red neuronal.
 
@@ -18,9 +18,9 @@ La **función de activación** es simplemente una función que se aplica a la sa
 
     La función de salida se debe ajustar al tipo de predicción que se está realizando:
     
-        * Regresión.
-        * Clasificación binaria.
-        * Clasificación multiclase.
+    - Regresión.
+    - Clasificación binaria.
+    - Clasificación multiclase.
 
 Para conseguir buenos resultados con las redes neuronales es preciso que los datos de entrada estén normalizados a valores entre 0 y 1.
 
@@ -61,6 +61,7 @@ Cuando creamos una red neuronal densa, todas las capas están interconectadas. L
 ### El entrenamiento
 Al igual que en todos los procesos de Machine Learning, comienza con un conjunto de datos de entrenamiento. Cada instancia de estos datos consistirá en un conjunto de características (la entrada) junto con el objetivo esperado (salida). **Entrenar la red neuronal significa ajustar los pesos *w* de manera que pueda transformar las características en el objetivo. Los pesos representan de algún modo la relación entre la entrada y el resultado.
 
+
 Para entrenar los datos es necesario:
 - Una **función de pérdida**, que mida cómo son de buenas las predicciones que realiza la redn neuronal.
 - Un **optimizador** que dice a la red neuronal cómo tiene que cambiar los pesos.
@@ -85,6 +86,7 @@ Según el tipo de problema que se esté tratando (regresión o clasificación) l
 Es un algoritmo que ajusta los pesos para minimizar la pérdida.
 
 Se utiliza el algoritmo del **Gradiente Estocástico Descendente**, es iterativo en cada paso realiza las siguientes tareas:
+
 1. Utiliza un subconjunto de los datos de entrenamiento y los utiliza en la red neuronal para realizar predicciones.
 2. Mide la pérdida entre las predicciones y los valores reales.
 3. Finalmente ajusta los pesos en una dirección que hace la pérdida menor.
@@ -156,3 +158,93 @@ De esta forma se puede obtener un valor 0-1 de la predicción.
 
 ![Sigmoid](https://i.imgur.com/FYbRvJo.png)
 
+
+# Ajuste de hiperparámetros
+
+La precisión de un modelo de red neuronal puede modificarse utilizando los hiperparámetros.
+
+- Cambio de función de activación.
+- Aumento de epocas (veces que se usan todos los datos en el entrenamiento).
+- Aumentar las neuronas en una capa.
+- Agregar más capas.
+
+Sin embargo, todo este tipo de aumentos supondrá también una aumento en los requisitos de procesamiento. La clave es encontrar un punto equilibrado adecuado.
+
+
+Es necesario diferenciar entre *hiperparámetros* y *parámetros* de un modelo. Los **parámetros** son los valores internos a la red nueronal, por ejemplo los pesos de las neuronas. Aprenden automáticamente a partir de las muestras de entrenamiento. Estos parámetros se utilizan para hacer predicciones en un modelo ya entrenado que se encuentra en producción.
+
+Los **hiperparámetros** son parámetros externos al modelo, los establece el programador de la red neuronal, por ejemplo seleccionando la función de activación a utilizar, o el tamaño del lote en el entrenamiento. Los hiperparámetros tienen un gran impacto en la precisión de una red neuronal.
+
+Se pueden clasificar en dos grandes grupos:
+
+- Hiperparámetros a nivel de **estructura y topología** de la red: número de capas, número de neuronas por capa, sus funciones de activación, inicialización de los pesos, etc.
+- Hiperparámetros a nivel de **algoritmo de aprendizaje**: epocas, tamaño del lote, tasa de aprendizaje, etc.
+
+
+## Hiperparámetros relaciones con el algoritmo de aprendizaje
+
+### Número de epocas
+
+Nos indica el número de veces que los datos de entrenamiento han pasado por la red neuronal durante el entrenamiento.
+
+Un número alto de epocas provoca que el modelo se ajuste en exceso a los datos y puede tener problemas de generalización con el conjunto de datos de prueba y validación. También puede producir *vanishing gradients* y *exploding gradient*.
+
+Si el número de épocas es escaso, supone que el modelo no ha visto suficientes datos para entrenarse, y no hará buenas predicciones.
+
+Hay que probar diferentes valores. Incrementando el número de épocas hasta que **la métrica de precisión con los datos de validación** empiece a decrecer, incluso cuando la precisión de los datos de entrenamiento contiúe incrementándose (posible overfitting).
+
+
+### Tamaño del lote
+
+Se pueden particionar los datos en lotes de entrenamiento para pasar por la red.
+Su tamaño depende de básicamente de la capacidad de memoria del equipo utilizado.
+
+### Tasa de aprendizaje
+
+El vector del gradiente tiene una *dirección* y una *magnitud*. Los algoritmos de gradiente descendente multiplican la +magnitud* por el **learning rate** (tasa de aprendizaje).
+
+!!! note    "Ejemplo!"
+Si el gradiente tiene una magnitud de 1.15 y el *learning rate* es 0.01, entonces el algoritmo del gradiente descente seleccionará el próximo punto a 0.0115 de distancia del anterior.
+
+
+Si el valor es demasiado grande, el aprendizaje será más rápido pero al ser pasos demasiado grandes pasará el valor mínimo de la función de pérdida.
+
+Si el valor es demasiado pequeño, se avanzará con pasos pequeños. Esto supone que el proceso de aprendizaje puede extremadamente lento.
+
+En general, si el modelo de aprendizaje no funciona hay que disminuir el *learning rate*.
+
+Existe otro hiperparámetro el **learning rate decay** que permite disminuir la tasa de aprendizaje a medida que van pasando las épocas. El aprendizaje avanza más rápido al principio y luego se ralentiza.
+
+!!! info    "optimizador"
+El valor de la tasa de aprendizaje depende del optimizador utilizado. Por ejemplo, para el optimizador **sdg** (descenso gradiente estocastico) *learnning rate* 0.1
+Para el optimizador **adams** es mejor un *learnning rate* entre 0.001 y 0.01
+
+
+### Inicialización de los pesos de las neuronas
+
+Es recomendable inicializar los pesos con valores aleatorios y pequeños.
+
+
+### Funciones de activación
+
+La función de activación sirve para introducir la no linealidad en las capacidades de modelado de la red.
+
+***linear***
+No aporta cambio a la señal de entrada. La salida coincide con la entrada.
+
+***sigmoid***
+La mayor parte de su salida estará próxima a los valores 0 o 1.
+
+***tanh***
+En este caso la salida estará próxima a los valores -1 o 1.
+
+***softmax***
+Devuelve la distribución de probabilidad sobre clases mutuamente excluyentes. A menudo se ubica en la capa de salida.
+
+***relu***
+Cuando la entrada tenga un valor menor que 0 la salida será 0, y en otro caso coincidirá con la entrada.
+
+!!! note    "Métricas importantes"
+Hay que distinguir entre la función de pérdida con los **datos de entrenamiento** y los **datos de validación** 
+
+Utilizando [Google playground](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.33012&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false) se puede prácticar como evoluciona el resultado al modificar algunos hiperparámetros.
