@@ -1,6 +1,6 @@
 # Transferencia de conocimiento
 
-Estos modelos se basan en redes preentrenadas
+Estos modelos se basan en redes preentrenadas, aprovechan los coeficientes ya obtenidos.
 
 ## Técnicas de tranferencia de conocimiento
 
@@ -33,3 +33,11 @@ La siguiente relación de modelos está disponible en la [plataforma de la libre
 !!! note    "ImageNet"
 Se trata de una organización que dispone de una gran base de datos de imágenes etiquetas y clasificadas. [Más información al respecto](https://www.image-net.org/about.php).
 
+
+# Patos y leones
+
+Revisa el [siguiente modelo](https://www.kaggle.com/code/joerobcia/patos-y-leones/notebook) almacenado en Kaggle, que permite determinar si en una foto aparece un pájaro o solo el bosque.
+
+Transforma el cuaderno para investigar si es posible distinguir entre **patos o leones**.
+
+Vuelve a transformar el cuaderno para distinguir entre objetos "más complicados" y útiles.

@@ -18,8 +18,10 @@ nav:
         - "Redes Densas": "redesneuronales/redes_profundas.md"
         - "Redes Recurrentes/LSTM": "redesneuronales/temporales.md"
         - "Redes Convolucionales": "redesneuronales/convolucionales.md"
+        - "Hiperparámetros": "redesneuronales/hiperparametros.md"
     - "Transferencia de conocimiento": "transferencia.md"
     - "Procesamiento Lenguaje Natural": "nlp.md"
+    - "Aprendizaje no supervisado": "no_supervisado.md"
     - "Tareas": "redesneuronales/tareas1.md"
 
 theme:
