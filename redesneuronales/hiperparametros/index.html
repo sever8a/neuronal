@@ -12,14 +12,14 @@
         <meta name="author" content="IES Severo Ochoa">
       
       
-        <link rel="canonical" href="https://sever8a.github.io/neuronal/redesneuronales/fundamentos/">
+        <link rel="canonical" href="https://sever8a.github.io/neuronal/redesneuronales/hiperparametros/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0b4">
     
     
       
-        <title>Fundamentos - Deep Learning</title>
+        <title>Hiperparámetros - Deep Learning</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#el-perceptron" class="md-skip">
+        <a href="#ajuste-de-hiperparametros" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fundamentos
+              Hiperparámetros
             
           </span>
         </div>
@@ -332,52 +332,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Fundamentos
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../fundamentos/" class="md-nav__link">
         Fundamentos
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#la-neurona" class="md-nav__link">
-    La neurona
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -429,11 +388,93 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../hiperparametros/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Hiperparámetros
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Hiperparámetros
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hiperparametros-relaciones-con-el-algoritmo-de-aprendizaje" class="md-nav__link">
+    Hiperparámetros relaciones con el algoritmo de aprendizaje
+  </a>
+  
+    <nav class="md-nav" aria-label="Hiperparámetros relaciones con el algoritmo de aprendizaje">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numero-de-epocas" class="md-nav__link">
+    Número de epocas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamano-del-lote" class="md-nav__link">
+    Tamaño del lote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasa-de-aprendizaje" class="md-nav__link">
+    Tasa de aprendizaje
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-de-los-pesos-de-las-neuronas" class="md-nav__link">
+    Inicialización de los pesos de las neuronas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-activacion" class="md-nav__link">
+    Funciones de activación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -532,9 +573,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#la-neurona" class="md-nav__link">
-    La neurona
+  <a href="#hiperparametros-relaciones-con-el-algoritmo-de-aprendizaje" class="md-nav__link">
+    Hiperparámetros relaciones con el algoritmo de aprendizaje
   </a>
+  
+    <nav class="md-nav" aria-label="Hiperparámetros relaciones con el algoritmo de aprendizaje">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numero-de-epocas" class="md-nav__link">
+    Número de epocas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamano-del-lote" class="md-nav__link">
+    Tamaño del lote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasa-de-aprendizaje" class="md-nav__link">
+    Tasa de aprendizaje
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-de-los-pesos-de-las-neuronas" class="md-nav__link">
+    Inicialización de los pesos de las neuronas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-activacion" class="md-nav__link">
+    Funciones de activación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -553,30 +635,65 @@
                   
 
 
-<h1 id="el-perceptron">El perceptron</h1>
-<p>El elmento más básico de una red neuronal es la <strong><em>neurona</em></strong>. La red neuronal más sencilla es el <strong>perceptron</strong>, que está compuesta de una única neurona. </p>
-<p>La potencia de una red neuronal se obtiene de la complejidad de las conexiones entre las neuronas que la forman.</p>
-<h2 id="la-neurona">La neurona</h2>
-<p><img alt="La neurona" src="https://i.imgur.com/mfOlDR6.png" /></p>
-<p>Los componentes fundamentales son:</p>
+<h1 id="ajuste-de-hiperparametros">Ajuste de hiperparámetros</h1>
+<p>La precisión de un modelo de red neuronal puede modificarse utilizando los hiperparámetros.</p>
 <ul>
-<li>La entrada <strong><em>x</em></strong>.</li>
-<li>El peso <strong><em>w</em></strong>, Conecta la entrada con la neurona y tiene un peso.</li>
-<li>Un peso especial llamado desviación (bias) <strong><em>b</em></strong>.</li>
-<li>Valor final de salida <strong><em>y</em></strong>.</li>
+<li>Cambio de función de activación.</li>
+<li>Aumento de epocas (veces que se usan todos los datos en el entrenamiento).</li>
+<li>Aumentar las neuronas en una capa.</li>
+<li>Agregar más capas.</li>
 </ul>
-<p>La entrada <strong><em>x</em></strong> llega hasta la neurona mediante una conexión de peso <strong><em>w</em></strong>. El valor para llegar a la neurona es su multiplación <strong><em>w * x</em></strong>. La red neuronal aprende modificando sus pesos <strong><em>w</em></strong>. Obteniendo la salida <strong><em>y</em></strong> con el resultado.</p>
-<p>La desviación (bias) <strong><em>b</em></strong> modifica el valor de salida de la neurona, independientemente de la entrada.</p>
-<p>Por lo tanto, la fórmula de la neurona es <strong><em>$y = wx + b$</em></strong>.</p>
-<blockquote>
-<p>La fórmula de una ecuación lineal, donde <strong><em>w</em></strong> es la pendiente y <strong><em>b</em></strong> el punto de corte de la recta el eje de ordenadas.</p>
-</blockquote>
-<div class="admonition info">
-<p class="admonition-title">Elementos mínimos</p>
-<p>Como mínimo siempre es necesario definir una capa de entrada y una de salida. La capa de entrada debe tener tantas neuronas de entrada como características de entrada tenga el modelo.</p>
+<p>Sin embargo, todo este tipo de aumentos supondrá también una aumento en los requisitos de procesamiento. La clave es encontrar un punto equilibrado adecuado.</p>
+<p>Es necesario diferenciar entre <em>hiperparámetros</em> y <em>parámetros</em> de un modelo. Los <strong>parámetros</strong> son los valores internos a la red nueronal, por ejemplo los pesos de las neuronas. Aprenden automáticamente a partir de las muestras de entrenamiento. Estos parámetros se utilizan para hacer predicciones en un modelo ya entrenado que se encuentra en producción.</p>
+<p>Los <strong>hiperparámetros</strong> son parámetros externos al modelo, los establece el programador de la red neuronal, por ejemplo seleccionando la función de activación a utilizar, o el tamaño del lote en el entrenamiento. Los hiperparámetros tienen un gran impacto en la precisión de una red neuronal.</p>
+<p>Se pueden clasificar en dos grandes grupos:</p>
+<ul>
+<li>Hiperparámetros a nivel de <strong>estructura y topología</strong> de la red: número de capas, número de neuronas por capa, sus funciones de activación, inicialización de los pesos, etc.</li>
+<li>Hiperparámetros a nivel de <strong>algoritmo de aprendizaje</strong>: epocas, tamaño del lote, tasa de aprendizaje, etc.</li>
+</ul>
+<h2 id="hiperparametros-relaciones-con-el-algoritmo-de-aprendizaje">Hiperparámetros relaciones con el algoritmo de aprendizaje</h2>
+<h3 id="numero-de-epocas">Número de epocas</h3>
+<p>Nos indica el número de veces que los datos de entrenamiento han pasado por la red neuronal durante el entrenamiento.</p>
+<p>Un número alto de epocas provoca que el modelo se ajuste en exceso a los datos y puede tener problemas de generalización con el conjunto de datos de prueba y validación. También puede producir <em>vanishing gradients</em> y <em>exploding gradient</em>.</p>
+<p>Si el número de épocas es escaso, supone que el modelo no ha visto suficientes datos para entrenarse, y no hará buenas predicciones.</p>
+<p>Hay que probar diferentes valores. Incrementando el número de épocas hasta que <strong>la métrica de precisión con los datos de validación</strong> empiece a decrecer, incluso cuando la precisión de los datos de entrenamiento contiúe incrementándose (posible overfitting).</p>
+<h3 id="tamano-del-lote">Tamaño del lote</h3>
+<p>Se pueden particionar los datos en lotes de entrenamiento para pasar por la red.
+Su tamaño depende de básicamente de la capacidad de memoria del equipo utilizado.</p>
+<h3 id="tasa-de-aprendizaje">Tasa de aprendizaje</h3>
+<p>El vector del gradiente tiene una <em>dirección</em> y una <em>magnitud</em>. Los algoritmos de gradiente descendente multiplican la +magnitud<em> por el </em><em>learning rate</em>* (tasa de aprendizaje).</p>
+<div class="admonition note">
+<p class="admonition-title">Ejemplo!</p>
 </div>
-<p>La cantidad de neuronas en la capa de salida dependerá de la respuesta que se esté buscando. En el caso de una valor (regresión), o una clasificación binaria bastará con una neurona. Pero si es una <strong>clasificación multiclse</strong> se necesita una neurona de salida por cada clase diferente.</p>
-<p><img alt="modelo neurona" src="https://www.researchgate.net/profile/Dmitry-Rashkovetsky/publication/348382026/figure/fig3/AS:978712501690376@1610354652732/Schematic-representation-of-a-neuron-A-linear-combination-of-the-inputs-x-i-followed-by.jpg" /></p>
+<p>Si el gradiente tiene una magnitud de 1.15 y el <em>learning rate</em> es 0.01, entonces el algoritmo del gradiente descente seleccionará el próximo punto a 0.0115 de distancia del anterior.</p>
+<p>Si el valor es demasiado grande, el aprendizaje será más rápido pero al ser pasos demasiado grandes pasará el valor mínimo de la función de pérdida.</p>
+<p>Si el valor es demasiado pequeño, se avanzará con pasos pequeños. Esto supone que el proceso de aprendizaje puede extremadamente lento.</p>
+<p>En general, si el modelo de aprendizaje no funciona hay que disminuir el <em>learning rate</em>.</p>
+<p>Existe otro hiperparámetro el <strong>learning rate decay</strong> que permite disminuir la tasa de aprendizaje a medida que van pasando las épocas. El aprendizaje avanza más rápido al principio y luego se ralentiza.</p>
+<div class="admonition info">
+<p class="admonition-title">optimizador</p>
+</div>
+<p>El valor de la tasa de aprendizaje depende del optimizador utilizado. Por ejemplo, para el optimizador <strong>sdg</strong> (descenso gradiente estocastico) <em>learnning rate</em> 0.1
+Para el optimizador <strong>adams</strong> es mejor un <em>learnning rate</em> entre 0.001 y 0.01</p>
+<h3 id="inicializacion-de-los-pesos-de-las-neuronas">Inicialización de los pesos de las neuronas</h3>
+<p>Es recomendable inicializar los pesos con valores aleatorios y pequeños.</p>
+<h3 id="funciones-de-activacion">Funciones de activación</h3>
+<p>La función de activación sirve para introducir la no linealidad en las capacidades de modelado de la red.</p>
+<p><strong><em>linear</em></strong>
+No aporta cambio a la señal de entrada. La salida coincide con la entrada.</p>
+<p><strong><em>sigmoid</em></strong>
+La mayor parte de su salida estará próxima a los valores 0 o 1.</p>
+<p><strong><em>tanh</em></strong>
+En este caso la salida estará próxima a los valores -1 o 1.</p>
+<p><strong><em>softmax</em></strong>
+Devuelve la distribución de probabilidad sobre clases mutuamente excluyentes. A menudo se ubica en la capa de salida.</p>
+<p><strong><em>relu</em></strong>
+Cuando la entrada tenga un valor menor que 0 la salida será 0, y en otro caso coincidirá con la entrada.</p>
+<div class="admonition note">
+<p class="admonition-title">Métricas importantes</p>
+</div>
+<p>Hay que distinguir entre la función de pérdida con los <strong>datos de entrenamiento</strong> y los <strong>datos de validación</strong> </p>
+<p>Utilizando <a href="https://playground.tensorflow.org">Google playground</a> se puede prácticar como evoluciona el resultado al modificar algunos hiperparámetros.</p>
 
 
 
