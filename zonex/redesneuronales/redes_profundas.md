@@ -152,8 +152,35 @@ Es una buena métrica siempre que la probabilidad de que suceda cada una de las 
 
 El problema es que las metrícas de clasificación no pueden usarse como función de perdida. En su lugar se utliza la **entropía cruzada** (probabilidad de predecir la clase correcta).
 
-#### Función Sigmoide
+## Funciones de activación
+
+Se utiliza para progar hacia adelante la salida de una neurona. Esta salida la reciben las neuronas de la siguiente capa a la que está conectada. Sirve para introducir la **no linealidad** en las capacidades del modelo de red.
+
+### Linear
+
+La señal no cambia.
+
+![linear](http://torres.ai/wp-content/uploads/2018/06/Picture.3.2.png)
+
+### Función Sigmoide
 
 De esta forma se puede obtener un valor 0-1 de la predicción.
 
 ![Sigmoid](https://i.imgur.com/FYbRvJo.png)
+
+### tanh
+
+A diferencia de la función sigmoide, el rango normalizado está entre -1 y 1. La ventaja es que puede tratar mejor con números negativos.
+
+![tangente hiperbólica](http://torres.ai/wp-content/uploads/2018/06/Picture3.3.png)
+
+### Softmax
+
+Sirve para generalizar la regresión logística, de manera que en lugar de clasificar en binario pueda contener múltiples límites de decisión. Devuelve la distribución de probabilidad sobre las clases de salida mutuamente excluyentes. Se suele utilizar en la capa de salida.
+
+
+### Relu
+
+Cuando el valor es inferior a 0, la salida será 0 y cuando la entrada sea superior aplica una función lineal.
+
+![relu](http://torres.ai/wp-content/uploads/2018/06/Picture3.5.png)

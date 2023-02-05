@@ -7,27 +7,50 @@ Las redes convolucionales ofrecen ventajas, frente a las redes de capas densas, 
 
 Las capas convolucionales son el elemento clave en este tipo de redes.
 
-Se basan en el reconocimiento de elementos característicos de cada tipo de imagen. Aprende de líneas, bordes, texturas o formas.
+Se basan en el reconocimiento de elementos característicos de cada imagen. Aprende de líneas, bordes, texturas o formas.
 
 !["Aprendizaje"](https://www.researchgate.net/profile/Honglak-Lee/publication/220424626/figure/fig2/AS:277417953382421@1443153002703/Columns-1-4-the-second-layer-bases-top-and-the-third-layer-bases-bottom-learned-from.png)
 
 
 La primera capa convolucional aprende patrones básicos, y las siguientes capas aprenden patrones compuestos de las capas anteriores, cada vez más complejos.
 
+![aprendizaje de una cara](http://torres.ai/wp-content/uploads/2018/06/Picture.4.1.png)
+
+Las dos capas que definen a las redes convolucionales están especializadas en dos operaciones: *convolution* y *pooling*.
+
 
 # De capas densas a capas convolucionales
 
+Las capas convolucionales **aprenden patrones locales** en pequeñas ventanas de dos dimensiones. Mientras que las capas densas aprenden patrones globales en su espacio global de entrada.
+
+Una característica muy interesante de las capas convolucionales es que una vez aprendida una característica o rasgo visual en un punto de la imagen, la puede **reconocer en cualquier parte de la imagen**. Sin embargo, una red de capas densas tiene que aprender de nuevo el patrón si aparece en otro lugar de la imagen.
+
+Otra característica destacable, es que las capas convolucionales pueden aprender **jerarquías espaciales de patrones**. Una capa aprende patrones básicos, la siguiente patrones compuestos de elementos básicos aprendidos en la capa anterior.
+
 Las capas convolucionales operan sobre matrices de tres ejes, mapas de características. Dos ejes indican las dimensiones: altura y anchura, el tercer eje es el *canal* en imágenes RGB la dimensión es 3, correspondiendo con cada canal de color. Sin embargo en imágenes en blanco y negro la dimensión es 1 (nivel de gris).
 
-La capa convolucional, realiza una reducción de la dimensión de la imagen de entrada, de manera que mediante una ventana de tamaño específico va recorriendo todos los pixel de la imagen de entrada. El movimiento de esta ventana se establece con el parámetro **stride**.
+No se conectan todas las entradas (pixels) de la imagen con todas las neuronas, tan solo se hace por pequeñas zonas localizadas (ventanas).
+
+![pequeñas zonas localizadas](http://torres.ai/wp-content/uploads/2018/06/Picture.4.2.png)
+
+Esta ventana va deslizándose por toda la imagen, conectando cada una de ellas con una neurona de la siguiente capa.
+
+![recorrido de la venta por la imagen](http://torres.ai/wp-content/uploads/2018/06/Picture.4.3.png)
+
+La capa convolucional, realiza una reducción de la dimensión de la imagen de entrada, de manera que mediante una ventana de tamaño específico va recorriendo todos los pixel de la imagen de entrada. El movimiento de esta ventana se establece con el parámetro **stride**. Puede ser de un pixel o más.
 
 !["El stride"](https://d2l.ai/_images/conv-stride.svg)
 
 Al tamaño de esta ventana se denomina **kernel**, y corresponde a una matriz cuadrada que abarca tantos pixel como los indicados en este parámetro. Sin embargo, la combinación de estos dos parámetros para el recorrido exploratorio de toda la imagen, deja entrever que unos pixeles participan más que otros, concretamente los pixel más próximos a los bordes, quedan excluidos de más convoluciones.
 
 
-Para solventar esta circunstancia se utiliza el parámetro **padding** que permite añadir a la imagen un bórde extra de pixeles, permitiendo que el *kernel* y su desplazamiento *sride* recorra todos los pixeles (incluidos los del borde) en más ocasiones.
+Para mejorar el barrido de pixel de la imagen, se utiliza el parámetro **padding** que permite añadir a la imagen un bórde extra de pixeles, permitiendo que el *kernel* (ventana o filtro) y su desplazamiento *sride* recorra todos los pixeles significativos en más ocasiones.
 
+
+Una particularidad importante en redes convolucionales, es que se usa el mismo *kernel* (filtro o ventana) en todas las neuronas de una misma capa, es decir el mismo peso **w** y el mismo sesgo **b**. Esto reduce de forma drástica los parámetros que debe ajustar la red neuronal.
+
+!!! info    "varios filtros"
+Un filtro solo puede detectar una característica de la imagen. Para realizar reconocimientos es necesario detectar más características usando varios filtros al mismo tiempo.
 
 ''' python  hl_lines="14"
 import tensorflow as tf
@@ -61,7 +84,26 @@ comp_conv2d(conv2d, X).shape
 
 ## Pooling
 
+Las redes convolucionales acompañan a las capas convolucionales de capas de **pooling**, que suelen ser aplicadas inmediantemente después de las capas convolucionales. Las capas **pooling** hacen una simplificación de la información recogida por la capa convolucional y crean una versión condensada de la información contenida.
+
 Aplicar este tipo de capa supone realizar una reducción dimensional de la imagen previa. Hay posibilidad de utilizar el máximo valor, o el valor promedio, de la ventana indicada como kernel
+
+!!! note    "El pooling"
+Una ventana (*kernel*) de 2 x 2 pixeles, se simplifica a un único pixel.
+
+[poling 2x2 a 1](http://torres.ai/wp-content/uploads/2018/06/Picture4.5.png)
+
+Hay varias formas de condensar la información. Una opción es utilizar el *max_pooling*, que se queda con el valor máximo de los que había en la ventana (*kernel*).
+
+También se puede utilizar *average_pooling*, donde cada conjunto de valores de pixel se transforma en el valor promedio.
+
+![ejemplo max_pooling](http://torres.ai/wp-content/uploads/2018/06/Picture.4.6.png)
+
+Como la capa pooling se aplica a cada filtro (*kernel*), y la capa convolucional alberga más de un filtro, se obtendrá una **capa pooling** con tantos filtros de pooling como convolucionales.
+
+
+## Red convolucional básica
+
 
 
 El dataset de prendas de ropa de Zalando sirve para probar los resultados que se pueden conseguir con un modelo de red neuronal de capas densas, frente a una red con capas convolucionales.

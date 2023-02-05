@@ -31,4 +31,23 @@ La cantidad de neuronas en la capa de salida dependerá de la respuesta que se e
 ![modelo neurona](https://www.researchgate.net/profile/Dmitry-Rashkovetsky/publication/348382026/figure/fig3/AS:978712501690376@1610354652732/Schematic-representation-of-a-neuron-A-linear-combination-of-the-inputs-x-i-followed-by.jpg)
 
 
+# Construcción de un modelo Deep Learning en 10 líneas
 
+El problema de identificación de dígitos escritos a mano, es un problema de clasificación.
+
+![prolema identificación dígitos](https://torres.ai/wp-content/uploads/2020/05/deep-learning.mnist-vector-probabilidades-768x327.png)
+
+''' python
+import tensorflow as tf
+from tensorflow.keras.utils import to_categorical
+(x_train, y_train), _ = tf.keras.datasets.mnist.load_data()
+x_train = x_train.reshape(60000, 784).astype('float32')/255
+y_train = to_categorical(y_train, num_classes=10)
+model = tf.keras.Sequential()
+model.add(tf.keras.layers.Dense(10, activation='sigmoid', 
+            input_shape=(784,)))
+model.add(tf.keras.layers.Dense(10, activation='softmax'))
+model.compile(loss="categorical_crossentropy", optimizer="sgd", 
+                 metrics = ['accuracy'])
+model.fit(x_train, y_train, epochs=10, verbose=0)
+'''
