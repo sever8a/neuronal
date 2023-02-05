@@ -53,8 +53,8 @@ Una particularidad importante en redes convolucionales, es que se usa el mismo *
 Un filtro solo puede detectar una característica de la imagen. Para realizar reconocimientos es necesario detectar más características usando varios filtros al mismo tiempo.
 
 ''' python  hl_lines="14"
-import tensorflow as tf
 
+import tensorflow as tf
 
 # We define a helper function to calculate convolutions. It initializes
 # the convolutional layer weights and performs corresponding dimensionality
