@@ -496,8 +496,27 @@
     Accuracy y entropía cruzada
   </a>
   
-    <nav class="md-nav" aria-label="Accuracy y entropía cruzada">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-de-activacion" class="md-nav__link">
+    Funciones de activación
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones de activación">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear" class="md-nav__link">
+    Linear
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#funcion-sigmoide" class="md-nav__link">
@@ -506,8 +525,24 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#tanh" class="md-nav__link">
+    tanh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#softmax" class="md-nav__link">
+    Softmax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relu" class="md-nav__link">
+    Relu
+  </a>
   
 </li>
         
@@ -774,8 +809,27 @@
     Accuracy y entropía cruzada
   </a>
   
-    <nav class="md-nav" aria-label="Accuracy y entropía cruzada">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-de-activacion" class="md-nav__link">
+    Funciones de activación
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones de activación">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear" class="md-nav__link">
+    Linear
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#funcion-sigmoide" class="md-nav__link">
@@ -784,8 +838,24 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#tanh" class="md-nav__link">
+    tanh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#softmax" class="md-nav__link">
+    Softmax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relu" class="md-nav__link">
+    Relu
+  </a>
   
 </li>
         
@@ -907,9 +977,22 @@ El underfitting ocurre cuando la función de pérdida no baja (sigue siendo alta
 <p>Para problemas de clasificación, la precisión (acuracy) es la métrica que representa la relación entre predicciones correctas y el total de predicciones. <em>+precision = correctas / total+</em>.</p>
 <p>Es una buena métrica siempre que la probabilidad de que suceda cada una de las clases sea la misma.</p>
 <p>El problema es que las metrícas de clasificación no pueden usarse como función de perdida. En su lugar se utliza la <strong>entropía cruzada</strong> (probabilidad de predecir la clase correcta).</p>
-<h4 id="funcion-sigmoide">Función Sigmoide</h4>
+<h2 id="funciones-de-activacion">Funciones de activación</h2>
+<p>Se utiliza para progar hacia adelante la salida de una neurona. Esta salida la reciben las neuronas de la siguiente capa a la que está conectada. Sirve para introducir la <strong>no linealidad</strong> en las capacidades del modelo de red.</p>
+<h3 id="linear">Linear</h3>
+<p>La señal no cambia.</p>
+<p><img alt="linear" src="http://torres.ai/wp-content/uploads/2018/06/Picture.3.2.png" /></p>
+<h3 id="funcion-sigmoide">Función Sigmoide</h3>
 <p>De esta forma se puede obtener un valor 0-1 de la predicción.</p>
 <p><img alt="Sigmoid" src="https://i.imgur.com/FYbRvJo.png" /></p>
+<h3 id="tanh">tanh</h3>
+<p>A diferencia de la función sigmoide, el rango normalizado está entre -1 y 1. La ventaja es que puede tratar mejor con números negativos.</p>
+<p><img alt="tangente hiperbólica" src="http://torres.ai/wp-content/uploads/2018/06/Picture3.3.png" /></p>
+<h3 id="softmax">Softmax</h3>
+<p>Sirve para generalizar la regresión logística, de manera que en lugar de clasificar en binario pueda contener múltiples límites de decisión. Devuelve la distribución de probabilidad sobre las clases de salida mutuamente excluyentes. Se suele utilizar en la capa de salida.</p>
+<h3 id="relu">Relu</h3>
+<p>Cuando el valor es inferior a 0, la salida será 0 y cuando la entrada sea superior aplica una función lineal.</p>
+<p><img alt="relu" src="http://torres.ai/wp-content/uploads/2018/06/Picture3.5.png" /></p>
 
 
 

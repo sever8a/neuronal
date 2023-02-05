@@ -511,40 +511,64 @@
 <p>Las redes convolucionales ofrecen ventajas, frente a las redes de capas densas, para el procesamiento de imágenes.</p>
 <p><img alt="&quot;Esquema convolucional&quot;" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*CrjJwSX9S7f759dK2EtGJQ.png" /></p>
 <p>Las capas convolucionales son el elemento clave en este tipo de redes.</p>
-<p>Se basan en el reconocimiento de elementos característicos de cada tipo de imagen. Aprende de líneas, bordes, texturas o formas.</p>
+<p>Se basan en el reconocimiento de elementos característicos de cada imagen. Aprende de líneas, bordes, texturas o formas.</p>
 <p><img alt="&quot;Aprendizaje&quot;" src="https://www.researchgate.net/profile/Honglak-Lee/publication/220424626/figure/fig2/AS:277417953382421@1443153002703/Columns-1-4-the-second-layer-bases-top-and-the-third-layer-bases-bottom-learned-from.png" /></p>
 <p>La primera capa convolucional aprende patrones básicos, y las siguientes capas aprenden patrones compuestos de las capas anteriores, cada vez más complejos.</p>
+<p><img alt="aprendizaje de una cara" src="http://torres.ai/wp-content/uploads/2018/06/Picture.4.1.png" /></p>
+<p>Las dos capas que definen a las redes convolucionales están especializadas en dos operaciones: <em>convolution</em> y <em>pooling</em>.</p>
 <h1 id="de-capas-densas-a-capas-convolucionales">De capas densas a capas convolucionales</h1>
+<p>Las capas convolucionales <strong>aprenden patrones locales</strong> en pequeñas ventanas de dos dimensiones. Mientras que las capas densas aprenden patrones globales en su espacio global de entrada.</p>
+<p>Una característica muy interesante de las capas convolucionales es que una vez aprendida una característica o rasgo visual en un punto de la imagen, la puede <strong>reconocer en cualquier parte de la imagen</strong>. Sin embargo, una red de capas densas tiene que aprender de nuevo el patrón si aparece en otro lugar de la imagen.</p>
+<p>Otra característica destacable, es que las capas convolucionales pueden aprender <strong>jerarquías espaciales de patrones</strong>. Una capa aprende patrones básicos, la siguiente patrones compuestos de elementos básicos aprendidos en la capa anterior.</p>
 <p>Las capas convolucionales operan sobre matrices de tres ejes, mapas de características. Dos ejes indican las dimensiones: altura y anchura, el tercer eje es el <em>canal</em> en imágenes RGB la dimensión es 3, correspondiendo con cada canal de color. Sin embargo en imágenes en blanco y negro la dimensión es 1 (nivel de gris).</p>
-<p>La capa convolucional, realiza una reducción de la dimensión de la imagen de entrada, de manera que mediante una ventana de tamaño específico va recorriendo todos los pixel de la imagen de entrada. El movimiento de esta ventana se establece con el parámetro <strong>stride</strong>.</p>
+<p>No se conectan todas las entradas (pixels) de la imagen con todas las neuronas, tan solo se hace por pequeñas zonas localizadas (ventanas).</p>
+<p><img alt="pequeñas zonas localizadas" src="http://torres.ai/wp-content/uploads/2018/06/Picture.4.2.png" /></p>
+<p>Esta ventana va deslizándose por toda la imagen, conectando cada una de ellas con una neurona de la siguiente capa.</p>
+<p><img alt="recorrido de la venta por la imagen" src="http://torres.ai/wp-content/uploads/2018/06/Picture.4.3.png" /></p>
+<p>La capa convolucional, realiza una reducción de la dimensión de la imagen de entrada, de manera que mediante una ventana de tamaño específico va recorriendo todos los pixel de la imagen de entrada. El movimiento de esta ventana se establece con el parámetro <strong>stride</strong>. Puede ser de un pixel o más.</p>
 <p><img alt="&quot;El stride&quot;" src="https://d2l.ai/_images/conv-stride.svg" /></p>
 <p>Al tamaño de esta ventana se denomina <strong>kernel</strong>, y corresponde a una matriz cuadrada que abarca tantos pixel como los indicados en este parámetro. Sin embargo, la combinación de estos dos parámetros para el recorrido exploratorio de toda la imagen, deja entrever que unos pixeles participan más que otros, concretamente los pixel más próximos a los bordes, quedan excluidos de más convoluciones.</p>
-<p>Para solventar esta circunstancia se utiliza el parámetro <strong>padding</strong> que permite añadir a la imagen un bórde extra de pixeles, permitiendo que el <em>kernel</em> y su desplazamiento <em>sride</em> recorra todos los pixeles (incluidos los del borde) en más ocasiones.</p>
-<p>''' python  hl_lines="14"
-import tensorflow as tf</p>
-<h1 id="we-define-a-helper-function-to-calculate-convolutions-it-initializes">We define a helper function to calculate convolutions. It initializes</h1>
-<h1 id="the-convolutional-layer-weights-and-performs-corresponding-dimensionality">the convolutional layer weights and performs corresponding dimensionality</h1>
-<h1 id="elevations-and-reductions-on-the-input-and-output">elevations and reductions on the input and output</h1>
-<p>def comp_conv2d(conv2d, X):
-    # (1, 1) indicates that batch size and the number of channels are both 1
-    X = tf.reshape(X, (1, ) + X.shape + (1, ))
-    Y = conv2d(X)
-    # Strip the first two dimensions: examples and channels
-    return tf.reshape(Y, Y.shape[1:3])</p>
-<h1 id="1-row-and-column-is-padded-on-either-side-so-a-total-of-2-rows-or-columns-are-added">1 row and column is padded on either side, so a total of 2 rows or columns are added</h1>
-<p>conv2d = tf.keras.layers.Conv2D(1, kernel_size=3, padding='same')
-X = tf.random.uniform(shape=(8, 8))
-comp_conv2d(conv2d, X).shape
-'''</p>
+<p>Para mejorar el barrido de pixel de la imagen, se utiliza el parámetro <strong>padding</strong> que permite añadir a la imagen un bórde extra de pixeles, permitiendo que el <em>kernel</em> (ventana o filtro) y su desplazamiento <em>sride</em> recorra todos los pixeles significativos en más ocasiones.</p>
+<p>Una particularidad importante en redes convolucionales, es que se usa el mismo <em>kernel</em> (filtro o ventana) en todas las neuronas de una misma capa, es decir el mismo peso <strong>w</strong> y el mismo sesgo <strong>b</strong>. Esto reduce de forma drástica los parámetros que debe ajustar la red neuronal.</p>
+<div class="admonition info">
+<p class="admonition-title">varios filtros</p>
+</div>
+<p>Un filtro solo puede detectar una característica de la imagen. Para realizar reconocimientos es necesario detectar más características usando varios filtros al mismo tiempo.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="c1"># We define a helper function to calculate convolutions. It initializes</span>
+<span class="c1"># the convolutional layer weights and performs corresponding dimensionality</span>
+<span class="c1"># elevations and reductions on the input and output</span>
+<span class="k">def</span> <span class="nf">comp_conv2d</span><span class="p">(</span><span class="n">conv2d</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+    <span class="c1"># (1, 1) indicates that batch size and the number of channels are both 1</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">)</span> <span class="o">+</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">))</span>
+    <span class="n">Y</span> <span class="o">=</span> <span class="n">conv2d</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="c1"># Strip the first two dimensions: examples and channels</span>
+    <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">Y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+<span class="c1"># 1 row and column is padded on either side, so a total of 2 rows or columns are added</span>
+<span class="n">conv2d</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">)</span>
+<span class="hll"><span class="n">X</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+</span><span class="n">comp_conv2d</span><span class="p">(</span><span class="n">conv2d</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
+</code></pre></div>
 <p>Cuando la altura y anchura del kernel no son iguales, también es posible establecer una dimensión adecuada para el parámetro padding.</p>
-<p>''' python hl_lines="3"</p>
-<h1 id="we-use-a-convolution-kernel-with-height-5-and-width-3-the-padding-on">We use a convolution kernel with height 5 and width 3. The padding on</h1>
-<h1 id="either-side-of-the-height-and-width-are-2-and-1-respectively">either side of the height and width are 2 and 1, respectively</h1>
-<p>conv2d = tf.keras.layers.Conv2D(1, kernel_size=(5, 3), padding='same')
-comp_conv2d(conv2d, X).shape
-'''</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># We use a convolution kernel with height 5 and width 3. The padding on</span>
+<span class="c1"># either side of the height and width are 2 and 1, respectively</span>
+<span class="hll"><span class="n">conv2d</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">)</span>
+</span><span class="n">comp_conv2d</span><span class="p">(</span><span class="n">conv2d</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
+</code></pre></div>
 <h2 id="pooling">Pooling</h2>
+<p>Las redes convolucionales acompañan a las capas convolucionales de capas de <strong>pooling</strong>, que suelen ser aplicadas inmediantemente después de las capas convolucionales. Las capas <strong>pooling</strong> hacen una simplificación de la información recogida por la capa convolucional y crean una versión condensada de la información contenida.</p>
 <p>Aplicar este tipo de capa supone realizar una reducción dimensional de la imagen previa. Hay posibilidad de utilizar el máximo valor, o el valor promedio, de la ventana indicada como kernel</p>
+<div class="admonition note">
+<p class="admonition-title">El pooling</p>
+</div>
+<p>Una ventana (<em>kernel</em>) de 2 x 2 pixeles, se simplifica a un único pixel.</p>
+<p><a href="http://torres.ai/wp-content/uploads/2018/06/Picture4.5.png">poling 2x2 a 1</a></p>
+<p>Hay varias formas de condensar la información. Una opción es utilizar el <em>max_pooling</em>, que se queda con el valor máximo de los que había en la ventana (<em>kernel</em>).</p>
+<p>También se puede utilizar <em>average_pooling</em>, donde cada conjunto de valores de pixel se transforma en el valor promedio.</p>
+<p><img alt="ejemplo max_pooling" src="http://torres.ai/wp-content/uploads/2018/06/Picture.4.6.png" /></p>
+<p>Como la capa pooling se aplica a cada filtro (<em>kernel</em>), y la capa convolucional alberga más de un filtro, se obtendrá una <strong>capa pooling</strong> con tantos filtros de pooling como convolucionales.</p>
+<h2 id="red-convolucional-basica">Red convolucional básica</h2>
 <p>El dataset de prendas de ropa de Zalando sirve para probar los resultados que se pueden conseguir con un modelo de red neuronal de capas densas, frente a una red con capas convolucionales.</p>
 <p><a href="https://colab.research.google.com/drive/1VdwtqDSlz1TzNVyWU0R-X9qvrkQ-z7c5?usp=sharing">Ejemplo para comparar</a></p>
 <h1 id="aumento-de-datos">Aumento de datos</h1>
