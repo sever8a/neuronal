@@ -408,6 +408,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gan/" class="md-nav__link">
+        Redes Generativas Adversarias
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -556,6 +570,10 @@
 <span class="hll"><span class="n">conv2d</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">)</span>
 </span><span class="n">comp_conv2d</span><span class="p">(</span><span class="n">conv2d</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Memoria vs parámetros</p>
+</div>
+<p>Las capas convolucionales necesitan más memoría, ya que almacenan más información de procesamiento. Mientras que las capas densas precisan muchos parámetros para el modelo, que deben ser aprendidos.</p>
 <h2 id="pooling">Pooling</h2>
 <p>Las redes convolucionales acompañan a las capas convolucionales de capas de <strong>pooling</strong>, que suelen ser aplicadas inmediantemente después de las capas convolucionales. Las capas <strong>pooling</strong> hacen una simplificación de la información recogida por la capa convolucional y crean una versión condensada de la información contenida.</p>
 <p>Aplicar este tipo de capa supone realizar una reducción dimensional de la imagen previa. Hay posibilidad de utilizar el máximo valor, o el valor promedio, de la ventana indicada como kernel</p>
@@ -601,6 +619,19 @@
 - camión</p>
 <p>Una desventaja de este dataset es el tamaño (32 x 32), ya que son imágenes con baja resolución.</p>
 <p>La base de datos <a href="https://cocodataset.org/#home">COCO</a> consiste en un dataset de imágenes etiquetadas con 80 categorías. Se utiliza para entrenar modelos para solucionar problemas de <strong>segmentación de instancias</strong>.</p>
+<h1 id="hiperparametros">Hiperparámetros</h1>
+<h2 id="tamano-y-numero-de-filtros">Tamaño y número de filtros</h2>
+<p>El tamaño de la ventana suele ser 3x3 ó 5x5.
+El número de filtros 32 ó 64.</p>
+<h1 id="uso-de-redes-ya-disenadas">Uso de redes ya diseñadas</h1>
+<p>Incluidas en el framework Keras.</p>
+<p><a href="https://keras.io/api/applications/">Keras modelos listos para utilizar</a></p>
+<p>Están incluidos en la propia librería y resulta fácil disponer de ellos.</p>
+<p>Por ejemplo VGG16</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">keras.applications</span> <span class="kn">import</span> <span class="n">VGG16</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">VGG16</span><span class="p">(</span><span class="n">weights</span><span class="o">=</span><span class="s1">&#39;imagenet&#39;</span><span class="p">)</span>
+</code></pre></div>
 
 
 
