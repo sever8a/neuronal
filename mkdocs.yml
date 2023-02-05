@@ -19,6 +19,7 @@ nav:
         - "Redes Recurrentes/LSTM": "redesneuronales/temporales.md"
         - "Redes Convolucionales": "redesneuronales/convolucionales.md"
         - "Hiperparámetros": "redesneuronales/hiperparametros.md"
+        - "Redes Generativas Adversarias": "redesneuronales/gan.md"
     - "Transferencia de conocimiento": "transferencia.md"
     - "Procesamiento Lenguaje Natural": "nlp.md"
     - "Aprendizaje no supervisado": "no_supervisado.md"

@@ -87,3 +87,6 @@ Cuando la entrada tenga un valor menor que 0 la salida será 0, y en otro caso c
 Hay que distinguir entre la función de pérdida con los **datos de entrenamiento** y los **datos de validación** 
 
 Utilizando [Google playground](https://playground.tensorflow.org) se puede prácticar como evoluciona el resultado al modificar algunos hiperparámetros.
+
+
+

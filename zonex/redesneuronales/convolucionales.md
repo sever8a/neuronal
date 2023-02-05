@@ -52,7 +52,7 @@ Una particularidad importante en redes convolucionales, es que se usa el mismo *
 !!! info    "varios filtros"
 Un filtro solo puede detectar una característica de la imagen. Para realizar reconocimientos es necesario detectar más características usando varios filtros al mismo tiempo.
 
-''' python  hl_lines="14"
+``` python  hl_lines="14"
 
 import tensorflow as tf
 
@@ -69,18 +69,22 @@ def comp_conv2d(conv2d, X):
 conv2d = tf.keras.layers.Conv2D(1, kernel_size=3, padding='same')
 X = tf.random.uniform(shape=(8, 8))
 comp_conv2d(conv2d, X).shape
-'''
+```
 
 Cuando la altura y anchura del kernel no son iguales, también es posible establecer una dimensión adecuada para el parámetro padding.
 
 
 
-''' python hl_lines="3"
+``` python hl_lines="3"
 # We use a convolution kernel with height 5 and width 3. The padding on
 # either side of the height and width are 2 and 1, respectively
 conv2d = tf.keras.layers.Conv2D(1, kernel_size=(5, 3), padding='same')
 comp_conv2d(conv2d, X).shape
-'''
+```
+
+!!! note    "Memoria vs parámetros"
+
+Las capas convolucionales necesitan más memoría, ya que almacenan más información de procesamiento. Mientras que las capas densas precisan muchos parámetros para el modelo, que deben ser aprendidos.
 
 ## Pooling
 
@@ -109,6 +113,7 @@ Como la capa pooling se aplica a cada filtro (*kernel*), y la capa convolucional
 El dataset de prendas de ropa de Zalando sirve para probar los resultados que se pueden conseguir con un modelo de red neuronal de capas densas, frente a una red con capas convolucionales.
 
 [Ejemplo para comparar](https://colab.research.google.com/drive/1VdwtqDSlz1TzNVyWU0R-X9qvrkQ-z7c5?usp=sharing)
+
 
 # Aumento de datos
 
@@ -162,3 +167,28 @@ Las clases que dispone son:
 Una desventaja de este dataset es el tamaño (32 x 32), ya que son imágenes con baja resolución.
 
 La base de datos [COCO](https://cocodataset.org/#home) consiste en un dataset de imágenes etiquetadas con 80 categorías. Se utiliza para entrenar modelos para solucionar problemas de **segmentación de instancias**.
+
+# Hiperparámetros
+
+## Tamaño y número de filtros
+
+El tamaño de la ventana suele ser 3x3 ó 5x5.
+El número de filtros 32 ó 64.
+
+# Uso de redes ya diseñadas
+
+Incluidas en el framework Keras.
+
+[Keras modelos listos para utilizar](https://keras.io/api/applications/)
+
+Están incluidos en la propia librería y resulta fácil disponer de ellos.
+
+Por ejemplo VGG16
+
+``` python  
+
+from keras.applications import VGG16
+
+model = VGG16(weights='imagenet')
+
+```
