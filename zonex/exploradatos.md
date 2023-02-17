@@ -33,6 +33,7 @@ De entre todos los datos del dataset, se pueden elegir algunas características 
 
 
 !!! note    "dropna"
+
     Se utiliza para eliminar los valores Na.
     `.dropna(axis=0)`
 
