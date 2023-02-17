@@ -25,15 +25,14 @@ El elemento principal es el DataFrame. Es comparable a una hoja de cálculo Exce
 De entre todos los datos del dataset, se pueden elegir algunas características (utilizando la intuición), pero también es posible utilizar **técnicas estadísticas** para automáticamente priorizar el uso de algunas características frente a otras.
 
 !!! note    "columns"
-    La propiedad `columns` muestra la lista de nombres de loas características del DataFrame.
-
+La propiedad `columns` muestra la lista de nombres de loas características del DataFrame.
     ``` python
     df.columns
     ```
 
 
 !!! note    "dropna"
-    Se utiliza para eliminar los valores Na.
+Se utiliza para eliminar los valores Na.
     `.dropna(axis=0)`
 
 Para seleccionar un subconjunto de datos se puede hacer utilizando la notacion "punto", indicando el nombre de la característica en el DataFrame. Normalmente es útil para obtener el vector `y` con las etiquetas objetivo.

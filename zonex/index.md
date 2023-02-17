@@ -14,8 +14,7 @@ Es muy difícil encontrar personas que dominen estos elementos y todavía lo es 
 La inteligencia artificial, la inteligencia de negocio y el análisis de datos se plantean desde diferentes perspectivas un objetivo común: **buscar las oportunidades derivadas del uso de la información disponible y su análisis en cualquier organización**.
 
 !!! note "Info"
-
-    Resulta clave extraer valor de los datos, y a la vez conseguir que la organización tome decisiones más ***informadas*** obteniendo un retorno positivo.
+Resulta clave extraer valor de los datos, y a la vez conseguir que la organización tome decisiones más ***informadas*** obteniendo un retorno positivo.
 
 
 ![cubo line](https://etc.usf.edu/clippix/pix/wooden-fence-at-castillo-de-san-marcos_small.jpg)

@@ -23,8 +23,7 @@ Por lo tanto, la fórmula de la neurona es ***$y = wx + b$***.
 > La fórmula de una ecuación lineal, donde ***w*** es la pendiente y ***b*** el punto de corte de la recta el eje de ordenadas.
 
 !!! info "Elementos mínimos"
-
-    Como mínimo siempre es necesario definir una capa de entrada y una de salida. La capa de entrada debe tener tantas neuronas de entrada como características de entrada tenga el modelo.
+Como mínimo siempre es necesario definir una capa de entrada y una de salida. La capa de entrada debe tener tantas neuronas de entrada como características de entrada tenga el modelo.
 
 La cantidad de neuronas en la capa de salida dependerá de la respuesta que se esté buscando. En el caso de una valor (regresión), o una clasificación binaria bastará con una neurona. Pero si es una **clasificación multiclse** se necesita una neurona de salida por cada clase diferente.
 

@@ -30,3 +30,5 @@ Competición para aprender. Demuestra a tus compañeros tu habilidad con la inte
 Ventas en **La Favorita**, una cadena de tiendas de productos de alimentación. Predicciones a nivel de una gran corporación.
 
 ## Redes convolucionales
+Botella de plástico o botella de cristal.
+

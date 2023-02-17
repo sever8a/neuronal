@@ -83,7 +83,6 @@ comp_conv2d(conv2d, X).shape
 ```
 
 !!! note    "Memoria vs parámetros"
-
 Las capas convolucionales necesitan más memoría, ya que almacenan más información de procesamiento. Mientras que las capas densas precisan muchos parámetros para el modelo, que deben ser aprendidos.
 
 ## Pooling
