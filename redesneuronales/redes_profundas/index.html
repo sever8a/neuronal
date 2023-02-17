@@ -903,13 +903,11 @@
 <p>La <strong>función de activación</strong> es simplemente una función que se aplica a la salida de las neuronas de cada capa. La función más común es la función de rectificación <em>$max(0,x)$</em>.  </p>
 <div class="admonition info">
 <p class="admonition-title">Salida</p>
-<p>La función de salida se debe ajustar al tipo de predicción que se está realizando:</p>
-<ul>
-<li>Regresión.</li>
-<li>Clasificación binaria.</li>
-<li>Clasificación multiclase.</li>
-</ul>
 </div>
+<p>La función de salida se debe ajustar al tipo de predicción que se está realizando: 
+    - Regresión.
+    - Clasificación binaria.
+    - Clasificación multiclase.</p>
 <p>Para conseguir buenos resultados con las redes neuronales es preciso que los datos de entrada estén normalizados a valores entre 0 y 1.</p>
 <pre><code>    &gt; La función convierte en 0 los valores negativos.
 </code></pre>
@@ -944,14 +942,12 @@
 <p>Según el tipo de problema que se esté tratando (regresión o clasificación) la función de pérdida tendrá que ser diferente. Por ejemplo; el error absoluto medio, o el error cuadrático medio son dos funciones para regresiones.</p>
 <div class="admonition info">
 <p class="admonition-title">Funciones de pérdida</p>
-<p>Ajustadas a cada tipo de problema.</p>
-<ul>
-<li>Clasificación múltiple con one hot encoding --&gt; <em>categorical_crossentropy</em></li>
-<li>Clasificación múltiple con indice categoria --&gt; <em>sparse_categorical_crossentropy</em></li>
-<li>Regresión --&gt; <em>mse</em></li>
-<li>Clasificación binaria --&gt; <em>binary_crossentropy</em></li>
-</ul>
 </div>
+<p>Ajustadas a cada tipo de problema.
+    - Clasificación múltiple con one hot encoding --&gt; <em>categorical_crossentropy</em>
+    - Clasificación múltiple con indice categoria --&gt; <em>sparse_categorical_crossentropy</em>
+    - Regresión --&gt; <em>mse</em>
+    - Clasificación binaria --&gt; <em>binary_crossentropy</em></p>
 <h3 id="el-optimizador-gradiente-estocastico-descendente">El optimizador - Gradiente Estocástico Descendente</h3>
 <p>Es un algoritmo que ajusta los pesos para minimizar la pérdida.</p>
 <p>Se utiliza el algoritmo del <strong>Gradiente Estocástico Descendente</strong>, es iterativo en cada paso realiza las siguientes tareas:</p>

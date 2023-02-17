@@ -448,47 +448,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Procesamiento Lenguaje Natural
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         Procesamiento Lenguaje Natural
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#representacion-textos" class="md-nav__link">
-    Representación textos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modelos-pln" class="md-nav__link">
-    Modelos PLN
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -544,28 +506,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#representacion-textos" class="md-nav__link">
-    Representación textos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modelos-pln" class="md-nav__link">
-    Modelos PLN
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -580,6 +520,43 @@
 
 
 <h1 id="procesamiento-del-lenguaje-natural">Procesamiento del Lenguaje Natural</h1>
+<h1 id="transformer">Transformer</h1>
+<p>Se trata de una librería de última generación que facilita la interpretación de contenidos textuales. La promoción de esta librería se realiza desde Hugging Face. 
+Intervienen los siguientes elementos:
+* <strong>Encambio</strong>.
+* <strong>Tokenización</strong>.
+* <strong>Preprocesado</strong>.</p>
+<h1 id="el-ecosistema-de-hugging-face">El ecosistema de Hugging Face</h1>
+<h2 id="hub">Hub</h2>
+<p>Contiene todos los modelos, datasets, y spaces. Estos últimos son demos de los modelos. Finalmente también está disponible la documentación de todas las librerías.</p>
+<p>Conjunto de herramientas y liberías para utilizar fácilmente la inteligencia artificial.</p>
+<p>ültimamente están añadiendo más librerías para tareas específicas, como visión artificial.</p>
+<h2 id="libreria-transformers">Librería transformers</h2>
+<p>En Google colab es necesario instalarla. 
+El pipeline es un elemento muy sencillo para comenzar a utilizar modelos.</p>
+<p>Todos los modelos disponibles están en el <em>hub</em>, y pueden ser utilizados directamente.</p>
+<p>Tareas de clasificación o generación de texto.</p>
+<p>También es posible modificar las etapas de <strong>pipeline</strong>
+* <strong>Tokenizador</strong>. Codificación de las palabras de un texto.
+* <strong>Model</strong>. Modelo utilizado.
+* <strong>Posprocesado</strong>. Se tiene que realizar el postprocesado para ajustar el resultado a lo que se busca.</p>
+<p>Se puede utilizar el autotokenizer.
+El automodel.
+Cada capa es la entrada de la siguiente.</p>
+<p>También es posible instanciar el modelo directamente.</p>
+<h2 id="la-libreria-dataset">La librería dataset</h2>
+<p>Una vez instalada se puede utilizar directamente.
+Concretando el dataset que se quiere utilizar, directamente se puede llamar y viene directamente separado en datos de entrenamiento y validación.</p>
+<p>Es posible crear dataset propios, cargando desde un formato concreto.</p>
+<p>Etapas de procesado de texto
+* Proceso de normalización de un texto. Transformar mayusculas en minúsculas y quitar acentos.
+* Pretokenización. Separa espacios en blanco y signos de puntación. El resultado es una lista.
+* Modelado, generación de unidades semánticas. (No confundir con la red neuronal). Utiliza una representación compacta del lenguaje. Verbos en diferentes conjugaciones se utilizan en infinitivo. Las palabras en singular más un token para indicar cuando está en plural.
+* Postprocesado, añade tokens especiales, como el inicio o fin de frase. Se consigue un alista de id.</p>
+<ul>
+<li>El decodificador, es un elemento importante porque permite volver a convertir los identificadores en texto original. </li>
+</ul>
+<p>El resultado de este procesado es el texto tokenizado, preparado para ser la entreda al modelo.</p>
 <h2 id="representacion-textos">Representación textos</h2>
 <p>Para entrenar modelos de Machine Learning se pueden utilizar diferentes formas de representación de las palabras y textos en formato de vector numérico.</p>
 <p>Métodos de representación:
