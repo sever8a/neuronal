@@ -33,8 +33,7 @@ De entre todos los datos del dataset, se pueden elegir algunas características 
 
 
 !!! note    "dropna"
-
-Se utiliza para eliminar los valores Na.
+    Se utiliza para eliminar los valores Na.
     `.dropna(axis=0)`
 
 Para seleccionar un subconjunto de datos se puede hacer utilizando la notacion "punto", indicando el nombre de la característica en el DataFrame. Normalmente es útil para obtener el vector `y` con las etiquetas objetivo.
