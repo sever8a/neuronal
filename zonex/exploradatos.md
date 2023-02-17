@@ -26,7 +26,7 @@ De entre todos los datos del dataset, se pueden elegir algunas características 
 
 !!! note    "columns"
 
-La propiedad `columns` muestra la lista de nombres de loas características del DataFrame.
+    La propiedad `columns` muestra la lista de nombres de loas características del DataFrame.
     ``` python
     df.columns
     ```
