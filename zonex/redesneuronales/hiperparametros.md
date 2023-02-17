@@ -43,7 +43,8 @@ Su tamaño depende de básicamente de la capacidad de memoria del equipo utiliza
 El vector del gradiente tiene una *dirección* y una *magnitud*. Los algoritmos de gradiente descendente multiplican la +magnitud* por el **learning rate** (tasa de aprendizaje).
 
 !!! note    "Ejemplo!"
-Si el gradiente tiene una magnitud de 1.15 y el *learning rate* es 0.01, entonces el algoritmo del gradiente descente seleccionará el próximo punto a 0.0115 de distancia del anterior.
+
+    Si el gradiente tiene una magnitud de 1.15 y el *learning rate* es 0.01, entonces el algoritmo del gradiente descente seleccionará el próximo punto a 0.0115 de distancia del anterior.
 
 
 Si el valor es demasiado grande, el aprendizaje será más rápido pero al ser pasos demasiado grandes pasará el valor mínimo de la función de pérdida.
