@@ -38,8 +38,10 @@ Se basa en la lentitud en que cambian los valores a loargo plazo. Es decir, las 
 Se puede observar como aunque cada año la emisión varía y cambia oscilando con valores altos y bajos, según la estación. la tendencia en un rango más ámplio, año tras año, se puede obtener considerando la media anual, observando el crecimiento.
 
 !!! note    "Tendencia"
-Para observar la tendencia es necesario calcular la media sobre un número más ámplio de datos.
+
+    Para observar la tendencia es necesario calcular la media sobre un número más ámplio de datos.
     
+
 ## Estacionalidad
 
 Parámetros constantes en el tiempo.
@@ -85,7 +87,8 @@ Los problemas basados en series de datos temporales se pueden rediseñar como pr
 Se puede reestructurar el dataset de series temporales en dataset para aprendizaje supervisado, considerando la siguiente toma temporal como el objetivo de la anterior. El previo paso de tiempo es la entrada al modelo (*X*), mientras que el siguiente paso de tiempo es la salida del modelo (*y*).
 
 !!! warning "Orden datos"
-Es muy importante mantener el orden de los datos.
+
+    Es muy importante mantener el orden de los datos.
 
 Es posible que los valores primeros y últimos del dataset queden incompletos. En este caso será necesario eliminar estos registros.
 

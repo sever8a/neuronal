@@ -50,7 +50,8 @@ Para mejorar el barrido de pixel de la imagen, se utiliza el parámetro **paddin
 Una particularidad importante en redes convolucionales, es que se usa el mismo *kernel* (filtro o ventana) en todas las neuronas de una misma capa, es decir el mismo peso **w** y el mismo sesgo **b**. Esto reduce de forma drástica los parámetros que debe ajustar la red neuronal.
 
 !!! info    "varios filtros"
-Un filtro solo puede detectar una característica de la imagen. Para realizar reconocimientos es necesario detectar más características usando varios filtros al mismo tiempo.
+
+    Un filtro solo puede detectar una característica de la imagen. Para realizar reconocimientos es necesario detectar más características usando varios filtros al mismo tiempo.
 
 ``` python  hl_lines="14"
 
@@ -83,7 +84,8 @@ comp_conv2d(conv2d, X).shape
 ```
 
 !!! note    "Memoria vs parámetros"
-Las capas convolucionales necesitan más memoría, ya que almacenan más información de procesamiento. Mientras que las capas densas precisan muchos parámetros para el modelo, que deben ser aprendidos.
+
+    Las capas convolucionales necesitan más memoría, ya que almacenan más información de procesamiento. Mientras que las capas densas precisan muchos parámetros para el modelo, que deben ser aprendidos.
 
 ## Pooling
 
@@ -92,9 +94,10 @@ Las redes convolucionales acompañan a las capas convolucionales de capas de **p
 Aplicar este tipo de capa supone realizar una reducción dimensional de la imagen previa. Hay posibilidad de utilizar el máximo valor, o el valor promedio, de la ventana indicada como kernel
 
 !!! note    "El pooling"
-Una ventana (*kernel*) de 2 x 2 pixeles, se simplifica a un único pixel.
 
-[poling 2x2 a 1](http://torres.ai/wp-content/uploads/2018/06/Picture4.5.png)
+    Una ventana (*kernel*) de 2 x 2 pixeles, se simplifica a un único pixel.
+
+![poling 2x2 a 1](http://torres.ai/wp-content/uploads/2018/06/Picture4.5.png)
 
 Hay varias formas de condensar la información. Una opción es utilizar el *max_pooling*, que se queda con el valor máximo de los que había en la ventana (*kernel*).
 
@@ -111,7 +114,7 @@ Como la capa pooling se aplica a cada filtro (*kernel*), y la capa convolucional
 
 El dataset de prendas de ropa de Zalando sirve para probar los resultados que se pueden conseguir con un modelo de red neuronal de capas densas, frente a una red con capas convolucionales.
 
-[Ejemplo para comparar](https://colab.research.google.com/drive/1VdwtqDSlz1TzNVyWU0R-X9qvrkQ-z7c5?usp=sharing)
+![Ejemplo para comparar](https://colab.research.google.com/drive/1VdwtqDSlz1TzNVyWU0R-X9qvrkQ-z7c5?usp=sharing)
 
 
 # Aumento de datos

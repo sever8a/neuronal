@@ -55,8 +55,9 @@ En general, si el modelo de aprendizaje no funciona hay que disminuir el *learni
 Existe otro hiperparámetro el **learning rate decay** que permite disminuir la tasa de aprendizaje a medida que van pasando las épocas. El aprendizaje avanza más rápido al principio y luego se ralentiza.
 
 !!! info    "optimizador"
-El valor de la tasa de aprendizaje depende del optimizador utilizado. Por ejemplo, para el optimizador **sdg** (descenso gradiente estocastico) *learnning rate* 0.1
-Para el optimizador **adams** es mejor un *learnning rate* entre 0.001 y 0.01
+
+    El valor de la tasa de aprendizaje depende del optimizador utilizado. Por ejemplo, para el optimizador **sdg** (descenso gradiente estocastico) *learnning rate* 0.1
+    Para el optimizador **adams** es mejor un *learnning rate* entre 0.001 y 0.01
 
 
 ### Inicialización de los pesos de las neuronas
@@ -84,7 +85,8 @@ Devuelve la distribución de probabilidad sobre clases mutuamente excluyentes. A
 Cuando la entrada tenga un valor menor que 0 la salida será 0, y en otro caso coincidirá con la entrada.
 
 !!! note    "Métricas importantes"
-Hay que distinguir entre la función de pérdida con los **datos de entrenamiento** y los **datos de validación** 
+
+    Hay que distinguir entre la función de pérdida con los **datos de entrenamiento** y los **datos de validación** 
 
 Utilizando [Google playground](https://playground.tensorflow.org) se puede prácticar como evoluciona el resultado al modificar algunos hiperparámetros.
 
