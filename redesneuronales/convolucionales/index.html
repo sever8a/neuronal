@@ -546,8 +546,8 @@
 <p>Una particularidad importante en redes convolucionales, es que se usa el mismo <em>kernel</em> (filtro o ventana) en todas las neuronas de una misma capa, es decir el mismo peso <strong>w</strong> y el mismo sesgo <strong>b</strong>. Esto reduce de forma drástica los parámetros que debe ajustar la red neuronal.</p>
 <div class="admonition info">
 <p class="admonition-title">varios filtros</p>
-</div>
 <p>Un filtro solo puede detectar una característica de la imagen. Para realizar reconocimientos es necesario detectar más características usando varios filtros al mismo tiempo.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 
 <span class="c1"># We define a helper function to calculate convolutions. It initializes</span>
@@ -572,23 +572,23 @@
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Memoria vs parámetros</p>
-</div>
 <p>Las capas convolucionales necesitan más memoría, ya que almacenan más información de procesamiento. Mientras que las capas densas precisan muchos parámetros para el modelo, que deben ser aprendidos.</p>
+</div>
 <h2 id="pooling">Pooling</h2>
 <p>Las redes convolucionales acompañan a las capas convolucionales de capas de <strong>pooling</strong>, que suelen ser aplicadas inmediantemente después de las capas convolucionales. Las capas <strong>pooling</strong> hacen una simplificación de la información recogida por la capa convolucional y crean una versión condensada de la información contenida.</p>
 <p>Aplicar este tipo de capa supone realizar una reducción dimensional de la imagen previa. Hay posibilidad de utilizar el máximo valor, o el valor promedio, de la ventana indicada como kernel</p>
 <div class="admonition note">
 <p class="admonition-title">El pooling</p>
-</div>
 <p>Una ventana (<em>kernel</em>) de 2 x 2 pixeles, se simplifica a un único pixel.</p>
-<p><a href="http://torres.ai/wp-content/uploads/2018/06/Picture4.5.png">poling 2x2 a 1</a></p>
+</div>
+<p><img alt="poling 2x2 a 1" src="http://torres.ai/wp-content/uploads/2018/06/Picture4.5.png" /></p>
 <p>Hay varias formas de condensar la información. Una opción es utilizar el <em>max_pooling</em>, que se queda con el valor máximo de los que había en la ventana (<em>kernel</em>).</p>
 <p>También se puede utilizar <em>average_pooling</em>, donde cada conjunto de valores de pixel se transforma en el valor promedio.</p>
 <p><img alt="ejemplo max_pooling" src="http://torres.ai/wp-content/uploads/2018/06/Picture.4.6.png" /></p>
 <p>Como la capa pooling se aplica a cada filtro (<em>kernel</em>), y la capa convolucional alberga más de un filtro, se obtendrá una <strong>capa pooling</strong> con tantos filtros de pooling como convolucionales.</p>
 <h2 id="red-convolucional-basica">Red convolucional básica</h2>
 <p>El dataset de prendas de ropa de Zalando sirve para probar los resultados que se pueden conseguir con un modelo de red neuronal de capas densas, frente a una red con capas convolucionales.</p>
-<p><a href="https://colab.research.google.com/drive/1VdwtqDSlz1TzNVyWU0R-X9qvrkQ-z7c5?usp=sharing">Ejemplo para comparar</a></p>
+<p><img alt="Ejemplo para comparar" src="https://colab.research.google.com/drive/1VdwtqDSlz1TzNVyWU0R-X9qvrkQ-z7c5?usp=sharing" /></p>
 <h1 id="aumento-de-datos">Aumento de datos</h1>
 <p>Permite disponer de más datos aplicando variaciones a las imágenes disponibles (rotación, iluminación, contraste,...).</p>
 <p>En algunos casos (problemas de segmentación) puede ser necesario aplicar los mismos filtros a otros elementos del dataset relacionados con cada elemento del dataset. Por ejemplo, la máscara en los problemas de segmentación.</p>
