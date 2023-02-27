@@ -10,6 +10,8 @@ Problemas donde es necesario conocer qué objetos se parecen o agrupan por simil
 
 Las características de referencia no deben ser usados para el agrupamiento.
 
+Este tipo de problema se basa en realizar agrupaciones de los elementos. Hay que determinar cuantos agrupamientos se van a realizar con los datos. 
+
 ## Algorítmo G-means
 
 Una vez seleccionados los datos más relevantes, se calcula el **centroide** y la distancia de cada elemento a esos puntos centrales. Los **centroides** son el promedio de todas las distancias de los objetos agrupados alrededor de él. 
