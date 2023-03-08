@@ -30,15 +30,16 @@ theme:
     features:
         - navigation.expand
 
-consent:
-title: Cookie consent
-description: >-
-    Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación
-    y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes.
-    Con tu consentimiento, me ayudas a mejorar estos materiales.
-analytics:
-provider: google
-property: G-Y671WB1DQM
+extra:
+    consent:
+        title: Cookie consent
+        description: >-
+            Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación
+            y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes.
+            Con tu consentimiento, me ayudas a mejorar estos materiales.
+    analytics:
+        provider: google
+        property: G-Y671WB1DQM
 
 markdown_extensions:
     - admonition
