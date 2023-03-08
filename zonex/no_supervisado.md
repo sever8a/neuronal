@@ -1,16 +1,19 @@
-# Aprendizaje no supoervisado
+# Aprendizaje no supervisado
 
-Se trata de una serie de algoritmos de Machine Learning que permiten trabajar con datasets no etiquetados, es decir que no se utiliza una características conocida como objetivo.
+Se trata de una serie de algoritmos de Machine Learning que permiten trabajar con datasets no etiquetados, es decir que no se utiliza una características conocida como objetivo. En general los datos que se obtienen del mundo real serán de este tipo. Para etiquetarlos será necesario realizar un proceso manual o automático.
 
-# Segmentación de datos
+# Segmentación de datos. Clusters
 
-*Organizar automáticamente datos en grupos similares entre ellas y distintos de las demás.*
+*Organizar automáticamente datos en grupos similares entre ellos y distintos de los demás.*
 
 Problemas donde es necesario conocer qué objetos se parecen o agrupan por similitud. Para ello se utilizan las técnicas de **clustering** consiguiendo una segmentación automática de grupos de datos.
 
-Las características de referencia no deben ser usados para el agrupamiento.
+info: "Atención"
+    Las características de referencia no deben ser usados para el agrupamiento.
 
-Este tipo de problema se basa en realizar agrupaciones de los elementos. Hay que determinar cuantos agrupamientos se van a realizar con los datos. 
+Este tipo de problema se basa en realizar agrupaciones de los elementos. Hay que determinar cuantos agrupamientos se van a realizar con los datos. En función de este valor, se obtendrán diferentes agrupamientos posibles.
+
+Los elementos de referencia, determinan cada tipo de agrupamiento, considerando al resto de elementos del mismo: *elementos del mismo tipo*.
 
 ## Algorítmo G-means
 
@@ -31,3 +34,8 @@ Es necesario determinar las características relevantes que se van a utilizar pa
 También se pueden valorar las características más relevantes.
 
 Con los datos del dataset también se puede crear un batch-centroid, que corresponde a los datos de un cluster.
+
+
+# Funciones para determinar el número óptimo de clusters
+
+La función Silueta, es la más utilizada para determinar cuántos clusters se deben establecer con los datos.
