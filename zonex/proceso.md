@@ -27,7 +27,7 @@ El origen puede ser **interno**, considerando datos generados por la propia orga
 
 ![cientifico de datos moderno](https://www.business-science.io/assets/2019-05-23-financial-data-scientist/modern_data_scientist.jpg)
 
-!!! note **"Nota"**
+!!! info "Nota"
     El analista de datos busca conclusiones y alertas sobre métricas que la organización considera críticas. El científico de datos construye nuevos modelos y busca conocimiento sobre indicadores que la organización aún no sabe que son importantes.
 
 
