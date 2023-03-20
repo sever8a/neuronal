@@ -532,26 +532,29 @@
 
 
 <h1 id="aprendizaje-no-supervisado">Aprendizaje no supervisado</h1>
-<p>Se trata de una serie de algoritmos de Machine Learning que permiten trabajar con datasets no etiquetados, es decir que no se utiliza una características conocida como objetivo. En general los datos que se obtienen del mundo real serán de este tipo. Para etiquetarlos será necesario realizar un proceso manual o automático.</p>
+<p>Los datos que se obtienen del mundo real, generalmente, no están etiquetados. Para obtener información a partir de estos datos se utilizan algoritmos de aprendizaje no supervisado.</p>
+<p>Se trata de una serie de algoritmos de Machine Learning que permiten trabajar con datasets no etiquetados, es decir que no se utiliza una características conocida como objetivo. En general los datos que se obtienen del mundo real serán de este tipo. Para etiquetarlos sería necesario realizar un proceso manual o automático.</p>
 <h1 id="segmentacion-de-datos-clusters">Segmentación de datos. Clusters</h1>
 <p><em>Organizar automáticamente datos en grupos similares entre ellos y distintos de los demás.</em></p>
-<p>Problemas donde es necesario conocer qué objetos se parecen o agrupan por similitud. Para ello se utilizan las técnicas de <strong>clustering</strong> consiguiendo una segmentación automática de grupos de datos.</p>
+<p>Uno de los algoritmos más utilizados, es la segmentación de datos. Problemas donde es necesario conocer qué objetos se parecen o agrupan por similitud. Para ello se utilizan las técnicas de <strong>clustering</strong> consiguiendo una segmentación automática en grupos de datos.</p>
 <p>info: "Atención"
     Las características de referencia no deben ser usados para el agrupamiento.</p>
-<p>Este tipo de problema se basa en realizar agrupaciones de los elementos. Hay que determinar cuantos agrupamientos se van a realizar con los datos. En función de este valor, se obtendrán diferentes agrupamientos posibles.</p>
+<p>Este tipo de problema consiste en realizar agrupaciones de los elementos. De cada agrupamiento hay que identificar alguna característica que permita caracterizar al cluster.</p>
 <p>Los elementos de referencia, determinan cada tipo de agrupamiento, considerando al resto de elementos del mismo: <em>elementos del mismo tipo</em>.</p>
+<p>La dificultad de esta técnica es: determinar cuantos agrupamientos se van a realizar con los datos. En función de este valor, se obtendrán diferentes agrupamientos posibles.</p>
 <h2 id="algoritmo-g-means">Algorítmo G-means</h2>
 <p>Una vez seleccionados los datos más relevantes, se calcula el <strong>centroide</strong> y la distancia de cada elemento a esos puntos centrales. Los <strong>centroides</strong> son el promedio de todas las distancias de los objetos agrupados alrededor de él. </p>
-<p>Los grupos estarán mejor definidos cuanto más próximos al centroide estén y más lejanos a otros.</p>
-<p>Las nuevas instacián se claficarán en el grupo al que pertenecen al proporcionar las características.</p>
-<p>Se puede generar</p>
+<p>Los grupos estarán mejor definidos cuanto más próximos al centroide estén y más lejanos a otros centroides.</p>
+<p>Las nuevas instacias se claficarán en el grupo al que pertenecen, según el todas las características que se han tenido en cuenta para el modelo.</p>
+<p>Su funcionamiento se basa en realizar divisiones de las agrupaciones previas realizadas. Modificando el valor de <strong><em>k</em></strong>. En la primera iteración, el valor es <strong>1</strong>, luego realiza una división (valor 2)</p>
 <h2 id="algoritmo-k-means">Algoritmo K-means</h2>
-<p>En este caso se puede establecer cuántos grupos se quieren conseguir con los datos existentes. </p>
+<p>Este algoritmo necesita saber cuántos grupos se quieren conseguir con los datos existentes. </p>
 <p>Es necesario determinar las características relevantes que se van a utilizar para la clasificación.</p>
 <p>También se pueden valorar las características más relevantes.</p>
 <p>Con los datos del dataset también se puede crear un batch-centroid, que corresponde a los datos de un cluster.</p>
 <h1 id="funciones-para-determinar-el-numero-optimo-de-clusters">Funciones para determinar el número óptimo de clusters</h1>
 <p>La función Silueta, es la más utilizada para determinar cuántos clusters se deben establecer con los datos.</p>
+<p>Se prueba con varios valores para el número de agrupaciones, y se compara la métrica silueta. Por lo general, se consigue determinar cuál es el valor óptimo de agrupamientos.</p>
 
 
   
