@@ -4,6 +4,12 @@ Los datos que se obtienen del mundo real, generalmente, no están etiquetados. P
 
 Se trata de una serie de algoritmos de Machine Learning que permiten trabajar con datasets no etiquetados, es decir que no se utiliza una características conocida como objetivo. En general los datos que se obtienen del mundo real serán de este tipo. Para etiquetarlos sería necesario realizar un proceso manual o automático.
 
+# Asociación de datos. Agrupamiento
+
+Permite establecer asociaciones entre características, de manera que se pueden evidenciar relaciones entre items, que vinculan, por ejemplo, la compra de un producto (cerveza), con otro (pañales).
+
+***A priori***, es un algoritmo de asociacion que permite desvelar la relación entre diferentes items.
+
 # Segmentación de datos. Clusters
 
 *Organizar automáticamente datos en grupos similares entre ellos y distintos de los demás.*
