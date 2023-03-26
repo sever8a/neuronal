@@ -29,7 +29,7 @@ ARIMA es un modelo clásico que da buenos resultados, pero tiene la debilidad qu
 Las redes neuronales, árboles de regresión (M5), regresión mediante soporte de vectores o métodos *kernel* corresponden a esta categoría. Además de las variables anteriores, el modelo puede incorporar la variable temporar y variables temporales derivadas (como día de la semana, trimestre, franja horaria).
 
 
-## Tendencia
+# Patrón de Tendencia
 
 Se basa en la lentitud en que cambian los valores a loargo plazo. Es decir, las fluctuaciones a corto plazo no son relevantes, solo los cambios en un rango más ámplio.
 
@@ -42,14 +42,17 @@ Se puede observar como aunque cada año la emisión varía y cambia oscilando co
     Para observar la tendencia es necesario calcular la media sobre un número más ámplio de datos.
     
 
-## Estacionalidad
+# Patrón de Estacionalidad
 
-Parámetros constantes en el tiempo.
+Parámetros constantes en el tiempo. Se repiten los valores en ciertos momentos, de manera estatica (estacional).
 
-## Ciclos
+# Patrón de Ciclos
 
 Los datos presentan una fluctuación variable sin tener una frecuencia fija.
-## Predicciones híbridas
+
+# Patrón de datos Irregulares
+
+Los datos no siempre tienen un patrón evidente. El nivel de temporización, puede determinar estar en uno u otro patrón.
 
 # Decisiones ante un problema de serie temporal de datos
 
@@ -79,6 +82,12 @@ También es necesario diseñar un proceso de evaluación del modelo. Considerand
 
 Es importante valorar el modelo más adecuado para el problema, considerando diferentes opciones y tecnologías.
 
+!!! info "Tipos de datos"
+
+    Los datos pueden ser:
+        - Datos cronológicos.
+        - Metadatos.
+        - Datos agregados. 
 
 # Como transformar series temporales en problema de aprendizaje supervisado
 
