@@ -428,34 +428,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#tendencia" class="md-nav__link">
-    Tendencia
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#estacionalidad" class="md-nav__link">
-    Estacionalidad
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ciclos" class="md-nav__link">
-    Ciclos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#predicciones-hibridas" class="md-nav__link">
-    Predicciones híbridas
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -620,34 +592,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#tendencia" class="md-nav__link">
-    Tendencia
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#estacionalidad" class="md-nav__link">
-    Estacionalidad
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ciclos" class="md-nav__link">
-    Ciclos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#predicciones-hibridas" class="md-nav__link">
-    Predicciones híbridas
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -678,7 +622,7 @@
 <p>ARIMA es un modelo clásico que da buenos resultados, pero tiene la debilidad que precisa datos completos, se centra en relaciones lineales, establece dependencias temporales fijas, se centra en una única variable de entrada.</p>
 <h2 id="predicciones-basadas-en-modelos-no-lineales">Predicciónes basadas en modelos no lineales</h2>
 <p>Las redes neuronales, árboles de regresión (M5), regresión mediante soporte de vectores o métodos <em>kernel</em> corresponden a esta categoría. Además de las variables anteriores, el modelo puede incorporar la variable temporar y variables temporales derivadas (como día de la semana, trimestre, franja horaria).</p>
-<h2 id="tendencia">Tendencia</h2>
+<h1 id="patron-de-tendencia">Patrón de Tendencia</h1>
 <p>Se basa en la lentitud en que cambian los valores a loargo plazo. Es decir, las fluctuaciones a corto plazo no son relevantes, solo los cambios en un rango más ámplio.</p>
 <p><img alt="Emisión de CO2 del volcan Manu Loa" src="https://i.imgur.com/EZOXiPs.gif" /></p>
 <p>Se puede observar como aunque cada año la emisión varía y cambia oscilando con valores altos y bajos, según la estación. la tendencia en un rango más ámplio, año tras año, se puede obtener considerando la media anual, observando el crecimiento.</p>
@@ -686,11 +630,12 @@
 <p class="admonition-title">Tendencia</p>
 <p>Para observar la tendencia es necesario calcular la media sobre un número más ámplio de datos.</p>
 </div>
-<h2 id="estacionalidad">Estacionalidad</h2>
-<p>Parámetros constantes en el tiempo.</p>
-<h2 id="ciclos">Ciclos</h2>
+<h1 id="patron-de-estacionalidad">Patrón de Estacionalidad</h1>
+<p>Parámetros constantes en el tiempo. Se repiten los valores en ciertos momentos, de manera estatica (estacional).</p>
+<h1 id="patron-de-ciclos">Patrón de Ciclos</h1>
 <p>Los datos presentan una fluctuación variable sin tener una frecuencia fija.</p>
-<h2 id="predicciones-hibridas">Predicciones híbridas</h2>
+<h1 id="patron-de-datos-irregulares">Patrón de datos Irregulares</h1>
+<p>Los datos no siempre tienen un patrón evidente. El nivel de temporización, puede determinar estar en uno u otro patrón.</p>
 <h1 id="decisiones-ante-un-problema-de-serie-temporal-de-datos">Decisiones ante un problema de serie temporal de datos</h1>
 <p>Es necesario conseguir la respuesta a las siguientes cuestiones para plantear adecuadamente la resolución del problema concreto.</p>
 <ol>
@@ -722,6 +667,13 @@
 <p>Conocer toda esta información ayuda a definir el problema. Se pueden utilizar elementos de visualización, análisis estadísticos o criterios de expertos.</p>
 <p>También es necesario diseñar un proceso de evaluación del modelo. Considerando estratégias como dividir los datos en entrenamiento y test, entrenar una aproximación del modelo.</p>
 <p>Es importante valorar el modelo más adecuado para el problema, considerando diferentes opciones y tecnologías.</p>
+<div class="admonition info">
+<p class="admonition-title">Tipos de datos</p>
+<p>Los datos pueden ser:
+    - Datos cronológicos.
+    - Metadatos.
+    - Datos agregados. </p>
+</div>
 <h1 id="como-transformar-series-temporales-en-problema-de-aprendizaje-supervisado">Como transformar series temporales en problema de aprendizaje supervisado</h1>
 <p>Los problemas basados en series de datos temporales se pueden rediseñar como problemas de aprendizaje supervisado. De esta manera se puede utilizar para la solución modelos lineales y no lineales de Machine Learning.</p>
 <p>Se puede reestructurar el dataset de series temporales en dataset para aprendizaje supervisado, considerando la siguiente toma temporal como el objetivo de la anterior. El previo paso de tiempo es la entrada al modelo (<em>X</em>), mientras que el siguiente paso de tiempo es la salida del modelo (<em>y</em>).</p>
