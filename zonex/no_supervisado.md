@@ -19,6 +19,8 @@ Uno de los algoritmos más utilizados, es la segmentación de datos. Problemas d
 info: "Atención"
     Las características de referencia no deben ser usados para el agrupamiento.
 
+![No supervisado](https://bookdown.org/dparedesi/data-science-con-r/img/kmeans-centers.png)
+
 Este tipo de problema consiste en realizar agrupaciones de los elementos. De cada agrupamiento hay que identificar alguna característica que permita caracterizar al cluster.
 
 Los elementos de referencia, determinan cada tipo de agrupamiento, considerando al resto de elementos del mismo: *elementos del mismo tipo*.
@@ -27,7 +29,7 @@ La dificultad de esta técnica es: determinar cuantos agrupamientos se van a rea
 
 
 
-## Algorítmo G-means
+## Algorítmo C-means
 
 Una vez seleccionados los datos más relevantes, se calcula el **centroide** y la distancia de cada elemento a esos puntos centrales. Los **centroides** son el promedio de todas las distancias de los objetos agrupados alrededor de él. 
 
@@ -54,3 +56,29 @@ Con los datos del dataset también se puede crear un batch-centroid, que corresp
 La función Silueta, es la más utilizada para determinar cuántos clusters se deben establecer con los datos.
 
 Se prueba con varios valores para el número de agrupaciones, y se compara la métrica silueta. Por lo general, se consigue determinar cuál es el valor óptimo de agrupamientos.
+
+En este caso es necesario seleccionar **indicadores** que permitan evidenciar si el número de cluster elegido es el más adecuado para los datos disponibles.
+
+# Los datos importantes
+
+Las caracteristicas de los datos del dataset, pueden determinar el resultado que se obtiene con el algoritmo. Es importante recordar los tipos de datos que nos podemos encontrar:
+
+- Binarios. Valores con dos posibilidades de respuesta.
+- Nominales. Textos.
+- Ordinales. Valores que dependen de una escala.
+- Numéricos. Valores numéricos que tienen un sentido total en el dato.
+
+La codificación de los datos también es importante, ya que las técnicas que se aplican en estos algoritmos se basan en funciones estadísticas y matemáticas. 
+
+Tanto los datos ordinales como los binarios, pueden codificarse para estar representados en el dataset de una manera adecuada para su procesamiento. *One hot encoding* o *creación de escalas progresivas* son algunas de las técnicas que se pueden emplear.
+
+
+## La normalización
+
+Como puede haber datos de diferente naturaleza, y los algoritmos se basan en el cálculo de las distancias entre los elementos. La existencia de valores dispares en escala entre diferentes características, pueden sesgar la distancia entre elementos, y por tanto, el resultado de la categorizacion en clusters.
+
+Es conveniente aplicar técnicas de normalización, como el **raging**, que básicamente consiste en normalizar los valores de las características al intervalo continuo [0, 1]. 
+
+Otra posibilidad es la estandarización, asignando al valor medio de una caracteristica el 0 y con una desviación de 1. De esta forma los valores están en el rango [-1, 1].
+
+
