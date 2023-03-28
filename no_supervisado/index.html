@@ -542,10 +542,11 @@
 <p>Uno de los algoritmos más utilizados, es la segmentación de datos. Problemas donde es necesario conocer qué objetos se parecen o agrupan por similitud. Para ello se utilizan las técnicas de <strong>clustering</strong> consiguiendo una segmentación automática en grupos de datos.</p>
 <p>info: "Atención"
     Las características de referencia no deben ser usados para el agrupamiento.</p>
+<p><img alt="No supervisado" src="https://bookdown.org/dparedesi/data-science-con-r/img/kmeans-centers.png" /></p>
 <p>Este tipo de problema consiste en realizar agrupaciones de los elementos. De cada agrupamiento hay que identificar alguna característica que permita caracterizar al cluster.</p>
 <p>Los elementos de referencia, determinan cada tipo de agrupamiento, considerando al resto de elementos del mismo: <em>elementos del mismo tipo</em>.</p>
 <p>La dificultad de esta técnica es: determinar cuantos agrupamientos se van a realizar con los datos. En función de este valor, se obtendrán diferentes agrupamientos posibles.</p>
-<h2 id="algoritmo-g-means">Algorítmo G-means</h2>
+<h2 id="algoritmo-c-means">Algorítmo C-means</h2>
 <p>Una vez seleccionados los datos más relevantes, se calcula el <strong>centroide</strong> y la distancia de cada elemento a esos puntos centrales. Los <strong>centroides</strong> son el promedio de todas las distancias de los objetos agrupados alrededor de él. </p>
 <p>Los grupos estarán mejor definidos cuanto más próximos al centroide estén y más lejanos a otros centroides.</p>
 <p>Las nuevas instacias se claficarán en el grupo al que pertenecen, según el todas las características que se han tenido en cuenta para el modelo.</p>
@@ -558,6 +559,21 @@
 <h1 id="funciones-para-determinar-el-numero-optimo-de-clusters">Funciones para determinar el número óptimo de clusters</h1>
 <p>La función Silueta, es la más utilizada para determinar cuántos clusters se deben establecer con los datos.</p>
 <p>Se prueba con varios valores para el número de agrupaciones, y se compara la métrica silueta. Por lo general, se consigue determinar cuál es el valor óptimo de agrupamientos.</p>
+<p>En este caso es necesario seleccionar <strong>indicadores</strong> que permitan evidenciar si el número de cluster elegido es el más adecuado para los datos disponibles.</p>
+<h1 id="los-datos-importantes">Los datos importantes</h1>
+<p>Las caracteristicas de los datos del dataset, pueden determinar el resultado que se obtiene con el algoritmo. Es importante recordar los tipos de datos que nos podemos encontrar:</p>
+<ul>
+<li>Binarios. Valores con dos posibilidades de respuesta.</li>
+<li>Nominales. Textos.</li>
+<li>Ordinales. Valores que dependen de una escala.</li>
+<li>Numéricos. Valores numéricos que tienen un sentido total en el dato.</li>
+</ul>
+<p>La codificación de los datos también es importante, ya que las técnicas que se aplican en estos algoritmos se basan en funciones estadísticas y matemáticas. </p>
+<p>Tanto los datos ordinales como los binarios, pueden codificarse para estar representados en el dataset de una manera adecuada para su procesamiento. <em>One hot encoding</em> o <em>creación de escalas progresivas</em> son algunas de las técnicas que se pueden emplear.</p>
+<h2 id="la-normalizacion">La normalización</h2>
+<p>Como puede haber datos de diferente naturaleza, y los algoritmos se basan en el cálculo de las distancias entre los elementos. La existencia de valores dispares en escala entre diferentes características, pueden sesgar la distancia entre elementos, y por tanto, el resultado de la categorizacion en clusters.</p>
+<p>Es conveniente aplicar técnicas de normalización, como el <strong>raging</strong>, que básicamente consiste en normalizar los valores de las características al intervalo continuo [0, 1]. </p>
+<p>Otra posibilidad es la estandarización, asignando al valor medio de una caracteristica el 0 y con una desviación de 1. De esta forma los valores están en el rango [-1, 1].</p>
 
 
   
