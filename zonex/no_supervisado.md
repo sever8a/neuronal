@@ -1,35 +1,40 @@
 # Aprendizaje no supervisado
 
-Los datos que se obtienen del mundo real, generalmente, no están etiquetados. Para obtener información a partir de estos datos se utilizan algoritmos de aprendizaje no supervisado.
+Por lo general, los datos que se obtienen del mundo real **no están etiquetados**. Para extraer información a partir de estos datos se pueden utilizar algoritmos de aprendizaje no supervisado. En lugar de realizar procesos de etiquetado (manual o atomático).
 
-Se trata de una serie de algoritmos de Machine Learning que permiten trabajar con datasets no etiquetados, es decir que no se utiliza una características conocida como objetivo. En general los datos que se obtienen del mundo real serán de este tipo. Para etiquetarlos sería necesario realizar un proceso manual o automático.
+Son algoritmos de Machine Learning basados en funciones estadísticas y matemáticas.
 
-# Asociación de datos. Agrupamiento
+# Reducción de la dimensionalidad
 
-Permite establecer asociaciones entre características, de manera que se pueden evidenciar relaciones entre items, que vinculan, por ejemplo, la compra de un producto (cerveza), con otro (pañales).
+El objetivo de estos algoritmos es reducir el número de características de un dataset, para hacerlo asequible para emplear otro algoritmo, o para facilitar la interpretación por una persona. 
 
-***A priori***, es un algoritmo de asociacion que permite desvelar la relación entre diferentes items.
+
+# Asociación de datos. Asociación
+
+Se pretende descubrir asociaciones entre características, de manera que se pueden evidenciar relaciones entre items. Por ejemplo, analizando los detalles de todos los tickets de compra, se obtiene que el producto (cerveza), está asociado con otro (pañales).
+
+***A priori***, es un algoritmo de asociacion que permite desvelar la relación entre diferentes elementos del dataset.
 
 # Categorización de datos. Clustering
 
-*Organizar automáticamente datos en grupos similares entre ellos y distintos de los demás.*
+*Organizar automáticamente datos en categorías similares entre ellas y distintas de las demás.*
 
-Uno de los algoritmos más utilizados, es la segmentación de datos. Problemas donde es necesario conocer qué objetos se parecen o agrupan por similitud. Para ello se utilizan las técnicas de **clustering** consiguiendo una segmentación automática en grupos de datos.
+Se utilizan en problemas donde es necesario conocer qué objetos se parecen o agrupan por similitud. Para ello se utilizan las técnicas de **clustering** consiguiendo una segmentación automática en grupos de datos.
 
 info: "Atención"
-    Las características de referencia no deben ser usados para el agrupamiento.
+    Las características de referencia de cada categoria (clustering) no deben ser usadas para el agrupamiento.
 
 ![No supervisado](https://bookdown.org/dparedesi/data-science-con-r/img/kmeans-centers.png)
 
-Este tipo de problema consiste en realizar agrupaciones de los elementos. De cada agrupamiento hay que identificar alguna característica que permita caracterizar al cluster.
+Este tipo de problema consiste en realizar agrupaciones de los elementos. En cada agrupamiento hay que identificar alguna característica que permita caracterizar al cluster (recetas con alto contenido en sal, bajas calorias, ...)
 
-Los elementos de referencia, determinan cada tipo de agrupamiento, considerando al resto de elementos del mismo: *elementos del mismo tipo*.
+Los items de referencia de una categoría, determinan el agrupamiento en el que se situan. Se puede generalizar, considerando al resto de elementos de la misma categoría: ***elementos de la misma tipología***.
 
-La dificultad de esta técnica es: determinar cuantos agrupamientos se van a realizar con los datos. En función de este valor, se obtendrán diferentes agrupamientos posibles.
+La dificultad del clustering es: determinar en cuantas categorías se pueden asociar los datos. En función de este valor, se obtendrán diferentes categorizaciones posibles.
 
+![Algoritmos de clustering](https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png)
 
-
-## Algorítmo C-means
+## Algorítmo Esperanza-Maximización (EM)
 
 Una vez seleccionados los datos más relevantes, se calcula el **centroide** y la distancia de cada elemento a esos puntos centrales. Los **centroides** son el promedio de todas las distancias de los objetos agrupados alrededor de él. 
 
