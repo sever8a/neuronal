@@ -10,7 +10,7 @@ Permite establecer asociaciones entre características, de manera que se pueden 
 
 ***A priori***, es un algoritmo de asociacion que permite desvelar la relación entre diferentes items.
 
-# Segmentación de datos. Clusters
+# Categorización de datos. Clustering
 
 *Organizar automáticamente datos en grupos similares entre ellos y distintos de los demás.*
 
