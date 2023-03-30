@@ -532,25 +532,33 @@
 
 
 <h1 id="aprendizaje-no-supervisado">Aprendizaje no supervisado</h1>
-<p>Los datos que se obtienen del mundo real, generalmente, no están etiquetados. Para obtener información a partir de estos datos se utilizan algoritmos de aprendizaje no supervisado.</p>
-<p>Se trata de una serie de algoritmos de Machine Learning que permiten trabajar con datasets no etiquetados, es decir que no se utiliza una características conocida como objetivo. En general los datos que se obtienen del mundo real serán de este tipo. Para etiquetarlos sería necesario realizar un proceso manual o automático.</p>
-<h1 id="asociacion-de-datos-agrupamiento">Asociación de datos. Agrupamiento</h1>
-<p>Permite establecer asociaciones entre características, de manera que se pueden evidenciar relaciones entre items, que vinculan, por ejemplo, la compra de un producto (cerveza), con otro (pañales).</p>
-<p><strong><em>A priori</em></strong>, es un algoritmo de asociacion que permite desvelar la relación entre diferentes items.</p>
-<h1 id="segmentacion-de-datos-clusters">Segmentación de datos. Clusters</h1>
-<p><em>Organizar automáticamente datos en grupos similares entre ellos y distintos de los demás.</em></p>
-<p>Uno de los algoritmos más utilizados, es la segmentación de datos. Problemas donde es necesario conocer qué objetos se parecen o agrupan por similitud. Para ello se utilizan las técnicas de <strong>clustering</strong> consiguiendo una segmentación automática en grupos de datos.</p>
+<p>Por lo general, los datos que se obtienen del mundo real <strong>no están etiquetados</strong>. Para extraer información a partir de estos datos se pueden utilizar algoritmos de aprendizaje no supervisado. En lugar de realizar procesos de etiquetado (manual o atomático).</p>
+<p>Son algoritmos de Machine Learning basados en funciones estadísticas y matemáticas.</p>
+<h1 id="reduccion-de-la-dimensionalidad">Reducción de la dimensionalidad</h1>
+<p>El objetivo de estos algoritmos es reducir el número de características de un dataset, para hacerlo asequible para emplear otro algoritmo, o para facilitar la interpretación por una persona. </p>
+<h1 id="asociacion-de-datos-asociacion">Asociación de datos. Asociación</h1>
+<p>Se pretende descubrir asociaciones entre características, de manera que se pueden evidenciar relaciones entre items. Por ejemplo, analizando los detalles de todos los tickets de compra, se obtiene que el producto (cerveza), está asociado con otro (pañales).</p>
+<p><strong><em>A priori</em></strong>, es un algoritmo de asociacion que permite desvelar la relación entre diferentes elementos del dataset.</p>
+<h1 id="categorizacion-de-datos-clustering">Categorización de datos. Clustering</h1>
+<p><em>Organizar automáticamente datos en categorías similares entre ellas y distintas de las demás.</em></p>
+<p>Se utilizan en problemas donde es necesario conocer qué objetos se parecen o agrupan por similitud. Para ello se utilizan las técnicas de <strong>clustering</strong> consiguiendo una segmentación automática en grupos de datos.</p>
 <p>info: "Atención"
-    Las características de referencia no deben ser usados para el agrupamiento.</p>
+    Las características de referencia de cada categoria (clustering) no deben ser usadas para el agrupamiento.</p>
 <p><img alt="No supervisado" src="https://bookdown.org/dparedesi/data-science-con-r/img/kmeans-centers.png" /></p>
-<p>Este tipo de problema consiste en realizar agrupaciones de los elementos. De cada agrupamiento hay que identificar alguna característica que permita caracterizar al cluster.</p>
-<p>Los elementos de referencia, determinan cada tipo de agrupamiento, considerando al resto de elementos del mismo: <em>elementos del mismo tipo</em>.</p>
-<p>La dificultad de esta técnica es: determinar cuantos agrupamientos se van a realizar con los datos. En función de este valor, se obtendrán diferentes agrupamientos posibles.</p>
-<h2 id="algoritmo-c-means">Algorítmo C-means</h2>
-<p>Una vez seleccionados los datos más relevantes, se calcula el <strong>centroide</strong> y la distancia de cada elemento a esos puntos centrales. Los <strong>centroides</strong> son el promedio de todas las distancias de los objetos agrupados alrededor de él. </p>
-<p>Los grupos estarán mejor definidos cuanto más próximos al centroide estén y más lejanos a otros centroides.</p>
-<p>Las nuevas instacias se claficarán en el grupo al que pertenecen, según el todas las características que se han tenido en cuenta para el modelo.</p>
-<p>Su funcionamiento se basa en realizar divisiones de las agrupaciones previas realizadas. Modificando el valor de <strong><em>k</em></strong>. En la primera iteración, el valor es <strong>1</strong>, luego realiza una división (valor 2)</p>
+<p>Este tipo de problema consiste en realizar agrupaciones de los elementos. En cada agrupamiento hay que identificar alguna característica que permita caracterizar al cluster (recetas con alto contenido en sal, bajas calorias, ...)</p>
+<p>Los items de referencia de una categoría, determinan el agrupamiento en el que se situan. Se puede generalizar, considerando al resto de elementos de la misma categoría: <strong><em>elementos de la misma tipología</em></strong>.</p>
+<p>La dificultad del clustering es: determinar en cuantas categorías se pueden asociar los datos. En función de este valor, se obtendrán diferentes categorizaciones posibles.</p>
+<p><img alt="Algoritmos de clustering" src="https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png" /></p>
+<h2 id="algoritmo-esperanza-maximizacion-em">Algorítmo Esperanza-Maximización (EM)</h2>
+<p>Se usa para encontrar estimadores de máxima verisimilitud de parámetros. Es un proceso iterativo para maximizar verosimilitud en presencia de datos faltantes. Cada iteración consiste de dos pasos:</p>
+<ul>
+<li>
+<p>Calcular el valor esperado de la log-verosimilitud promediando sobre datos faltantes con una aproximación de la solución.</p>
+</li>
+<li>
+<p>Obtener una nueva aproximación maximizando la cantidad resultante en el paso previo.</p>
+</li>
+</ul>
 <h2 id="algoritmo-k-means">Algoritmo K-means</h2>
 <p>Este algoritmo necesita saber cuántos grupos se quieren conseguir con los datos existentes. </p>
 <p>Es necesario determinar las características relevantes que se van a utilizar para la clasificación.</p>
