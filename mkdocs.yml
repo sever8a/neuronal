@@ -12,6 +12,7 @@ nav:
     - "Pasos básicos":
         - "exploradatos.md"
         - "Análisis Exploratorio": "exploradatos.md"
+    - "Machine Learning": "machinelearning.md"
     - "Redes Neuronales": 
         - "redesneuronales/index.md"
         - "Fundamentos": "redesneuronales/fundamentos.md"

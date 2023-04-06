@@ -36,13 +36,11 @@ La dificultad del clustering es: determinar en cuantas categorías se pueden aso
 
 ## Algorítmo Esperanza-Maximización (EM)
 
-Una vez seleccionados los datos más relevantes, se calcula el **centroide** y la distancia de cada elemento a esos puntos centrales. Los **centroides** son el promedio de todas las distancias de los objetos agrupados alrededor de él. 
+Se usa para encontrar estimadores de máxima verisimilitud de parámetros. Es un proceso iterativo para maximizar verosimilitud en presencia de datos faltantes. Cada iteración consiste de dos pasos:
 
-Los grupos estarán mejor definidos cuanto más próximos al centroide estén y más lejanos a otros centroides.
+* Calcular el valor esperado de la log-verosimilitud promediando sobre datos faltantes con una aproximación de la solución.
 
-Las nuevas instacias se claficarán en el grupo al que pertenecen, según el todas las características que se han tenido en cuenta para el modelo.
-
-Su funcionamiento se basa en realizar divisiones de las agrupaciones previas realizadas. Modificando el valor de ***k***. En la primera iteración, el valor es **1**, luego realiza una división (valor 2)
+* Obtener una nueva aproximación maximizando la cantidad resultante en el paso previo.
 
 
 ## Algoritmo K-means
