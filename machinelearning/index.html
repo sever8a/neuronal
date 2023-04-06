@@ -12,19 +12,21 @@
         <meta name="author" content="IES Severo Ochoa">
       
       
-      <link rel="icon" href="/neuronal/assets/images/favicon.png">
+        <link rel="canonical" href="https://sever8a.github.io/neuronal/machinelearning/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0b4">
     
     
       
-        <title>Deep Learning</title>
+        <title>Machine Learning - Deep Learning</title>
       
     
     
-      <link rel="stylesheet" href="/neuronal/assets/stylesheets/main.91872f81.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.91872f81.min.css">
       
         
-        <link rel="stylesheet" href="/neuronal/assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
         
       
       
@@ -41,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("/neuronal/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -75,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#algoritmos-machine-learning" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/neuronal/." title="Deep Learning" class="md-header__button md-logo" aria-label="Deep Learning" data-md-component="logo">
+    <a href=".." title="Deep Learning" class="md-header__button md-logo" aria-label="Deep Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -104,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Machine Learning
             
           </span>
         </div>
@@ -171,7 +178,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/neuronal/." title="Deep Learning" class="md-nav__button md-logo" aria-label="Deep Learning" data-md-component="logo">
+    <a href=".." title="Deep Learning" class="md-nav__button md-logo" aria-label="Deep Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -190,7 +197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         Comenzando
       </a>
     </li>
@@ -205,7 +212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/proceso/" class="md-nav__link">
+      <a href="../proceso/" class="md-nav__link">
         El proceso
       </a>
     </li>
@@ -220,7 +227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/deep_learning/" class="md-nav__link">
+      <a href="../deep_learning/" class="md-nav__link">
         Machine vs Deep
       </a>
     </li>
@@ -261,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/exploradatos/" class="md-nav__link">
+      <a href="../exploradatos/" class="md-nav__link">
         None
       </a>
     </li>
@@ -275,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/exploradatos/" class="md-nav__link">
+      <a href="../exploradatos/" class="md-nav__link">
         Análisis Exploratorio
       </a>
     </li>
@@ -295,11 +302,73 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/neuronal/machinelearning/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Machine Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Machine Learning
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#regresion-lineal" class="md-nav__link">
+    Regresión Lineal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regresion-logistica" class="md-nav__link">
+    Regresión Logistica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k-nearest-neighbors" class="md-nav__link">
+    K-Nearest Neighbors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-vector-machine-svm" class="md-nav__link">
+    Support Vector Machine (SVM)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -338,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/redesneuronales/" class="md-nav__link">
+      <a href="../redesneuronales/" class="md-nav__link">
         Redes Neuronales
       </a>
     </li>
@@ -352,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/redesneuronales/fundamentos/" class="md-nav__link">
+      <a href="../redesneuronales/fundamentos/" class="md-nav__link">
         Fundamentos
       </a>
     </li>
@@ -366,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/redesneuronales/redes_profundas/" class="md-nav__link">
+      <a href="../redesneuronales/redes_profundas/" class="md-nav__link">
         Redes Densas
       </a>
     </li>
@@ -380,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/redesneuronales/temporales/" class="md-nav__link">
+      <a href="../redesneuronales/temporales/" class="md-nav__link">
         Redes Recurrentes/LSTM
       </a>
     </li>
@@ -394,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/redesneuronales/convolucionales/" class="md-nav__link">
+      <a href="../redesneuronales/convolucionales/" class="md-nav__link">
         Redes Convolucionales
       </a>
     </li>
@@ -408,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/redesneuronales/hiperparametros/" class="md-nav__link">
+      <a href="../redesneuronales/hiperparametros/" class="md-nav__link">
         Hiperparámetros
       </a>
     </li>
@@ -422,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/redesneuronales/gan/" class="md-nav__link">
+      <a href="../redesneuronales/gan/" class="md-nav__link">
         Redes Generativas Adversarias
       </a>
     </li>
@@ -444,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/transferencia/" class="md-nav__link">
+      <a href="../transferencia/" class="md-nav__link">
         Transferencia de conocimiento
       </a>
     </li>
@@ -459,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/nlp/" class="md-nav__link">
+      <a href="../nlp/" class="md-nav__link">
         Procesamiento Lenguaje Natural
       </a>
     </li>
@@ -474,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/no_supervisado/" class="md-nav__link">
+      <a href="../no_supervisado/" class="md-nav__link">
         Aprendizaje no supervisado
       </a>
     </li>
@@ -489,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/neuronal/redesneuronales/tareas1/" class="md-nav__link">
+      <a href="../redesneuronales/tareas1/" class="md-nav__link">
         Tareas
       </a>
     </li>
@@ -513,6 +582,44 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#regresion-lineal" class="md-nav__link">
+    Regresión Lineal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regresion-logistica" class="md-nav__link">
+    Regresión Logistica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k-nearest-neighbors" class="md-nav__link">
+    K-Nearest Neighbors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-vector-machine-svm" class="md-nav__link">
+    Support Vector Machine (SVM)
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -524,8 +631,33 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="algoritmos-machine-learning">Algoritmos Machine Learning</h1>
+<h2 id="regresion-lineal">Regresión Lineal</h2>
+<h2 id="regresion-logistica">Regresión Logistica</h2>
+<h2 id="k-nearest-neighbors">K-Nearest Neighbors</h2>
+<p>Es un algortimo de clasificación de aprendizaje supervisado. Se utiliza para minería de datos, reconocimiento de patrones y detección de intrusos.</p>
+<p>No hace suposiciones sobre los datos, de manera que los datos tienen la misma importancia en el modelo. Para predecir utiliza las instacias clasificadas, en lugar de un algoritmo que devuelve una respuesta.</p>
+<p>Requiere gran cantidad de procesado y de memoria, ya que se almacenan las instancias.</p>
+<p>Se encuentran los puntos similares más cercandos. Considerando la distancia (Euclidiana, Manhatan, Minkoski).</p>
+<p>El valor a predecir se situa en el modelo, y se realizan votaciones de inclusión a la clase que consiga más votos.</p>
+<p>El valor de k corresponde con la cantidad de vecinos que se consideran para definir la clase de la instancia que se quiere averiguar. Es decir, con <strong>k=5</strong> se tomará la clase mayoritaria de los 5 puntos más cercanos.</p>
+<p>En la herramienta Weka, el algoritmo aparece en el apartado de clasificación - <strong><em>Lazy - LBK</em></strong></p>
+<h2 id="support-vector-machine-svm">Support Vector Machine (SVM)</h2>
+<p>Se utiliza en aprendizaje supervisado o no supervisado. Sirve para clasificar. Trabaja solo con dos clases. </p>
+<p>El principio fundamental se basa en establecer la línea óptima de división entre los dos grupos de clasificación.</p>
+<p>Para determinar la posición de esta línea de separación, se utiliza la distancia entre los puntos de ambas clases. Se pueden considerar los puntos más cercanos de ambas clases o los más lejanos.</p>
+<p>Se añade un hiperparámetro para generar cambios en la línea, de manera que deja de ser recta, para adaptarse mejor a la distribución de los elementos de cada clase.</p>
+
+
+  
+
+
+
+
+                
               </article>
             </div>
           
@@ -614,10 +746,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "/neuronal/", "features": ["navigation.expand"], "search": "/neuronal/assets/javascripts/workers/search.3de43c86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.3de43c86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/neuronal/assets/javascripts/bundle.ce0331ff.min.js"></script>
+      <script src="../assets/javascripts/bundle.ce0331ff.min.js"></script>
       
     
     
