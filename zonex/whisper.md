@@ -77,7 +77,7 @@ Aprovechamos el modelo pre-entrenado para realizar el fine tuning.
 * Cargar el pre-entrenamiento.
 
 
-! info "Mi primera vez"
+!!! info "Mi primera vez"
 
     Utilizo el código de ejemplo y guía que ofrece Hugging Face para realizar el fine tuning. Inicialmente lo intento con google colab, pero atención, el ejemplo del dataset de muestra da error. No se descarga. Lo intento en local y lo mismo. Resulta que el dataset ya no está disponible (al menos en las fechas que lo intenté).
     Cambio de dataset, y utilizo uno de mozilla con voces en varios idiomas, también está disponible en Hugging face, lo que facilita el uso ya que está preprocesado para utilizar train y test. El problema es que es demasiado grande (**107GB !!**), Google colab solo permite este espacio en la versión gratuita.
@@ -86,5 +86,6 @@ Aprovechamos el modelo pre-entrenado para realizar el fine tuning.
 
 
 Prueba una [versión de fine tuning desde colab](https://colab.research.google.com/drive/184wLPXdEnAeJH4bh8XrAHZjo8dLwYbT2?usp=sharing)
+
 
 
