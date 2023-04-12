@@ -80,7 +80,7 @@ Tanto los datos ordinales como los binarios, pueden codificarse para estar repre
 
 Como puede haber datos de diferente naturaleza, y los algoritmos se basan en el cálculo de las distancias entre los elementos. La existencia de valores dispares en escala entre diferentes características, pueden sesgar la distancia entre elementos, y por tanto, el resultado de la categorizacion en clusters.
 
-Es conveniente aplicar técnicas de normalización, como el **raging**, que básicamente consiste en normalizar los valores de las características al intervalo continuo [0, 1]. 
+Es conveniente aplicar técnicas de normalización, como el **ranging**, que básicamente consiste en normalizar los valores de las características al intervalo continuo [0, 1]. 
 
 Otra posibilidad es la estandarización, asignando al valor medio de una caracteristica el 0 y con una desviación de 1. De esta forma los valores están en el rango [-1, 1].
 

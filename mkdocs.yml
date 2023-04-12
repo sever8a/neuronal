@@ -23,6 +23,7 @@ nav:
         - "Redes Generativas Adversarias": "redesneuronales/gan.md"
     - "Transferencia de conocimiento": "transferencia.md"
     - "Procesamiento Lenguaje Natural": "nlp.md"
+        - "Whisper": "whisper.md"
     - "Aprendizaje no supervisado": "no_supervisado.md"
     - "Tareas": "redesneuronales/tareas1.md"
 

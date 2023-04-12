@@ -34,7 +34,7 @@ La estadística se apoya en el uso de la informática y su poder de computación
 # Minería de datos
 En sus inicios fue denostada por realizar el análisis de datos sin hipótesis previas. Ha evolucionado hacia la extracción de **información**.
 
-# ligencia de negocio
+# Inteligencia de negocio
 Toma de decisiones basadas en datos. Se fundamenta en utilizar información estructurada, **propia de cada organización**, almacenada en bases de datos relacionales (ordenadores centrales que controlan procesos de producción).
 
 Su propósito es ayudar a la toma de decisiones informadas, es decir con una justificación clara. Se basa en la transformación de datos masivos y de bajo nivel, en información más inteligible para los equipos directivos y de toma de decisiones.
