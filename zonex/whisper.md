@@ -80,8 +80,18 @@ Aprovechamos el modelo pre-entrenado para realizar el fine tuning.
 !!! info "Mi primera vez"
 
     Utilizo el código de ejemplo y guía que ofrece Hugging Face para realizar el fine tuning. Inicialmente lo intento con google colab, pero atención, el ejemplo del dataset de muestra da error. No se descarga. Lo intento en local y lo mismo. Resulta que el dataset ya no está disponible (al menos en las fechas que lo intenté).
+
     Cambio de dataset, y utilizo uno de mozilla con voces en varios idiomas, también está disponible en Hugging face, lo que facilita el uso ya que está preprocesado para utilizar train y test. El problema es que es demasiado grande (**107GB !!**), Google colab solo permite este espacio en la versión gratuita.
-    Ciertamente la instalación de las librerías y el dataset, resulta inviable trasvarios intentos, utilizando diferentes opciones para reducir su tamaño (simplemente la descarga son horas !!).
+
+    Ciertamente la instalación de las librerías y el dataset, resulta inviable tras varios intentos, utilizando diferentes opciones para reducir su tamaño (simplemente la descarga son horas !!).
+
+    Hay otra versión que permite utilizar la carga del dataset en streaming. De esta manera es posible utilizar el dataset, pero a costa de fragmentar mucho los datos, y reduciendo el tamaño del batch, que se procesa en cada época. 
+
+    Estima unas 8 horas para la primera época. Este tiempo se pasa del disponible en Google colab.
+
+    Hay que investigar otras formas: utilizar otro dataset, emplear como base otro modelo con menos carga...
+
+
 
 
 
