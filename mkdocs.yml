@@ -13,6 +13,7 @@ nav:
         - "exploradatos.md"
         - "Análisis Exploratorio": "exploradatos.md"
     - "Machine Learning": "machinelearning.md"
+        - "SparkML": "sparkml.md"
     - "Redes Neuronales": 
         - "redesneuronales/index.md"
         - "Fundamentos": "redesneuronales/fundamentos.md"
