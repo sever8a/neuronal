@@ -1,5 +1,23 @@
 # Algoritmos Machine Learning
 
+Machin Learning consiste en extraer patrones de comportamiento, a partir de los datos recopilados disponibles. Usando estadística, álgebra lineal y optimización numérica.
+
+Se basan en conseguir realizar alguna tarea en función de los datos de acontecimientos anteriores. Utilizando algoritmos matemáticos y estadísticos.
+
+Los algoritmos están divididos en tres clases principales:
+
+*   Aprendizaje Supervisado.
+*   Aprendizaje No Supervisado.
+*   Aprendizaje Por Refuerzo.
+
+En general se pueden afrontar los siguientes tipos de problemas:
+
+*   **Clasificación binaria**, consiste en determinar si un elemento pertenece o no a una categoría. Por ejemplo, determinar si un cliente es apropiado para concederle un crédito o no.
+
+*   **Clasificación multiclase**, determina a qué clase, entre varias posibles, pertece un elemento concreto. Por ejemplo, establecer el perfil de usuario, para un cliente que ha realizado una compra en un supermercado.
+
+*   **Regresión**, son problemas en los que hay que determinar un valor continuo. Por ejemplo, determinar los kilometros de autonomía de un vehículo.
+
 
 ## Regresión Lineal
 
