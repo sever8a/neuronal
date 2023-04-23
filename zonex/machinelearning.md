@@ -1,6 +1,6 @@
 # Algoritmos Machine Learning
 
-Machin Learning consiste en extraer patrones de comportamiento, a partir de los datos recopilados disponibles. Usando estadística, álgebra lineal y optimización numérica.
+Machine Learning consiste en extraer patrones de comportamiento, a partir de los datos recopilados disponibles. Usando estadística, álgebra lineal y optimización numérica.
 
 Se basan en conseguir realizar alguna tarea en función de los datos de acontecimientos anteriores. Utilizando algoritmos matemáticos y estadísticos.
 
@@ -82,7 +82,9 @@ El valor a predecir se situa en el modelo, y se realizan votaciones de inclusió
 
 El valor de k corresponde con la cantidad de vecinos que se consideran para definir la clase de la instancia que se quiere averiguar. Es decir, con **k=5** se tomará la clase mayoritaria de los 5 puntos más cercanos.
 
-En la herramienta Weka, el algoritmo aparece en el apartado de clasificación - ***Lazy - LBK***
+!!! info "Nota para Weka"
+
+    En la herramienta Weka, el algoritmo aparece en el apartado de clasificación - ***Lazy - LBK***
 
 
 
