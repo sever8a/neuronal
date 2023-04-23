@@ -18,11 +18,52 @@ En general se pueden afrontar los siguientes tipos de problemas:
 
 *   **Regresión**, son problemas en los que hay que determinar un valor continuo. Por ejemplo, determinar los kilometros de autonomía de un vehículo.
 
+Algoritmos para problemas de clasificación:
 
-## Regresión Lineal
+
+*   Regresión Logistica. Logistic Regression.
+*   Árboles de Decisión. Decision Trees.
+*   Árboles de Gradiente. Gradient-Boosted Trees.
+*   Bosques Aleatorios. Random Forest.
+*   Dispersión Bayesiana. Naive Bayes.
+*   Vector de Soporte. Linear Support Vector Machine.
+
+Algoritmos para problemas de regresión:
+
+*   Regresión Lineal. Linear Regression.
+*   Regresión Lineal Generalizada. Generalized Linear Regression.
+*   Árboles de Decisión para Regresión. Decision Tree Regression.
+*   Bosques Aleatorios para Regresión. Random Forest Regression.
+*   Árboles de Gradiente para Regresión. Gradient-Boosted Regression.
 
 
-## Regresión Logistica
+Algoritmos de aprendizaje no supervisado:
+
+*   K-means.
+*   Latent Dirichlet Allocation.
+*   Bisecting K-means.
+*   Gaussian.
+
+
+## Regresión Lineal. Linear Regression.
+
+
+## Regresión Logistica. Logistic Regression.
+
+
+## Árboles de Decisión. Decision Trees.
+
+
+## Árboles de Gradiente. Gradient-Boosted Trees.
+
+
+## Bosques Aleatorios. Random Forest.
+
+
+## Dispersión Bayesiana. Naive Bayes.
+
+
+## Vector de Soporte. Support Vector Machine.
 
 
 
@@ -42,6 +83,8 @@ El valor a predecir se situa en el modelo, y se realizan votaciones de inclusió
 El valor de k corresponde con la cantidad de vecinos que se consideran para definir la clase de la instancia que se quiere averiguar. Es decir, con **k=5** se tomará la clase mayoritaria de los 5 puntos más cercanos.
 
 En la herramienta Weka, el algoritmo aparece en el apartado de clasificación - ***Lazy - LBK***
+
+
 
 ## Support Vector Machine (SVM)
 

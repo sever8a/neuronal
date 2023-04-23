@@ -15,3 +15,10 @@ Sin embargo, cuando el dataset tiene un tamaño considerable, los recursos de me
     Hay que tener presentes los requisitos de los datos para poder aplicar cada algoritmo. Todos los datos númericos deben ser tipo *double*.
 
 * **Estimadores**, son los algoritmos de Machine Learning. Su resultado genera un modelo, que es un tipo de *transformador*.
+
+
+* **Pipeline**, combina transformadores y estimadores en un único modelo. Los pipeline son transformadores que devuelven un modelo
+
+
+![Imagen Spark](https://raw.githubusercontent.com/dmlc/web-data/master/xgboost/unified_pipeline_new.png)
+
